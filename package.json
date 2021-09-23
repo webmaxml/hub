@@ -1,0 +1,14 @@
+{
+  "name": "docshub",
+  "version": "1.0.0",
+  "description": "documentation hub",
+  "main": "index.js",
+  "scripts": {
+    "sync": "browser-sync dist -w --no-open --no-ui --no-notify --no-inject-changes"
+  },
+  "author": "webmaxml",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.5"
+  }
+}

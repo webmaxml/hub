@@ -1,0 +1,148 @@
+
+/* <<{ reset */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover, button:hover {
+  text-decoration: underline;
+}
+
+button {
+  background: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+/* }>> */
+
+/* <<{ vars */
+
+:root {
+  --c-accent: #92e5ff;
+  --c-text: #fff;
+  --ff-main: 'Roboto', sans-serif;
+}
+
+/* }>> */
+
+/* <<{ base */
+
+body {
+  background: #131313;
+}
+
+.content {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  min-height: 100vh;
+}
+
+/* }>> */
+
+/* <<{ aside */
+
+aside {
+  min-width: 300px;
+  padding: 15px;
+  flex-shrink: 0;
+  border-right: 1px solid var(--c-text);
+}
+
+.menu-link {
+  font-size: 14px;
+  line-height: 16px;
+  font-family: var(--ff-main);
+  color: var(--c-text);
+}
+
+.menu-button {
+  font-size: 14px;
+  line-height: 16px;
+  font-family: var(--ff-main);
+  color: var(--c-accent);
+}
+
+.menu-button::before { content: "\25BF\00a0\00a0"; }
+
+.submenu > .menu { padding-left: 17px; }
+.submenu.close .menu-button::before { content: "\25B9\00a0\00a0"; }
+.submenu.close .menu { display: none; }
+
+/* }>> */
+
+/* <<{ main */
+
+main {
+  position: relative;
+  padding: 15px;
+  width: 100%;
+  font-family: var(--ff-main);
+}
+
+main img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 100%;
+  padding: 15px;
+}
+
+.main-header {
+  font-size: 18px;
+  color: var(--c-text);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.main-content-header {
+  font-size: 16px;
+  color: var(--c-text);
+  border-bottom: 1px solid var(--c-text);
+  margin: 15px 0;
+}
+
+.main-list-item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.main-list-item:hover {
+  background: #00463f;
+}
+
+.main-link {
+  width: 200px;
+  flex-shrink: 0;
+  font-size: 14px;
+  color: var(--c-accent);
+}
+
+.main-desc {
+  font-size: 14px;
+  color: var(--c-text);
+  padding-left: 15px;
+}
+
+.main-desc::before {
+  content: "-\00a0\00a0";
+}
+
+
+/* }>> */
+
