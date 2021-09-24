@@ -1124,28 +1124,6 @@ const data = {
 
   // }>>
 
-  // <<{ sed
-
-      {
-        header: 'sed',
-        items: [
-          { name: 'хабр - sed и обработка текстов', desc: 'про sed и обработку текстов', link: 'https://habr.com/ru/company/ruvds/blog/327530/' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ expect
-
-      {
-        header: 'expect',
-        items: [
-          { name: 'хабр - expect и автоматизация утилит', desc: 'про expect и автоматизацию интерактивных утилит', link: 'https://habr.com/ru/company/ruvds/blog/328436/' },
-        ]
-      },
-
-  // }>>
-
   // <<{ i3
 
       {
@@ -1171,28 +1149,6 @@ const data = {
 
   // }>>
 
-  // <<{ compton
-
-      {
-        header: 'compton',
-        items: [
-          { name: 'compton', desc: 'composition manager', link: 'https://github.com/chjj/compton#compton' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ rofi
-
-      {
-        header: 'rofi',
-        items: [
-          { name: 'rofi', desc: 'application launcher', link: 'https://github.com/davatorium/rofi#a-window-switcher-application-launcher-and-dmenu-replacement' },
-        ]
-      },
-
-  // }>>
-
   // <<{ ranger
 
       {
@@ -1211,23 +1167,27 @@ const data = {
         header: 'fzf',
         items: [
           { name: 'fzf', desc: 'fuzzy finder utility', link: 'https://github.com/junegunn/fzf#table-of-contents' },
+          { name: 'search syntax', desc: 'search syntax when searching in fzf', link: 'https://github.com/junegunn/fzf#search-syntax' },
         ]
       },
 
   // }>>
 
-  // <<{ dunst
+  // <<{ utilities
 
       {
-        header: 'dunst',
+        header: 'utilities',
         items: [
+          { name: 'compton', desc: 'composition manager', link: 'https://github.com/chjj/compton#compton' },
+          { name: 'rofi', desc: 'application launcher', link: 'https://github.com/davatorium/rofi#a-window-switcher-application-launcher-and-dmenu-replacement' },
+          { name: 'fd', desc: 'fd finder, simple alternative to "find"', link: 'https://github.com/sharkdp/fd#fd' },
           { name: 'dunst', desc: 'configurable notification daemon', link: 'https://github.com/dunst-project/dunst#documentation' },
+          { name: 'expect и автоматизация утилит', desc: 'про expect и автоматизацию интерактивных утилит', link: 'https://habr.com/ru/company/ruvds/blog/328436/' },
+          { name: 'sed и обработка текстов', desc: 'про sed и обработку текстов', link: 'https://habr.com/ru/company/ruvds/blog/327530/' },
         ]
       },
 
   // }>>
-
-
 
     ],
 
