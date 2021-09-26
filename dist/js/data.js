@@ -1181,6 +1181,7 @@ const data = {
           { name: 'compton', desc: 'composition manager', link: 'https://github.com/chjj/compton#compton' },
           { name: 'rofi', desc: 'application launcher', link: 'https://github.com/davatorium/rofi#a-window-switcher-application-launcher-and-dmenu-replacement' },
           { name: 'fd', desc: 'fd finder, simple alternative to "find"', link: 'https://github.com/sharkdp/fd#fd' },
+          { name: 'ripgrep', desc: 'line-oriented search tool', link: 'https://github.com/BurntSushi/ripgrep#ripgrep-rg' },
           { name: 'dunst', desc: 'configurable notification daemon', link: 'https://github.com/dunst-project/dunst#documentation' },
           { name: 'expect и автоматизация утилит', desc: 'про expect и автоматизацию интерактивных утилит', link: 'https://habr.com/ru/company/ruvds/blog/328436/' },
           { name: 'sed и обработка текстов', desc: 'про sed и обработку текстов', link: 'https://habr.com/ru/company/ruvds/blog/327530/' },
@@ -1215,6 +1216,7 @@ const data = {
           { name: 'NERDTree', desc: 'nerdtree plugin', link: 'https://github.com/preservim/nerdtree#the-nerdtree-' },
           { name: 'Emmet-vim', desc: 'emmet plugin', link: 'https://github.com/mattn/emmet-vim#emmet-vim' },
           { name: 'fzf.vim', desc: 'fzf vim plugin', link: 'https://github.com/junegunn/fzf.vim#fzf-heart-vim' },
+          { name: 'UltiSnips', desc: 'snippets plugin', link: 'https://github.com/SirVer/ultisnips#ultisnips' },
         ]
       },
 
@@ -1768,6 +1770,7 @@ const data = {
       {
         header: 'apache',
         items: [
+          { name: 'installation', desc: 'apache and php installation on Linux', link: 'https://medium.com/@bahadirmezgil/how-to-install-php-and-apache-on-linux-ubuntu-linux-mint-ea73a1c1c426' },
           { name: 'apache 2.4 documentation', desc: 'apache 2.4 documentation', link: 'https://httpd.apache.org/docs/2.4/' },
           { name: 'apache configuration: .htaccess', desc: 'apache configuration with .htaccess', link: 'https://developer.mozilla.org/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess' },
         ]
@@ -1887,7 +1890,7 @@ const data = {
       {
         header: 'bitrix24',
         items: [
-          { name: 'bitrix24', desc: 'bitrix24 admin page', link: 'https://b24-fr808z.bitrix24.ua/stream/' },
+          { name: 'bitrix24', desc: 'bitrix24 admin page', link: 'https://uborshchiki.bitrix24.ua/stream/' },
           { name: 'helpdesk', desc: 'bitrix24 helpdesk', link: 'https://helpdesk.bitrix24.ru/' },
         ]
       },
