@@ -11,25 +11,68 @@ const data = {
 
   menu: {
 
-    'computer science': 'computer_science',
-    'network': 'network',
-    'development': 'development',
-    'windows': 'windows',
-    'linux': 'linux',
-    'utilities': 'utilities',
-    'html': 'html',
-    'css': 'css',
-    'javascript': 'javascript',
-    'nodejs': 'nodejs',
-    'php': 'php',
-    'servers': 'servers',
-    'databases': 'databases',
-    'services': 'services',
+    'network': {
+      'Созыкин - компьютерные сети': 'sozykin_kompyuternie_seti_video',
+    },
 
-    'books': {
-      'Шоттс - командная строка Linux': 'shotts_linux_command_line',
-      'bash manual': 'bash_manual',
-      'progit': 'progit',
+    'linux': {
+      'linux utilities': 'linux_utilities',
+      'shotts - linux command line': 'shotts_linux_command_line_book',
+      'bash manual': 'bash_manual_book',
+      'mix': 'linux_mix',
+    },
+
+    'git': {
+      'reference': 'git_reference',
+      'progit book': 'progit_book',
+    },
+
+    'vim': {
+      'vim reference book': 'vim_reference_book',
+      'vimscript the hard way book': 'vimscript_the_hard_way_book',
+      'plugins': 'vim_plugins',
+    },
+
+    'html': {
+      'html': 'html_mdn',
+      'handlebars': 'handlebars',
+    },
+
+    'css': {
+      'css': 'css_mdn',
+      'sass': 'sass',
+    },
+
+    'javascript': {
+      'javascript': 'javascript_mdn',
+      'DOM': 'dom',
+      'api': 'js_api',
+      'utilities': 'js_utilities',
+      'typescript': 'typescript',
+      'webpack': 'webpack',
+      'react': 'react',
+    },
+
+    'http': {
+      'http': 'http_mdn',
+      'apache': 'apache',
+      'nginx': 'nginx',
+    },
+
+    'nodejs': {
+      'nodejs': 'nodejs',
+    },
+
+    'php': {
+      'php': 'php',
+    },
+
+    'databases': {
+      'sql w3school': 'sql_w3school',
+    },
+
+    'CRM': {
+      'bitrix24': 'bitrix24',
     },
 
   },
@@ -40,9 +83,931 @@ const data = {
 
   content: {
 
-// <<{ html_full
+// <<{ <network>
 
-    html_full: [
+// <<{ sozykin_kompyuternie_seti_video
+
+    sozykin_kompyuternie_seti_video: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: 'Классификация сетей', desc: 'классификация сетей', link: 'https://www.youtube.com/watch?v=Y4LK1OZ54h0&list=PLtPJ9lKvJ4oiNMvYbOzCmWy6cRzYAh9B1' },
+          { name: 'Топология сетей', desc: 'топология сетей', link: 'https://www.youtube.com/watch?v=z8VmkYahV8M&list=PLtPJ9lKvJ4oiNMvYbOzCmWy6cRzYAh9B1&index=4' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// }>>
+
+// <<{ <linux>
+
+// <<{ linux_utilities
+
+    linux_utilities: [
+
+  // <<{ bash
+
+      {
+        header: 'bash',
+        items: [
+          { name: 'хабр - скрипты общее', desc: 'переменные, условия и общее для скриптов', link: 'https://habr.com/ru/company/ruvds/blog/325522/' },
+          { name: 'хабр - циклы', desc: 'про циклы', link: 'https://habr.com/ru/company/ruvds/blog/325928/' },
+          { name: 'хабр - параметры и ключи командной строки', desc: 'про параметры и ключи', link: 'https://habr.com/ru/company/ruvds/blog/326328/' },
+          { name: 'хабр - expect и автоматизация утилит', desc: 'про expect и автоматизацию интерактивных утилит', link: 'https://habr.com/ru/company/ruvds/blog/328436/' },
+          { name: 'хабр - sed и обработка текстов', desc: 'про sed и обработку текстов', link: 'https://habr.com/ru/company/ruvds/blog/327530/' },
+          { name: 'хабр - ввод и вывод', desc: 'про ввод и вывод', link: 'https://habr.com/ru/company/ruvds/blog/326594/' },
+          { name: 'хабр - сигналы, фоновые задачи', desc: 'про сигналы, фоновые задачи и управление сценариями', link: 'https://habr.com/ru/company/ruvds/blog/326826/' },
+          { name: 'хабр - функции и разработка библиотек', desc: 'про функции и разработку библиотек', link: 'https://habr.com/ru/company/ruvds/blog/327248/' },
+          { name: 'хабр - регулярные выражения', desc: 'про регулярные выражения', link: 'https://habr.com/ru/company/ruvds/blog/327896/' },
+          { name: 'хабр - практические примеры', desc: 'практические примеры', link: 'https://habr.com/ru/company/ruvds/blog/328346/' },
+          { name: 'brackets reference', desc: 'about different bash brackets', link: 'https://dev.to/rpalo/bash-brackets-quick-reference-4eh6' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ ssh
+
+      {
+        header: 'ssh',
+        items: [
+          { name: 'ssh overview', desc: 'about ssh, servers and clients', link: 'https://www.ssh.com/academy/ssh' },
+          { name: 'public key', desc: 'key for server to encrypt data', link: 'https://www.ssh.com/academy/cryptography/public-key' },
+          { name: 'private key', desc: 'key for user to read data, encrypted by publix key on server', link: 'https://www.ssh.com/academy/cryptography/private-key' },
+          { name: 'host key', desc: 'key for identifying hosts', link: 'https://www.ssh.com/academy/ssh/host-key' },
+          { name: 'openssh', desc: 'open source implementation of the ssh protocol', link: 'https://www.ssh.com/academy/ssh/openssh' },
+          { name: 'ssh', desc: 'openssh client', link: 'https://www.ssh.com/academy/ssh/command' },
+          { name: 'ssh-keygen', desc: 'openssh tool for creating ssh key pairs', link: 'https://www.ssh.com/academy/ssh/keygen' },
+          { name: 'ssh-copy-id', desc: 'openssh tool to install public key on the server', link: 'https://www.ssh.com/academy/ssh/copy-id' },
+          { name: 'ssh-agent', desc: 'openssh agent to keep track of user\'s keys and passphrases', link: 'https://www.ssh.com/academy/ssh/agent' },
+          { name: 'ssh-add', desc: 'openssh tool to add private keys to ssh agent', link: 'https://www.ssh.com/academy/ssh/add' },
+          { name: 'sftp', desc: 'secure file transfer protocol', link: 'https://www.ssh.com/academy/ssh/sftp' },
+          { name: 'scp', desc: 'secure copy protocol', link: 'https://www.ssh.com/academy/ssh/scp' },
+          { name: 'sshd', desc: 'openssh server', link: 'https://www.ssh.com/academy/ssh/sshd' },
+          { name: 'sshd_config', desc: 'configuration for ssh server located in /etc/ssh/sshd_config', link: 'https://www.ssh.com/academy/ssh/sshd_config' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ awk
+
+      {
+        header: 'awk',
+        items: [
+          { name: 'awk', desc: 'how to use awk command', link: 'https://www.howtogeek.com/562941/how-to-use-the-awk-command-on-linux/' },
+          { name: 'хабр - awk', desc: 'про awk', link: 'https://habr.com/ru/company/ruvds/blog/327754/' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ i3
+
+      {
+        header: 'i3',
+        items: [
+          { name: 'i3 user guide', desc: 'user guide for i3 window manager', link: 'https://i3wm.org/docs/userguide.html' },
+          { name: 'i3 layout saving', desc: 'guide for layout saving for i3 window manager', link: 'https://i3wm.org/docs/layout-saving.html' },
+          { name: 'i3status', desc: 'configuration of the builtin bar manager in i3 window manager', link: 'https://i3wm.org/docs/i3status.html' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ i3blocks
+
+      {
+        header: 'i3blocks',
+        items: [
+          { name: 'i3blocks', desc: 'more customizable bar manager for i3 wm', link: 'https://github.com/vivien/i3blocks#i3blocks' },
+          { name: 'i3blocks-contrib', desc: 'community contributed blocklets for i3blocks', link: 'https://github.com/vivien/i3blocks-contrib' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ ranger
+
+      {
+        header: 'ranger',
+        items: [
+          { name: 'ranger user guide', desc: 'shell file manager user guide', link: 'https://github.com/ranger/ranger/wiki/Official-user-guide#contents' },
+          { name: 'ranger wiki', desc: 'shell file manager wiki', link: 'https://github.com/ranger/ranger/wiki' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ fzf
+
+      {
+        header: 'fzf',
+        items: [
+          { name: 'fzf', desc: 'fuzzy finder utility', link: 'https://github.com/junegunn/fzf#table-of-contents' },
+          { name: 'search syntax', desc: 'search syntax when searching in fzf', link: 'https://github.com/junegunn/fzf#search-syntax' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ compton
+
+      {
+        header: 'compton',
+        items: [
+          { name: 'compton', desc: 'composition manager', link: 'https://github.com/chjj/compton#compton' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ rofi
+
+      {
+        header: 'rofi',
+        items: [
+          { name: 'rofi', desc: 'application launcher', link: 'https://github.com/davatorium/rofi#a-window-switcher-application-launcher-and-dmenu-replacement' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ fd
+
+      {
+        header: 'fd',
+        items: [
+          { name: 'fd', desc: 'fd finder, simple alternative to "find"', link: 'https://github.com/sharkdp/fd#fd' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ ripgrep
+
+      {
+        header: 'ripgrep',
+        items: [
+          { name: 'ripgrep', desc: 'line-oriented search tool', link: 'https://github.com/BurntSushi/ripgrep#ripgrep-rg' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ dunst
+
+      {
+        header: 'dunst',
+        items: [
+          { name: 'dunst', desc: 'configurable notification daemon', link: 'https://github.com/dunst-project/dunst#documentation' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ shotts_linux_command_line_book
+
+    shotts_linux_command_line_book: [
+
+  // <<{ командная оболочка
+
+      {
+        header: 'командная оболочка',
+        items: [
+          { name: 'что такое командная строка', desc: 'что такое командная строка и эмуляторы терминалов', link: `${books.shotts_command_line}#page=26` },
+          { name: 'консоль за кулисами', desc: 'о сеансах терминалов за ширмой рабочего стола и как между ними переключаться', link: `${books.shotts_command_line}#page=29` },
+          { name: 'оболочка входа и простая оболочка', desc: '2 типа сеансов работы с оболочкой', link: `${books.shotts_command_line}#page=137` },
+          { name: 'горячие клавиши оболочки', desc: 'горячие клавиши оболочки', link: `${books.shotts_command_line}#page=94` },
+          { name: 'автодополнение с помощью tab', desc: 'автодополненине с помощью tab', link: `${books.shotts_command_line}#page=95` },
+          { name: 'script', desc: 'запись в файл сеансов работы с оболочкой', link: `${books.shotts_command_line}#page=100` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ подстановка в командной оболочке
+
+      {
+        header: 'подстановка в командной оболочке',
+        items: [
+          { name: 'wildcards для имен файлов', desc: 'групповые символы и классы символов', link: `${books.shotts_command_line}#page=46` },
+          { name: 'подстановка путей и имен файлов', desc: 'подстановка результатов вместо wildcards перед выполнением команды', link: `${books.shotts_command_line}#page=82` },
+          { name: 'подстановка арифметических выражений', desc: 'подстановка результатов арифметических выражений', link: `${books.shotts_command_line}#page=85` },
+          { name: 'подстановка множества из {}', desc: 'подстановка множества из фигурных скобок', link: `${books.shotts_command_line}#page=86` },
+          { name: 'подстановка вывода команд', desc: 'подстановка stdout команды с помощью ${}', link: `${books.shotts_command_line}#page=87` },
+          { name: 'подстановка команды из истории', desc: 'подстановка команды из истории', link: `${books.shotts_command_line}#page=99` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ экранирование
+
+      {
+        header: 'экранирование',
+        items: [
+          { name: 'экранирование с помощью двойных кавычек', desc: 'все спецсимволы кроме $, /, ` теряют значение', link: `${books.shotts_command_line}#page=89` },
+          { name: 'экранирование с помощью одиночных кавычек', desc: 'все спецсимволы теряют значение', link: `${books.shotts_command_line}#page=90` },
+          { name: 'экранирование символов с помощью \\', desc: 'экранирование одного символа', link: `${books.shotts_command_line}#page=91` },
+          { name: 'спецсимволы \\n,\\r, \\t', desc: 'использование спецсимволов в командах', link: `${books.shotts_command_line}#page=92` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ перенаправления ввода/вывода
+
+      {
+        header: 'перенаправления ввода/вывода',
+        items: [
+          { name: 'stdin, stdout, stderr', desc: 'немного о стандартных вводах и выводах', link: `${books.shotts_command_line}#page=70` },
+          { name: 'перенаправление stdout', desc: 'как перенаправить stdout в файл', link: `${books.shotts_command_line}#page=71` },
+          { name: 'перенаправление stderr', desc: 'как перенаправить stderr в файл', link: `${books.shotts_command_line}#page=72` },
+          { name: 'перенаправление stdout и stderr', desc: 'как перенаправить stdout вместе с stderr в файл', link: `${books.shotts_command_line}#page=73` },
+          { name: 'перенаправление в /dev/null', desc: 'как избавиться от нежелательного вывода', link: `${books.shotts_command_line}#page=73` },
+          { name: 'перенаправление stdin', desc: 'как перенаправить stdin в файл', link: `${books.shotts_command_line}#page=75` },
+          { name: 'оператор перенаправления <', desc: 'изменение ввода, вместо stdin - файл', link: `${books.shotts_command_line}#page=76` },
+          { name: 'piping', desc: 'перенаправление вывода команды на ввод другой команды', link: `${books.shotts_command_line}#page=76` },
+          { name: 'tee', desc: 'получает данные с stdin и передает одновременно в stdout и в файл', link: `${books.shotts_command_line}#page=79` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ конфигурация командной оболочки
+
+      {
+        header: 'конфигурация командной оболочки',
+        items: [
+          { name: 'source .bashrc', desc: 'выполнить .bashrc в текущем сеансе оболочки', link: `${books.shotts_command_line}#page=144` },
+          { name: 'alias', desc: 'создание псеводнимов', link: `${books.shotts_command_line}#page=68` },
+          { name: 'спецсимволы, используемые в $PS1', desc: 'экранированные последовательности, используемые в строке приглашения', link: `${books.shotts_command_line}#page=164` },
+          { name: 'спецсимволы цвета, используемые в $PS1', desc: 'экранированные последовательности цвета, используемые в строке приглашения', link: `${books.shotts_command_line}#page=167` },
+          { name: 'спецсимолы позиции курсора, используемые в $PS1', desc: 'экранированные последовательности позиции курсора, используемые в строке приглашения', link: `${books.shotts_command_line}#page=169` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ переменные окружения
+
+      {
+        header: 'переменные окружения',
+        items: [
+          { name: 'printenv', desc: 'вывод переменных окружения', link: `${books.shotts_command_line}#page=135` },
+          { name: 'set', desc: 'вывод переменных окружения и оболочки и установка их значений', link: `${books.shotts_command_line}#page=135` },
+          { name: 'некоторые переменные окружения', desc: 'некоторые переменные окружения', link: `${books.shotts_command_line}#page=136` },
+          { name: 'export', desc: 'сделать содержимое переменной доступным дочерним процессам этой оболочки', link: `${books.shotts_command_line}#page=140` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ информация о командах
+
+      {
+        header: 'информация о командах',
+        items: [
+          { name: 'что такое команды', desc: 'про разные типы команд', link: `${books.shotts_command_line}#page=60` },
+          { name: 'type', desc: 'определение типа команды', link: `${books.shotts_command_line}#page=61` },
+          { name: 'which', desc: 'определение местоположения исполняемого файла', link: `${books.shotts_command_line}#page=61` },
+          { name: 'help', desc: 'получение справки для встроенных комманд (cd)', link: `${books.shotts_command_line}#page=62` },
+          { name: 'man', desc: 'вывод одностраничного справочника для команды', link: `${books.shotts_command_line}#page=63` },
+          { name: 'apropos', desc: 'поиск команды по ключевому слову в описании', link: `${books.shotts_command_line}#page=65` },
+          { name: 'whatis', desc: 'вывод однострочного описания команды', link: `${books.shotts_command_line}#page=66` },
+          { name: 'info', desc: 'вывод многостраничного справочника для команды', link: `${books.shotts_command_line}#page=66` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ файловая система
+
+      {
+        header: 'файловая система',
+        items: [
+          { name: 'об именах файлов', desc: 'некоторые факты об именах файлов', link: `${books.shotts_command_line}#page=34` },
+          { name: 'структура каталогов linux', desc: 'структура каталогов linux', link: `${books.shotts_command_line}#page=41` },
+          { name: 'немного про inode', desc: 'что такое inode и как его посмотреть', link: `${books.shotts_command_line}#page=56` },
+          { name: 'pwd', desc: 'о команде print working directory', link: `${books.shotts_command_line}#page=31` },
+          { name: 'cd', desc: 'о команде change current working directory', link: `${books.shotts_command_line}#page=33` },
+          { name: 'ls', desc: 'о команде list files', link: `${books.shotts_command_line}#page=35` },
+          { name: 'ls -l', desc: 'поля формата ls -l', link: `${books.shotts_command_line}#page=38` },
+          { name: 'file', desc: 'определение типа файла', link: `${books.shotts_command_line}#page=38` },
+          { name: 'mkdir', desc: 'создание каталогов', link: `${books.shotts_command_line}#page=48` },
+          { name: 'cp', desc: 'копирование файлов', link: `${books.shotts_command_line}#page=48` },
+          { name: 'mv', desc: 'перемещение файлов', link: `${books.shotts_command_line}#page=49` },
+          { name: 'rm', desc: 'удаление файлов', link: `${books.shotts_command_line}#page=50` },
+          { name: 'ln', desc: 'о жестких и симолических ссылках и их создании', link: `${books.shotts_command_line}#page=52` },
+          { name: 'touch', desc: 'создание нового файла или обновление времени модификации', link: `${books.shotts_command_line}#page=226` },
+          { name: 'stat', desc: 'полная информация о файле', link: `${books.shotts_command_line}#page=226` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ содержимое файлов
+
+      {
+        header: 'содержимое файлов',
+        items: [
+          { name: 'что такое текст', desc: 'что такое текст, редакторы и текстовые процессоры', link: `${books.shotts_command_line}#page=39` },
+          { name: 'less', desc: 'просмотр содержимого файла', link: `${books.shotts_command_line}#page=39` },
+          { name: 'cat', desc: 'показать содержимое файлов в stdout', link: `${books.shotts_command_line}#page=74` },
+          { name: 'head/tail', desc: 'вывод первых/последних n строк содержимого файла', link: `${books.shotts_command_line}#page=78` },
+          { name: 'sort', desc: 'сортировка результатов выводы', link: `${books.shotts_command_line}#page=76` },
+          { name: 'uniq', desc: 'поиск или удаление повторяющихся строк', link: `${books.shotts_command_line}#page=77` },
+          { name: 'wc', desc: 'cчетчик строк, слов, символов, байтов', link: `${books.shotts_command_line}#page=77` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ разрешения файлов
+
+      {
+        header: 'разрешения файлов',
+        items: [
+          { name: 'подробнее о -rwxrw-r--', desc: 'подробнее о типах файлов и привелегиях', link: `${books.shotts_command_line}#page=104` },
+          { name: 'восмеричные и двоичные маски привелегий', desc: 'изменение режима доступа к файлу', link: `${books.shotts_command_line}#page=107` },
+          { name: 'umask', desc: 'показать/установить разрашенеия по умолчанию для новых файлов', link: `${books.shotts_command_line}#page=109` },
+          { name: 'разрешения setuid, setgid, sticky bit', desc: 'об установке специальных разрешений', link: `${books.shotts_command_line}#page=111` },
+          { name: 'chmod', desc: 'изменение режима доступа к файлу', link: `${books.shotts_command_line}#page=105` },
+          { name: 'chown', desc: 'изменение владельца и группы файла', link: `${books.shotts_command_line}#page=115` },
+          { name: 'chgrp', desc: 'изменение группы файла', link: `${books.shotts_command_line}#page=116` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ пользователи
+
+      {
+        header: 'пользователи',
+        items: [
+          { name: 'id', desc: 'идентификаторы пользователя и групп куда он входит', link: `${books.shotts_command_line}#page=102` },
+          { name: 'способы сменить пользователя', desc: '3 способа как сменить пользователя', link: `${books.shotts_command_line}#page=112` },
+          { name: 'su', desc: 'запуск нового сеанса оболочки от имени другого пользователя', link: `${books.shotts_command_line}#page=112` },
+          { name: 'sudo', desc: 'выполнение команды от имени другого пользователя', link: `${books.shotts_command_line}#page=113` },
+          { name: 'passwd', desc: 'изменение пароля', link: `${books.shotts_command_line}#page=118` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ поиск
+
+      {
+        header: 'поиск',
+        items: [
+          { name: 'поиск в истории', desc: 'поиск в истории команд', link: `${books.shotts_command_line}#page=97` },
+          { name: 'locate', desc: 'поиск файлов по имени в базе данных файлов, которая обновляется раз в сутки программой updatedb', link: `${books.shotts_command_line}#page=214` },
+          { name: 'find', desc: 'поиск файлов в указаном каталоге по параметрам -type, -name, -size и т.д.', link: `${books.shotts_command_line}#page=216` },
+          { name: 'операторы find', desc: 'логические операторы при задании параметров в find, по умолчанию -and ', link: `${books.shotts_command_line}#page=220` },
+          { name: 'операции find', desc: 'операции с найденными файлами, по умолчанию -print', link: `${books.shotts_command_line}#page=222` },
+          { name: 'xargs', desc: 'преобразует вводные данные в список параметров указанной команды', link: `${books.shotts_command_line}#page=225` },
+          { name: 'использование null character в find/xargs', desc: 'использование null character в find/xargs', link: `${books.shotts_command_line}#page=225` },
+          { name: 'grep', desc: 'поиск по регулярному выражению', link: `${books.shotts_command_line}#page=245` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ regexp
+
+      {
+        header: 'regexp',
+        items: [
+          { name: 'posix regexp - любой символ', desc: 'любой 1 символ - точка (.)', link: `${books.shotts_command_line}#page=247` },
+          { name: 'posix regexp - начало/конец строки', desc: 'начало/конец строки - ^, $', link: `${books.shotts_command_line}#page=248` },
+          { name: 'словарь в linux', desc: 'словари в linux и поиск слов в них', link: `${books.shotts_command_line}#page=248` },
+          { name: 'posix regexp - диапазон символов', desc: 'диапазон символов - [abc]', link: `${books.shotts_command_line}#page=249` },
+          { name: 'posix regexp - классы символов', desc: 'классы символов - [[:word:]]', link: `${books.shotts_command_line}#page=251` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ процессы
+
+      {
+        header: 'процессы',
+        items: [
+          { name: 'как действует процесс', desc: 'что такое процесс и как он действует', link: `${books.shotts_command_line}#page=120` },
+          { name: 'ps', desc: 'просмотр списка процессов', link: `${books.shotts_command_line}#page=121` },
+          { name: 'top', desc: 'просмотр состояния процессов в динамике', link: `${books.shotts_command_line}#page=123` },
+          { name: 'command &', desc: 'перевод процессa в фоновый режим при запуске', link: `${books.shotts_command_line}#page=126` },
+          { name: 'jobs', desc: 'список процессов, переведенных в фоновый режим', link: `${books.shotts_command_line}#page=127` },
+          { name: 'fg', desc: 'перевод процесса на передний план', link: `${books.shotts_command_line}#page=127` },
+          { name: 'приостановка процесса', desc: 'перевод процесса в фоновый режим во время его работы', link: `${books.shotts_command_line}#page=128` },
+          { name: 'bg', desc: 'перевод процесса в фоновый режим', link: `${books.shotts_command_line}#page=128` },
+          { name: 'kill', desc: 'посылание сигналов процессам', link: `${books.shotts_command_line}#page=129` },
+          { name: 'сигналы, посылаемые процессам', desc: 'часто используемые сигналы, посылаемые процессам с помощью kill или горячих клавиш', link: `${books.shotts_command_line}#page=129` },
+          { name: 'killall', desc: 'посылание сигналов нескольним процессам', link: `${books.shotts_command_line}#page=131` },
+          { name: 'pstree', desc: 'выводит список процессов в древовидной форме', link: `${books.shotts_command_line}#page=132` },
+          { name: 'vmstat', desc: 'снэпшот использования системных ресурсов', link: `${books.shotts_command_line}#page=132` },
+          { name: 'xload', desc: 'изменение нагрузки на систему с течением времени', link: `${books.shotts_command_line}#page=132` },
+          { name: 'tload', desc: 'график изменения нагрузки на систему с течением времени', link: `${books.shotts_command_line}#page=132` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ устройства
+
+      {
+        header: 'устройства',
+        items: [
+          { name: 'монтирование устройств', desc: 'про монтирование и про файл /etc/fstab, где перечисляются устройства, монтируемые на этапе загрузки', link: `${books.shotts_command_line}#page=183` },
+          { name: 'mount', desc: 'монтирование файловых систем и просмотр списка уже смотнированых', link: `${books.shotts_command_line}#page=184` },
+          { name: 'umount', desc: 'размонтирование подключенных файловых систем', link: `${books.shotts_command_line}#page=186` },
+          { name: 'почему важно размонтировать устройства', desc: 'о буферах между устройством и операционной системой', link: `${books.shotts_command_line}#page=187` },
+          { name: 'определение названия устройства', desc: 'определения названия устройства с помощью простмотра логов при его подключении', link: `${books.shotts_command_line}#page=188` },
+          { name: 'fsdisk', desc: 'управление разделами на устройствах хранения', link: `${books.shotts_command_line}#page=191` },
+          { name: 'mkfs', desc: 'создание новой файловой системы', link: `${books.shotts_command_line}#page=193` },
+          { name: 'fsck', desc: 'проверка файловой системы на целостность', link: `${books.shotts_command_line}#page=194` },
+          { name: 'dd', desc: 'копирование блоков данных из одного места в другое', link: `${books.shotts_command_line}#page=196` },
+          { name: 'создание iso образа диска', desc: 'создание iso образа с помощью dd', link: `${books.shotts_command_line}#page=196` },
+          { name: 'genisoimage', desc: 'создание iso образа из каталога', link: `${books.shotts_command_line}#page=197` },
+          { name: 'монтирование iso образов', desc: 'монтирование локальных образов как устрoйства', link: `${books.shotts_command_line}#page=198` },
+          { name: 'wodim', desc: 'очистка компакт-диска и запись на него образов', link: `${books.shotts_command_line}#page=198` },
+          { name: 'md5sum', desc: 'контрольная сумма устройства/образа', link: `${books.shotts_command_line}#page=199` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ сеть
+
+      {
+        header: 'сеть',
+        items: [
+          { name: 'ping', desc: 'проверка соединения с помощью отсылки ICMP сообщения ECHO_REQUEST', link: `${books.shotts_command_line}#page=201` },
+          { name: 'traceroute', desc: 'трассировка маршрутизаторов на пути к целевому адресу', link: `${books.shotts_command_line}#page=202` },
+          { name: 'netstat', desc: 'просмотр параметров сети', link: `${books.shotts_command_line}#page=203` },
+          { name: 'ftp', desc: 'передача файлов по ftp', link: `${books.shotts_command_line}#page=205` },
+          { name: 'wget', desc: 'загрузчик файлов и содержимого сайтов', link: `${books.shotts_command_line}#page=207` },
+          { name: 'ssh', desc: 'шифрованное взаимодействие с удаленными хостами', link: `${books.shotts_command_line}#page=208` },
+          { name: 'scp', desc: 'шифрованное копирование файлов с удаленного хоста', link: `${books.shotts_command_line}#page=212` },
+          { name: 'sftp', desc: 'шифрованная передача файлов по ftp', link: `${books.shotts_command_line}#page=212` },
+          { name: 'rsync', desc: 'синхронизация файлов с удаленной системой', link: `${books.shotts_command_line}#page=240` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ архивация
+
+      {
+        header: 'архивация',
+        items: [
+          { name: 'gzip/gunzip', desc: 'сжатие/восстановление сжатых файлов', link: `${books.shotts_command_line}#page=230` },
+          { name: 'bzip2/bunzip2', desc: 'сжатие/восстановление сжатых файлов с более высокой степенью, чем gzip', link: `${books.shotts_command_line}#page=232` },
+          { name: 'что будет, если сжать уже сжатый файл', desc: 'что будет, если сжать уже сжатый файл', link: `${books.shotts_command_line}#page=233` },
+          { name: 'tar', desc: 'архивирование файлов', link: `${books.shotts_command_line}#page=233` },
+          { name: 'zip/unzip', desc: 'архивирование и сжатие/восстановление файлов', link: `${books.shotts_command_line}#page=238` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+
+          { name: 'posix regexp - BRE и ERE', desc: 'простые и расширенные регулярные выражения', link: `${books.shotts_command_line}#page=254` },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ bash_manual_book
+
+    bash_manual_book: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: 'what is shell and bash', desc: 'about bash and shell', link: `${books.bash_manual}#page=7` },
+          { name: 'escape character \\', desc: 'preserves the literal value of the next character', link: `${books.bash_manual}#page=12` },
+          { name: 'escape with single quotes', desc: 'preserves the literal value of each character within', link: `${books.bash_manual}#page=12` },
+          { name: 'escape with double quotes', desc: 'preserves the literal value of each character, except $, \', \\', link: `${books.bash_manual}#page=12` },
+          { name: 'ANSI-C quoting', desc: 'special chars inside $\'...\', for example - $\'\\n\' expands to new line', link: `${books.bash_manual}#page=12` },
+          { name: 'piplines', desc: 'about piping commands', link: `${books.bash_manual}#page=14` },
+          { name: 'listing commands', desc: 'listing commands with ;, && and ||', link: `${books.bash_manual}#page=15` },
+          { name: 'looping', desc: 'using for, while, until', link: `${books.bash_manual}#page=16` },
+          { name: 'conditionals', desc: 'using if, case, select', link: `${books.bash_manual}#page=17` },
+          { name: 'grouping commands', desc: 'grouping commands with () and {}', link: `${books.bash_manual}#page=21` },
+          { name: 'coprocesses', desc: 'executed asynchronously in a subshell', link: `${books.bash_manual}#page=21` },
+          { name: 'parallel', desc: 'run commands in parallel', link: `${books.bash_manual}#page=22` },
+          { name: 'functions', desc: 'about shell functions', link: `${books.bash_manual}#page=24` },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ linux_mix
+
+    linux_mix: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// }>>
+
+// <<{ <git>
+
+// <<{ git_reference
+
+    git_reference: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: 'git reference', desc: 'git commands reference', link: 'https://git-scm.com/docs' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ progit_book
+
+    progit_book: [
+
+  // <<{ about git
+
+      {
+        header: 'about git',
+        items: [
+          { name: 'local vcs', desc: 'about local version control systems', link: `${books.progit}#page=14` },
+          { name: 'centralized vcs', desc: 'about cetralized version control systems', link: `${books.progit}#page=15` },
+          { name: 'distributed vcs', desc: 'about distributed version control systems', link: `${books.progit}#page=16` },
+          { name: 'what is git', desc: 'what is git in a nutshell', link: `${books.progit}#page=18` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ configuration
+
+      {
+        header: 'configuration',
+        items: [
+          { name: 'config files', desc: 'where are git config files and how to write in them', link: `${books.progit}#page=25` },
+          { name: 'config user', desc: 'config name and email', link: `${books.progit}#page=26` },
+          { name: 'config editor', desc: 'config default editor for typing messages', link: `${books.progit}#page=26` },
+          { name: 'config default branch name', desc: 'config default default branch name instead of master', link: `${books.progit}#page=27` },
+          { name: 'config list settings', desc: 'check your config settings', link: `${books.progit}#page=27` },
+          { name: 'git aliases', desc: 'creating aliases for commands', link: `${books.progit}#page=67` },
+          { name: '.gitignore', desc: 'about .gitignore', link: `${books.progit}#page=36` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ repository
+
+      {
+        header: 'repository',
+        items: [
+          { name: 'initialize repository', desc: 'initialize repository with init', link: `${books.progit}#page=30` },
+          { name: 'cloning repository', desc: 'cloning repository with clone', link: `${books.progit}#page=31` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ checking info
+
+      {
+        header: 'checking info',
+        items: [
+          { name: 'check file status', desc: 'check file status with git status', link: `${books.progit}#page=32` },
+          { name: 'short status', desc: 'about git status -s', link: `${books.progit}#page=35` },
+          { name: 'viewwing staged and unstaged changes', desc: 'about git diff', link: `${books.progit}#page=37` },
+          { name: 'viewing commit history', desc: 'about git log', link: `${books.progit}#page=44` },
+          { name: 'options for git log', desc: 'options for git log', link: `${books.progit}#page=49` },
+          { name: 'options for limit output in git log', desc: 'options for limit output in git log', link: `${books.progit}#page=50` },
+          { name: 'specifiers for git log --pretty=format', desc: 'specifiers for git log --pretty=format', link: `${books.progit}#page=48` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ staging
+
+      {
+        header: 'staging',
+        items: [
+          { name: 'about tracked and untracked files', desc: 'about tracked and untracked files', link: `${books.progit}#page=32` },
+          { name: 'add new files', desc: 'add files with git add', link: `${books.progit}#page=33` },
+          { name: 'unstage a staged file (reset)', desc: 'about git reset HEAD <file>', link: `${books.progit}#page=52` },
+          { name: 'unstage a staged filr (restore)', desc: 'about git restore --staged <file>', link: `${books.progit}#page=54` },
+          { name: 'unmodify a modified file (checkout)', desc: 'about git checkout -- <file>', link: `${books.progit}#page=53` },
+          { name: 'unmodify a modified file (restore)', desc: 'about git restore <file>', link: `${books.progit}#page=55` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ commiting
+
+      {
+        header: 'commiting',
+        items: [
+          { name: 'commiting', desc: 'about git commit', link: `${books.progit}#page=40` },
+          { name: 'skipping staging area', desc: 'about git commit -a', link: `${books.progit}#page=42` },
+          { name: 'uncommit', desc: 'about git commit --amend', link: `${books.progit}#page=51` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ remotes
+
+      {
+        header: 'remotes',
+        items: [
+          { name: 'showing remotes', desc: 'about git remote -v', link: `${books.progit}#page=56` },
+          { name: 'adding remotes', desc: 'about git remote add <shortname> <url>', link: `${books.progit}#page=57` },
+          { name: 'fetching from remotes', desc: 'about git fetch <remote> and git pull', link: `${books.progit}#page=58` },
+          { name: 'pushing to remotes', desc: 'about git push <remote> <branch>', link: `${books.progit}#page=58` },
+          { name: 'info about remotes', desc: 'about git remote show <remote>', link: `${books.progit}#page=59` },
+          { name: 'renaming remotes', desc: 'about git remote rename <old> <new>', link: `${books.progit}#page=60` },
+          { name: 'delete remotes', desc: 'about git remote remove <remote>', link: `${books.progit}#page=60` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ branches
+
+      {
+        header: 'branches',
+        items: [
+          { name: 'branches in a nutshell', desc: 'branches in a nutshell', link: `${books.progit}#page=69` },
+          { name: 'creating branch', desc: 'about git branch <name>', link: `${books.progit}#page=71` },
+          { name: 'switching branches', desc: 'about git checkout <branch>', link: `${books.progit}#page=72` },
+          { name: 'git switch', desc: 'about git switch', link: `${books.progit}#page=76` },
+          { name: 'merging', desc: 'about git merge <branch>', link: `${books.progit}#page=81` },
+          { name: 'deleting branch', desc: 'about git branch -d <name>', link: `${books.progit}#page=82` },
+          { name: 'merge conflicts', desc: 'about merge conflicts', link: `${books.progit}#page=82` },
+          { name: 'list branches', desc: 'about git branch', link: `${books.progit}#page=85` },
+          { name: 'rename branch', desc: 'about git branch --move <oldname> <newname>', link: `${books.progit}#page=87` },
+          { name: 'about remote branches', desc: 'about remote branches', link: `${books.progit}#page=92` },
+          { name: 'pushing branch', desc: 'about git push <remote> <branch>', link: `${books.progit}#page=97` },
+          { name: 'tracking remote branches', desc: 'about git checkout --track <remote>/<branch>', link: `${books.progit}#page=99` },
+          { name: 'delete remote branch', desc: 'about git push <remote> --delete <branch>', link: `${books.progit}#page=100` },
+          { name: 'rabasing', desc: 'about git rebase <branch>', link: `${books.progit}#page=101` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ tags
+
+      {
+        header: 'tags',
+        items: [
+          { name: 'showing tags', desc: 'about git tag', link: `${books.progit}#page=61` },
+          { name: 'creating annotated tags', desc: 'about git tag -a <name> -m <message>', link: `${books.progit}#page=62` },
+          { name: 'creating lightweight tags', desc: 'about git tag <name>', link: `${books.progit}#page=63` },
+          { name: 'tagging commit', desc: 'about git tag -a <name> <commit>', link: `${books.progit}#page=64` },
+          { name: 'pushing tags to remotes', desc: 'about git push <remote> <tagname>', link: `${books.progit}#page=64` },
+          { name: 'deleting tags', desc: 'about git tag -d <name>', link: `${books.progit}#page=65` },
+          { name: 'checkout tags', desc: 'about git checkout <tagname>', link: `${books.progit}#page=66` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ working with filesystem
+
+      {
+        header: 'working with filesystem',
+        items: [
+          { name: 'removing files', desc: 'about git rm', link: `${books.progit}#page=42` },
+          { name: 'moving files', desc: 'about git mv', link: `${books.progit}#page=43` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// }>>
+
+// <<{ <vim>
+
+// <<{ vim_reference_book
+
+    vim_reference_book: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: 'normal mode', desc: 'different things you can do in normal mode', link: 'https://learnbyexample.gitbooks.io/vim-reference/content/Normal_mode.html' },
+          { name: 'commands', desc: 'different commands to enter in command mode', link: 'https://learnbyexample.gitbooks.io/vim-reference/content/Command_Line_mode.html' },
+          { name: 'visual mode', desc: 'about visual mode', link: 'https://learnbyexample.gitbooks.io/vim-reference/content/Visual_mode.html' },
+          { name: 'recording macro', desc: 'how to record macro', link: 'https://learnbyexample.gitbooks.io/vim-reference/content/Recording_Macro.html' },
+          { name: 'customization', desc: 'general vim customization', link: 'https://learnbyexample.gitbooks.io/vim-reference/content/Customizing_vim.html' },
+          { name: 'regexp', desc: 'about regexp in search and replace', link: 'https://learnbyexample.gitbooks.io/vim-reference/content/Regular_Expressions.html' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ vimscript_the_hard_way_book
+
+    vimscript_the_hard_way_book: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ vim_plugins
+
+    vim_plugins: [
+
+  // <<{ vimawesome
+
+      {
+        header: 'vimawesome',
+        items: [
+          { name: 'vimawesome', desc: 'vim plugins hub page', link: 'https://vimawesome.com/' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ vim-plug
+
+      {
+        header: 'vim-plug',
+        items: [
+          { name: 'vim-plug', desc: 'vim-plug github page', link: 'https://github.com/junegunn/vim-plug#' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ NERDTree
+
+      {
+        header: 'NERDTree',
+        items: [
+          { name: 'NERDTree', desc: 'nerdtree plugin', link: 'https://github.com/preservim/nerdtree#the-nerdtree-' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ ranger.vim
+
+      {
+        header: 'ranger.vim',
+        items: [
+          { name: 'ranger.vim', desc: 'ranger vim plugin', link: 'https://github.com/francoiscabrol/ranger.vim' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ Emmet-vim
+
+      {
+        header: 'Emmet-vim',
+        items: [
+          { name: 'Emmet-vim', desc: 'emmet plugin', link: 'https://github.com/mattn/emmet-vim#emmet-vim' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ fzf.vim
+
+      {
+        header: 'fzf.vim',
+        items: [
+          { name: 'fzf.vim', desc: 'fzf vim plugin', link: 'https://github.com/junegunn/fzf.vim#fzf-heart-vim' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ UltiSnips
+
+      {
+        header: 'UltiSnips',
+        items: [
+          { name: 'UltiSnips', desc: 'snippets plugin', link: 'https://github.com/SirVer/ultisnips#ultisnips' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ vim_mix
+
+    vim_mix: [
+
+  // <<{ cheatsheets
+
+      {
+        header: 'cheatsheets',
+        items: [
+          { name: 'vim cheat sheet', desc: 'vim cheat sheet', link: 'https://vim.rtorr.com/' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// }>>
+
+// <<{ <html>
+
+// <<{ html_mdn
+
+    html_mdn: [
 
   // <<{ meta
 
@@ -51,7 +1016,6 @@ const data = {
         items: [
           { name: '<meta>', desc: 'different metadata of the document', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta' },
           { name: 'names values in <meta>', desc: 'standard names values in <meta>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name' },
-          { name: 'open graph', desc: 'protocol to create social graph objects from the page', link: 'https://ogp.me/' },
         ]
       },
 
@@ -325,9 +1289,38 @@ const data = {
 
 // }>>
 
-// <<{ css_full
+// <<{ handlebars
 
-    css_full: [
+    handlebars: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: 'introduction', desc: 'about handlebars and its features', link: 'https://handlebarsjs.com/guide/' },
+          { name: 'expressions', desc: 'about expressions', link: 'https://handlebarsjs.com/guide/expressions.html' },
+          { name: 'partials', desc: 'about partials', link: 'https://handlebarsjs.com/guide/partials.html' },
+          { name: 'block helpers', desc: 'about block helpers', link: 'https://handlebarsjs.com/guide/block-helpers.html' },
+          { name: 'built-in helpers', desc: 'about built-in helpers', link: 'https://handlebarsjs.com/guide/builtin-helpers.html' },
+          { name: 'precompiling templates', desc: 'how to precompile templates', link: 'https://handlebarsjs.com/installation/precompilation.html' },
+          { name: 'api', desc: 'api reference', link: 'https://handlebarsjs.com/api-reference/' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// }>>
+
+// <<{ <css>
+
+// <<{ css_mdn
+
+    css_mdn: [
 
   // <<{ cascade
 
@@ -951,413 +1944,14 @@ const data = {
 
 // }>>
 
+// <<{ sass
 
+    sass: [
 
-
-// <<{ computer_science
-
-    computer_science: [
-
-  // <<{ binary numbers
+  // <<{ mix
 
       {
-        header: 'binary numbers',
-        items: [
-          { name: 'Обратный код', desc: 'чтобы записать отрицательное число, нужно перевернуть все разряды', link: 'https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%80%D0%B0%D1%82%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D0%B4' },
-          { name: 'Дополнительный код', desc: 'чтобы записать отрицательное число, нужно перевернуть все разряды и прибавить 1', link: 'https://ru.wikipedia.org/wiki/%D0%94%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D0%B4' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ network
-
-    network: [
-
-  // <<{ http
-
-      {
-        header: 'http',
-        items: [
-          { name: 'HTTP overview', desc: 'about HTTP protocol', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview' },
-          { name: 'caching', desc: 'about HTTP caching', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching' },
-          { name: 'cookies', desc: 'about HTTP cookies', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies' },
-          { name: 'CORS', desc: 'about Cross-Origin Resource Sharing', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS' },
-          { name: 'CSP', desc: 'about Content Security Policy', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP' },
-          { name: 'HTTP versions', desc: 'about different HTTP versions', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP' },
-          { name: 'Requests and Responses', desc: 'about HTTP messages', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages' },
-          { name: 'typical HTTP session', desc: 'about typical HTTP session', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Session' },
-          { name: 'connection management in HTTP/1.x', desc: 'about connection management in HTTP/1.x', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x' },
-          { name: 'headers reference', desc: 'HTTP headers reference', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers' },
-          { name: 'methods reference', desc: 'HTTP methods reference', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods' },
-          { name: 'codes reference', desc: 'HTTP response status codes reference', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Status' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ Созыкин - Компьютерные сети
-
-      {
-        header: 'Созыкин - Компьютерные сети',
-        items: [
-          { name: 'Классификация сетей', desc: 'классификация сетей', link: 'https://www.youtube.com/watch?v=Y4LK1OZ54h0&list=PLtPJ9lKvJ4oiNMvYbOzCmWy6cRzYAh9B1' },
-          { name: 'Топология сетей', desc: 'топология сетей', link: 'https://www.youtube.com/watch?v=z8VmkYahV8M&list=PLtPJ9lKvJ4oiNMvYbOzCmWy6cRzYAh9B1&index=4' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ development
-
-    development: [
-
-  // <<{ security
-
-      {
-        header: 'security',
-        items: [
-          { name: 'Mozilla web security guidelines', desc: 'Mozilla web security guidelines', link: 'https://infosec.mozilla.org/guidelines/web_security' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ PWA
-
-      {
-        header: 'PWA',
-        items: [
-          { name: 'PWA', desc: 'progressive web apps guide', link: 'https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ windows
-
-    windows: [
-
-  // <<{ optimization
-
-      {
-        header: 'optimization',
-        items: [
-          { name: 'оптимизация и ускорение работы windows', desc: 'оптимизация и ускорение работы windows', link: 'https://sysadmintips.ru/vyzhimaem-iz-windows-10-maksimum-optimizatsiya-sistemy.html' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ linux
-
-    linux: [
-
-  // <<{ bash
-
-      {
-        header: 'bash',
-        items: [
-          { name: 'хабр - скрипты общее', desc: 'переменные, условия и общее для скриптов', link: 'https://habr.com/ru/company/ruvds/blog/325522/' },
-          { name: 'хабр - циклы', desc: 'про циклы', link: 'https://habr.com/ru/company/ruvds/blog/325928/' },
-          { name: 'хабр - параметры и ключи командной строки', desc: 'про параметры и ключи', link: 'https://habr.com/ru/company/ruvds/blog/326328/' },
-          { name: 'хабр - ввод и вывод', desc: 'про ввод и вывод', link: 'https://habr.com/ru/company/ruvds/blog/326594/' },
-          { name: 'хабр - сигналы, фоновые задачи', desc: 'про сигналы, фоновые задачи и управление сценариями', link: 'https://habr.com/ru/company/ruvds/blog/326826/' },
-          { name: 'хабр - функции и разработка библиотек', desc: 'про функции и разработку библиотек', link: 'https://habr.com/ru/company/ruvds/blog/327248/' },
-          { name: 'хабр - регулярные выражения', desc: 'про регулярные выражения', link: 'https://habr.com/ru/company/ruvds/blog/327896/' },
-          { name: 'хабр - практические примеры', desc: 'практические примеры', link: 'https://habr.com/ru/company/ruvds/blog/328346/' },
-          { name: 'brackets reference', desc: 'about different bash brackets', link: 'https://dev.to/rpalo/bash-brackets-quick-reference-4eh6' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ ssh
-
-      {
-        header: 'ssh',
-        items: [
-          { name: 'ssh overview', desc: 'about ssh, servers and clients', link: 'https://www.ssh.com/academy/ssh' },
-          { name: 'public key', desc: 'key for server to encrypt data', link: 'https://www.ssh.com/academy/cryptography/public-key' },
-          { name: 'private key', desc: 'key for user to read data, encrypted by publix key on server', link: 'https://www.ssh.com/academy/cryptography/private-key' },
-          { name: 'host key', desc: 'key for identifying hosts', link: 'https://www.ssh.com/academy/ssh/host-key' },
-          { name: 'openssh', desc: 'open source implementation of the ssh protocol', link: 'https://www.ssh.com/academy/ssh/openssh' },
-          { name: 'ssh', desc: 'openssh client', link: 'https://www.ssh.com/academy/ssh/command' },
-          { name: 'ssh-keygen', desc: 'openssh tool for creating ssh key pairs', link: 'https://www.ssh.com/academy/ssh/keygen' },
-          { name: 'ssh-copy-id', desc: 'openssh tool to install public key on the server', link: 'https://www.ssh.com/academy/ssh/copy-id' },
-          { name: 'ssh-agent', desc: 'openssh agent to keep track of user\'s keys and passphrases', link: 'https://www.ssh.com/academy/ssh/agent' },
-          { name: 'ssh-add', desc: 'openssh tool to add private keys to ssh agent', link: 'https://www.ssh.com/academy/ssh/add' },
-          { name: 'sftp', desc: 'secure file transfer protocol', link: 'https://www.ssh.com/academy/ssh/sftp' },
-          { name: 'scp', desc: 'secure copy protocol', link: 'https://www.ssh.com/academy/ssh/scp' },
-          { name: 'sshd', desc: 'openssh server', link: 'https://www.ssh.com/academy/ssh/sshd' },
-          { name: 'sshd_config', desc: 'configuration for ssh server located in /etc/ssh/sshd_config', link: 'https://www.ssh.com/academy/ssh/sshd_config' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ awk
-
-      {
-        header: 'awk',
-        items: [
-          { name: 'awk', desc: 'how to use awk command', link: 'https://www.howtogeek.com/562941/how-to-use-the-awk-command-on-linux/' },
-          { name: 'хабр - awk', desc: 'про awk', link: 'https://habr.com/ru/company/ruvds/blog/327754/' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ i3
-
-      {
-        header: 'i3',
-        items: [
-          { name: 'i3 user guide', desc: 'user guide for i3 window manager', link: 'https://i3wm.org/docs/userguide.html' },
-          { name: 'i3 layout saving', desc: 'guide for layout saving for i3 window manager', link: 'https://i3wm.org/docs/layout-saving.html' },
-          { name: 'i3status', desc: 'configuration of the builtin bar manager in i3 window manager', link: 'https://i3wm.org/docs/i3status.html' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ i3blocks
-
-      {
-        header: 'i3blocks',
-        items: [
-          { name: 'i3blocks', desc: 'more customizable bar manager for i3 wm', link: 'https://github.com/vivien/i3blocks#i3blocks' },
-          { name: 'i3blocks-contrib', desc: 'community contributed blocklets for i3blocks', link: 'https://github.com/vivien/i3blocks-contrib' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ ranger
-
-      {
-        header: 'ranger',
-        items: [
-          { name: 'ranger user guide', desc: 'shell file manager user guide', link: 'https://github.com/ranger/ranger/wiki/Official-user-guide#contents' },
-          { name: 'ranger wiki', desc: 'shell file manager wiki', link: 'https://github.com/ranger/ranger/wiki' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ fzf
-
-      {
-        header: 'fzf',
-        items: [
-          { name: 'fzf', desc: 'fuzzy finder utility', link: 'https://github.com/junegunn/fzf#table-of-contents' },
-          { name: 'search syntax', desc: 'search syntax when searching in fzf', link: 'https://github.com/junegunn/fzf#search-syntax' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ utilities
-
-      {
-        header: 'utilities',
-        items: [
-          { name: 'compton', desc: 'composition manager', link: 'https://github.com/chjj/compton#compton' },
-          { name: 'rofi', desc: 'application launcher', link: 'https://github.com/davatorium/rofi#a-window-switcher-application-launcher-and-dmenu-replacement' },
-          { name: 'fd', desc: 'fd finder, simple alternative to "find"', link: 'https://github.com/sharkdp/fd#fd' },
-          { name: 'ripgrep', desc: 'line-oriented search tool', link: 'https://github.com/BurntSushi/ripgrep#ripgrep-rg' },
-          { name: 'dunst', desc: 'configurable notification daemon', link: 'https://github.com/dunst-project/dunst#documentation' },
-          { name: 'expect и автоматизация утилит', desc: 'про expect и автоматизацию интерактивных утилит', link: 'https://habr.com/ru/company/ruvds/blog/328436/' },
-          { name: 'sed и обработка текстов', desc: 'про sed и обработку текстов', link: 'https://habr.com/ru/company/ruvds/blog/327530/' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ utilities
-
-    utilities: [
-
-  // <<{ vim
-
-      {
-        header: 'vim',
-        items: [
-          { name: 'vim cheat sheet', desc: 'vim cheat sheet', link: 'https://vim.rtorr.com/' },
-          { name: 'normal mode', desc: 'different things you can do in normal mode', link: 'https://learnbyexample.gitbooks.io/vim-reference/content/Normal_mode.html' },
-          { name: 'commands', desc: 'different commands to enter in command mode', link: 'https://learnbyexample.gitbooks.io/vim-reference/content/Command_Line_mode.html' },
-          { name: 'visual mode', desc: 'about visual mode', link: 'https://learnbyexample.gitbooks.io/vim-reference/content/Visual_mode.html' },
-          { name: 'recording macro', desc: 'how to record macro', link: 'https://learnbyexample.gitbooks.io/vim-reference/content/Recording_Macro.html' },
-          { name: 'customization', desc: 'general vim customization', link: 'https://learnbyexample.gitbooks.io/vim-reference/content/Customizing_vim.html' },
-          { name: 'regexp', desc: 'about regexp in search and replace', link: 'https://learnbyexample.gitbooks.io/vim-reference/content/Regular_Expressions.html' },
-          { name: 'vim-plug', desc: 'vim-plug github page', link: 'https://github.com/junegunn/vim-plug#' },
-          { name: 'vimawesome', desc: 'vim plugins hub page', link: 'https://vimawesome.com/' },
-          { name: 'ranger.vim', desc: 'ranger vim plugin', link: 'https://github.com/francoiscabrol/ranger.vim' },
-          { name: 'NERDTree', desc: 'nerdtree plugin', link: 'https://github.com/preservim/nerdtree#the-nerdtree-' },
-          { name: 'Emmet-vim', desc: 'emmet plugin', link: 'https://github.com/mattn/emmet-vim#emmet-vim' },
-          { name: 'fzf.vim', desc: 'fzf vim plugin', link: 'https://github.com/junegunn/fzf.vim#fzf-heart-vim' },
-          { name: 'UltiSnips', desc: 'snippets plugin', link: 'https://github.com/SirVer/ultisnips#ultisnips' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ git
-
-      {
-        header: 'git',
-        items: [
-          { name: 'git reference', desc: 'git commands reference', link: 'https://git-scm.com/docs' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ photoshop
-
-      {
-        header: 'photoshop',
-        items: [
-          { name: '', desc: '', link: '' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ vs code
-
-      {
-        header: 'vs code',
-        items: [
-          { name: '', desc: '', link: '' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ chrome
-
-      {
-        header: 'chrome',
-        items: [
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ html
-
-    html: [
-
-  // <<{ html
-
-      {
-        header: 'html',
-        items: [
-          { name: 'tag reference', desc: 'tag reference', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element' },
-          { name: 'names values in <meta>', desc: 'standard names values in <meta>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name' },
-          { name: 'open graph', desc: 'protocol to create social graph objects from the page', link: 'https://ogp.me/' },
-          { name: 'rel values', desc: 'possible rel values in <link>, <a>, <area> and <form>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types' },
-          { name: 'preloading with rel="preload"', desc: 'how to start preloading resources early in the page lifecycle', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/preload' },
-          { name: 'Quirks Mode and Standards Mode', desc: 'browser modes to display content', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode' },
-          { name: 'Responsive images', desc: 'why and how use responsive images', link: 'https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images' },
-          { name: 'global attributes', desc: 'attributes common to all HTML elements', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes' },
-          { name: 'crossorigin', desc: 'crossorigin attribute for <link>, <img>, <video>, <audio> and <script>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ handlebars
-
-      {
-        header: 'handlebars',
-        items: [
-          { name: 'introduction', desc: 'about handlebars and its features', link: 'https://handlebarsjs.com/guide/' },
-          { name: 'expressions', desc: 'about expressions', link: 'https://handlebarsjs.com/guide/expressions.html' },
-          { name: 'partials', desc: 'about partials', link: 'https://handlebarsjs.com/guide/partials.html' },
-          { name: 'block helpers', desc: 'about block helpers', link: 'https://handlebarsjs.com/guide/block-helpers.html' },
-          { name: 'built-in helpers', desc: 'about built-in helpers', link: 'https://handlebarsjs.com/guide/builtin-helpers.html' },
-          { name: 'precompiling templates', desc: 'how to precompile templates', link: 'https://handlebarsjs.com/installation/precompilation.html' },
-          { name: 'api', desc: 'api reference', link: 'https://handlebarsjs.com/api-reference/' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ css
-
-    css: [
-
-  // <<{ css
-
-      {
-        header: 'css',
-        items: [
-          { name: 'css reference', desc: 'css reference', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#index' },
-          { name: 'at-rules', desc: 'css at-rules', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule' },
-          { name: 'cascade', desc: 'how to combine props from different sources', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade' },
-          { name: 'specificity', desc: 'selectors specificity when rules are matching', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity' },
-          { name: 'block formatting context', desc: 'about block formatting context', link: 'https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context' },
-          { name: 'z-stacking context', desc: 'stacking rules along z axis', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context' },
-          { name: 'containing block', desc: 'about element\'s containing block', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block' },
-          { name: 'basic box model', desc: 'basic box model for each element, rendered by browser', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model' },
-          { name: 'margin collapsing', desc: 'vertical margin collapsing', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing' },
-          { name: 'Flex layout', desc: 'about flex layout', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout' },
-          { name: 'Grid layout', desc: 'about Grid layout', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout' },
-          { name: 'specified value', desc: 'value that actually written in style sheet', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/specified_value' },
-          { name: 'computed value', desc: 'specified value after handling inherit/intial and converting relative values that don\'t depend on layout', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/computed_value' },
-          { name: 'used value', desc: 'computed value after converting relative values that depend on layout, like width, height, margin, padding', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/used_value' },
-          { name: 'actual value', desc: 'used value after making some local approximations, like rounding thickness of the border to the nearest integer', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/actual_value' },
-          { name: 'resolved value', desc: 'value returned by getComputedStyle() - computed value, but for some props (width, height) returns used value', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/resolved_value' },
-          { name: 'selectors', desc: 'css selectors', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors' },
-          { name: 'units', desc: 'css units and values', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Values_and_Units' },
-          { name: 'functions', desc: 'css functions', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions' },
-          { name: 'using media queries', desc: 'using media queries', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries' },
-          { name: 'using css variables', desc: 'using css custom properties', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties' },
-          { name: 'using overflow', desc: 'about overflow', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow' },
-          { name: 'using css transitions', desc: 'how to use css transitions', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions' },
-          { name: 'using css animation', desc: 'how to use animation', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations' },
-          { name: 'using css transforms', desc: 'how to use css transforms', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms' },
-          { name: 'using css shapes', desc: 'setting shape of a floating item', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes' },
-          { name: 'using css counters', desc: 'using counters to automatically number stuff', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ sass
-
-      {
-        header: 'sass',
+        header: 'mix',
         items: [
           { name: '', desc: '', link: '' },
         ]
@@ -1369,14 +1963,18 @@ const data = {
 
 // }>>
 
-// <<{ javascript
+// }>>
 
-    javascript: [
+// <<{ <javascript>
 
-  // <<{ javascript
+// <<{ javascript_mdn
+
+    javascript_mdn: [
+
+  // <<{ mix
 
       {
-        header: 'javascript',
+        header: 'mix',
         items: [
           { name: '', desc: '', link: '' },
         ]
@@ -1384,10 +1982,18 @@ const data = {
 
   // }>>
 
-  // <<{ DOM
+    ],
+
+// }>>
+
+// <<{ dom
+
+    dom: [
+
+  // <<{ mix
 
       {
-        header: 'DOM',
+        header: 'mix',
         items: [
           { name: 'EventTarget', desc: 'interface for receiving events and attaching listeners', link: 'https://developer.mozilla.org/en-US/docs/Web/API/EventTarget' },
           { name: 'Window', desc: 'interface for a browser window', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Window' },
@@ -1406,93 +2012,13 @@ const data = {
 
   // }>>
 
-  // <<{ typescript
+    ],
 
-      {
-        header: 'typescript',
-        items: [
-          { name: '', desc: '', link: '' },
-        ]
-      },
+// }>>
 
-  // }>>
+// <<{ js_api
 
-  // <<{ webpack
-
-      {
-        header: 'webpack',
-        items: [
-          { name: '', desc: '', link: '' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ react
-
-      {
-        header: 'react',
-        items: [
-          { name: '', desc: '', link: '' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ eslint
-
-      {
-        header: 'eslint',
-        items: [
-          { name: '', desc: '', link: '' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ babel
-
-      {
-        header: 'babel',
-        items: [
-          { name: '', desc: '', link: '' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ browser-sync
-
-      {
-        header: 'browser-sync',
-        items: [
-          { name: '', desc: '', link: '' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ browserify
-
-      {
-        header: 'browserify',
-        items: [
-          { name: '', desc: '', link: '' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ uglifyjs
-
-      {
-        header: 'uglifyjs',
-        items: [
-          { name: '', desc: '', link: '' },
-        ]
-      },
-
-  // }>>
+    js_api: [
 
   // <<{ Font Loading api
 
@@ -1723,14 +2249,58 @@ const data = {
 
 // }>>
 
-// <<{ nodejs
+// <<{ js_utilities
 
-    nodejs: [
+    js_utilities: [
 
-  // <<{ nodejs
+  // <<{ eslint
 
       {
-        header: 'nodejs',
+        header: 'eslint',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ babel
+
+      {
+        header: 'babel',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ browser-sync
+
+      {
+        header: 'browser-sync',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ browserify
+
+      {
+        header: 'browserify',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ uglifyjs
+
+      {
+        header: 'uglifyjs',
         items: [
           { name: '', desc: '', link: '' },
         ]
@@ -1742,14 +2312,14 @@ const data = {
 
 // }>>
 
-// <<{ php
+// <<{ typescript
 
-    php: [
+    typescript: [
 
-  // <<{ php
+  // <<{ mix
 
       {
-        header: 'php',
+        header: 'mix',
         items: [
           { name: '', desc: '', link: '' },
         ]
@@ -1761,14 +2331,86 @@ const data = {
 
 // }>>
 
-// <<{ servers
+// <<{ webpack
 
-    servers: [
+    webpack: [
 
-  // <<{ apache
+  // <<{ mix
 
       {
-        header: 'apache',
+        header: 'mix',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ react
+
+    react: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// }>>
+
+// <<{ <http>
+
+// <<{ http_mdn
+
+    http_mdn: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: 'HTTP overview', desc: 'about HTTP protocol', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview' },
+          { name: 'caching', desc: 'about HTTP caching', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching' },
+          { name: 'cookies', desc: 'about HTTP cookies', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies' },
+          { name: 'CORS', desc: 'about Cross-Origin Resource Sharing', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS' },
+          { name: 'CSP', desc: 'about Content Security Policy', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP' },
+          { name: 'HTTP versions', desc: 'about different HTTP versions', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP' },
+          { name: 'Requests and Responses', desc: 'about HTTP messages', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages' },
+          { name: 'typical HTTP session', desc: 'about typical HTTP session', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Session' },
+          { name: 'connection management in HTTP/1.x', desc: 'about connection management in HTTP/1.x', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x' },
+          { name: 'headers reference', desc: 'HTTP headers reference', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers' },
+          { name: 'methods reference', desc: 'HTTP methods reference', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods' },
+          { name: 'codes reference', desc: 'HTTP response status codes reference', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Status' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ apache
+
+    apache: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
         items: [
           { name: 'installation', desc: 'apache and php installation on Linux', link: 'https://medium.com/@bahadirmezgil/how-to-install-php-and-apache-on-linux-ubuntu-linux-mint-ea73a1c1c426' },
           { name: 'apache 2.4 documentation', desc: 'apache 2.4 documentation', link: 'https://httpd.apache.org/docs/2.4/' },
@@ -1778,10 +2420,18 @@ const data = {
 
   // }>>
 
-  // <<{ nginx
+    ],
+
+// }>>
+
+// <<{ nginx
+
+    nginx: [
+
+  // <<{ mix
 
       {
-        header: 'nginx',
+        header: 'mix',
         items: [
           { name: 'nginx documentation', desc: 'nginx documentation', link: 'https://nginx.org/en/docs/' },
         ]
@@ -1793,14 +2443,18 @@ const data = {
 
 // }>>
 
-// <<{ databases
+// }>>
 
-    databases: [
+// <<{ <nodejs>
 
-  // <<{ sql
+// <<{ nodejs
+
+    nodejs: [
+
+  // <<{ mix
 
       {
-        header: 'sql',
+        header: 'mix',
         items: [
           { name: '', desc: '', link: '' },
         ]
@@ -1812,33 +2466,236 @@ const data = {
 
 // }>>
 
-// <<{ services
+// }>>
 
-    services: [
+// <<{ <php>
 
-  // <<{ fonts
+// <<{ php
+
+    php: [
+
+  // <<{ mix
 
       {
-        header: 'fonts',
+        header: 'mix',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// }>>
+
+// <<{ <databases>
+
+// <<{ sql_w3school
+
+    sql_w3school: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// }>>
+
+// <<{ <CRM>
+
+// <<{ bitrix24
+
+    bitrix24: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: 'bitrix24', desc: 'bitrix24 admin page', link: 'https://uborshchiki.bitrix24.ua/stream/' },
+          { name: 'helpdesk', desc: 'bitrix24 helpdesk', link: 'https://helpdesk.bitrix24.ru/' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// }>>
+
+// <<{ <mix>
+
+// <<{ computer_science
+
+    computer_science: [
+
+  // <<{ binary numbers
+
+      {
+        header: 'binary numbers',
+        items: [
+          { name: 'Обратный код', desc: 'чтобы записать отрицательное число, нужно перевернуть все разряды', link: 'https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%80%D0%B0%D1%82%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D0%B4' },
+          { name: 'Дополнительный код', desc: 'чтобы записать отрицательное число, нужно перевернуть все разряды и прибавить 1', link: 'https://ru.wikipedia.org/wiki/%D0%94%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D0%B4' },
+          { name: 'Перевод в разные системы исчисления', desc: 'Перевод в разные системы исчисления', link: 'https://programforyou.ru/calculators/number-systems' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ security
+
+    security: [
+
+  // <<{ Mozilla web security
+
+      {
+        header: 'Mozilla web security',
+        items: [
+          { name: 'Mozilla web security guidelines', desc: 'Mozilla web security guidelines', link: 'https://infosec.mozilla.org/guidelines/web_security' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ translators
+
+    translators: [
+
+  // <<{ Google translator
+
+      {
+        header: 'Google translator',
+        items: [
+          { name: 'google переводчик', desc: 'google переводчик', link: 'https://translate.google.com/?hl=ru' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ PWA
+
+    pwa: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: 'PWA', desc: 'progressive web apps guide', link: 'https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ windows
+
+    windows: [
+
+  // <<{ optimization
+
+      {
+        header: 'optimization',
+        items: [
+          { name: 'оптимизация и ускорение работы windows', desc: 'оптимизация и ускорение работы windows', link: 'https://sysadmintips.ru/vyzhimaem-iz-windows-10-maksimum-optimizatsiya-sistemy.html' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ fonts_and_icons
+
+    fonts_and_icons: [
+
+  // <<{ google fonts
+
+      {
+        header: 'google fonts',
         items: [
           { name: 'google fonts', desc: 'google fonts', link: 'https://fonts.google.com/' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ fontsquirrel
+
+      {
+        header: 'fontsquirrel',
+        items: [
           { name: 'fontsquirrel', desc: 'download free fonts', link: 'https://www.fontsquirrel.com/' },
         ]
       },
 
   // }>>
 
-  // <<{ icons
+  // <<{ font awesome
 
       {
-        header: 'icons',
+        header: 'font awesome',
         items: [
           { name: 'font awesome cheetsheet', desc: 'font awesome cheetsheet', link: 'https://fontawesome.com/v5/cheatsheet' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ icofont
+
+      {
+        header: 'icofont',
+        items: [
           { name: 'icofont cheetsheet', desc: 'icofont cheetsheet', link: 'https://icofont.com/icons' },
         ]
       },
 
   // }>>
+
+    ],
+
+// }>>
+
+// }>>
+
+
+
+// <<{ services
+
+    services: [
 
   // <<{ chars
 
@@ -1852,588 +2709,13 @@ const data = {
 
   // }>>
 
-  // <<{ number translation
-
-      {
-        header: 'number translation',
-        items: [
-          { name: 'Перевод в разные системы исчисления', desc: 'Перевод в разные системы исчисления', link: 'https://programforyou.ru/calculators/number-systems' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ github
-
-      {
-        header: 'github',
-        items: [
-          { name: '', desc: '', link: '' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ translators
-
-      {
-        header: 'translators',
-        items: [
-          { name: 'google переводчик', desc: 'google переводчик', link: 'https://translate.google.com/?hl=ru' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ bitrix24
-
-      {
-        header: 'bitrix24',
-        items: [
-          { name: 'bitrix24', desc: 'bitrix24 admin page', link: 'https://uborshchiki.bitrix24.ua/stream/' },
-          { name: 'helpdesk', desc: 'bitrix24 helpdesk', link: 'https://helpdesk.bitrix24.ru/' },
-        ]
-      },
-
-  // }>>
-
     ],
 
 // }>>
 
-// <<{ <books>
 
-// <<{ shotts_linux_command_line
 
-    shotts_linux_command_line: [
 
-  // <<{ командная оболочка
-
-      {
-        header: 'командная оболочка',
-        items: [
-          { name: 'что такое командная строка', desc: 'что такое командная строка и эмуляторы терминалов', link: `${books.shotts_command_line}#page=26` },
-          { name: 'консоль за кулисами', desc: 'о сеансах терминалов за ширмой рабочего стола и как между ними переключаться', link: `${books.shotts_command_line}#page=29` },
-          { name: 'оболочка входа и простая оболочка', desc: '2 типа сеансов работы с оболочкой', link: `${books.shotts_command_line}#page=137` },
-          { name: 'горячие клавиши оболочки', desc: 'горячие клавиши оболочки', link: `${books.shotts_command_line}#page=94` },
-          { name: 'автодополнение с помощью tab', desc: 'автодополненине с помощью tab', link: `${books.shotts_command_line}#page=95` },
-          { name: 'script', desc: 'запись в файл сеансов работы с оболочкой', link: `${books.shotts_command_line}#page=100` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ подстановка в командной оболочке
-
-      {
-        header: 'подстановка в командной оболочке',
-        items: [
-          { name: 'wildcards для имен файлов', desc: 'групповые символы и классы символов', link: `${books.shotts_command_line}#page=46` },
-          { name: 'подстановка путей и имен файлов', desc: 'подстановка результатов вместо wildcards перед выполнением команды', link: `${books.shotts_command_line}#page=82` },
-          { name: 'подстановка арифметических выражений', desc: 'подстановка результатов арифметических выражений', link: `${books.shotts_command_line}#page=85` },
-          { name: 'подстановка множества из {}', desc: 'подстановка множества из фигурных скобок', link: `${books.shotts_command_line}#page=86` },
-          { name: 'подстановка вывода команд', desc: 'подстановка stdout команды с помощью ${}', link: `${books.shotts_command_line}#page=87` },
-          { name: 'подстановка команды из истории', desc: 'подстановка команды из истории', link: `${books.shotts_command_line}#page=99` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ экранирование
-
-      {
-        header: 'экранирование',
-        items: [
-          { name: 'экранирование с помощью двойных кавычек', desc: 'все спецсимволы кроме $, /, ` теряют значение', link: `${books.shotts_command_line}#page=89` },
-          { name: 'экранирование с помощью одиночных кавычек', desc: 'все спецсимволы теряют значение', link: `${books.shotts_command_line}#page=90` },
-          { name: 'экранирование символов с помощью \\', desc: 'экранирование одного символа', link: `${books.shotts_command_line}#page=91` },
-          { name: 'спецсимволы \\n,\\r, \\t', desc: 'использование спецсимволов в командах', link: `${books.shotts_command_line}#page=92` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ перенаправления ввода/вывода
-
-      {
-        header: 'перенаправления ввода/вывода',
-        items: [
-          { name: 'stdin, stdout, stderr', desc: 'немного о стандартных вводах и выводах', link: `${books.shotts_command_line}#page=70` },
-          { name: 'перенаправление stdout', desc: 'как перенаправить stdout в файл', link: `${books.shotts_command_line}#page=71` },
-          { name: 'перенаправление stderr', desc: 'как перенаправить stderr в файл', link: `${books.shotts_command_line}#page=72` },
-          { name: 'перенаправление stdout и stderr', desc: 'как перенаправить stdout вместе с stderr в файл', link: `${books.shotts_command_line}#page=73` },
-          { name: 'перенаправление в /dev/null', desc: 'как избавиться от нежелательного вывода', link: `${books.shotts_command_line}#page=73` },
-          { name: 'перенаправление stdin', desc: 'как перенаправить stdin в файл', link: `${books.shotts_command_line}#page=75` },
-          { name: 'оператор перенаправления <', desc: 'изменение ввода, вместо stdin - файл', link: `${books.shotts_command_line}#page=76` },
-          { name: 'piping', desc: 'перенаправление вывода команды на ввод другой команды', link: `${books.shotts_command_line}#page=76` },
-          { name: 'tee', desc: 'получает данные с stdin и передает одновременно в stdout и в файл', link: `${books.shotts_command_line}#page=79` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ конфигурация командной оболочки
-
-      {
-        header: 'конфигурация командной оболочки',
-        items: [
-          { name: 'source .bashrc', desc: 'выполнить .bashrc в текущем сеансе оболочки', link: `${books.shotts_command_line}#page=144` },
-          { name: 'alias', desc: 'создание псеводнимов', link: `${books.shotts_command_line}#page=68` },
-          { name: 'спецсимволы, используемые в $PS1', desc: 'экранированные последовательности, используемые в строке приглашения', link: `${books.shotts_command_line}#page=164` },
-          { name: 'спецсимволы цвета, используемые в $PS1', desc: 'экранированные последовательности цвета, используемые в строке приглашения', link: `${books.shotts_command_line}#page=167` },
-          { name: 'спецсимолы позиции курсора, используемые в $PS1', desc: 'экранированные последовательности позиции курсора, используемые в строке приглашения', link: `${books.shotts_command_line}#page=169` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ переменные окружения
-
-      {
-        header: 'переменные окружения',
-        items: [
-          { name: 'printenv', desc: 'вывод переменных окружения', link: `${books.shotts_command_line}#page=135` },
-          { name: 'set', desc: 'вывод переменных окружения и оболочки и установка их значений', link: `${books.shotts_command_line}#page=135` },
-          { name: 'некоторые переменные окружения', desc: 'некоторые переменные окружения', link: `${books.shotts_command_line}#page=136` },
-          { name: 'export', desc: 'сделать содержимое переменной доступным дочерним процессам этой оболочки', link: `${books.shotts_command_line}#page=140` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ информация о командах
-
-      {
-        header: 'информация о командах',
-        items: [
-          { name: 'что такое команды', desc: 'про разные типы команд', link: `${books.shotts_command_line}#page=60` },
-          { name: 'type', desc: 'определение типа команды', link: `${books.shotts_command_line}#page=61` },
-          { name: 'which', desc: 'определение местоположения исполняемого файла', link: `${books.shotts_command_line}#page=61` },
-          { name: 'help', desc: 'получение справки для встроенных комманд (cd)', link: `${books.shotts_command_line}#page=62` },
-          { name: 'man', desc: 'вывод одностраничного справочника для команды', link: `${books.shotts_command_line}#page=63` },
-          { name: 'apropos', desc: 'поиск команды по ключевому слову в описании', link: `${books.shotts_command_line}#page=65` },
-          { name: 'whatis', desc: 'вывод однострочного описания команды', link: `${books.shotts_command_line}#page=66` },
-          { name: 'info', desc: 'вывод многостраничного справочника для команды', link: `${books.shotts_command_line}#page=66` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ файловая система
-
-      {
-        header: 'файловая система',
-        items: [
-          { name: 'об именах файлов', desc: 'некоторые факты об именах файлов', link: `${books.shotts_command_line}#page=34` },
-          { name: 'структура каталогов linux', desc: 'структура каталогов linux', link: `${books.shotts_command_line}#page=41` },
-          { name: 'немного про inode', desc: 'что такое inode и как его посмотреть', link: `${books.shotts_command_line}#page=56` },
-          { name: 'pwd', desc: 'о команде print working directory', link: `${books.shotts_command_line}#page=31` },
-          { name: 'cd', desc: 'о команде change current working directory', link: `${books.shotts_command_line}#page=33` },
-          { name: 'ls', desc: 'о команде list files', link: `${books.shotts_command_line}#page=35` },
-          { name: 'ls -l', desc: 'поля формата ls -l', link: `${books.shotts_command_line}#page=38` },
-          { name: 'file', desc: 'определение типа файла', link: `${books.shotts_command_line}#page=38` },
-          { name: 'mkdir', desc: 'создание каталогов', link: `${books.shotts_command_line}#page=48` },
-          { name: 'cp', desc: 'копирование файлов', link: `${books.shotts_command_line}#page=48` },
-          { name: 'mv', desc: 'перемещение файлов', link: `${books.shotts_command_line}#page=49` },
-          { name: 'rm', desc: 'удаление файлов', link: `${books.shotts_command_line}#page=50` },
-          { name: 'ln', desc: 'о жестких и симолических ссылках и их создании', link: `${books.shotts_command_line}#page=52` },
-          { name: 'touch', desc: 'создание нового файла или обновление времени модификации', link: `${books.shotts_command_line}#page=226` },
-          { name: 'stat', desc: 'полная информация о файле', link: `${books.shotts_command_line}#page=226` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ содержимое файлов
-
-      {
-        header: 'содержимое файлов',
-        items: [
-          { name: 'что такое текст', desc: 'что такое текст, редакторы и текстовые процессоры', link: `${books.shotts_command_line}#page=39` },
-          { name: 'less', desc: 'просмотр содержимого файла', link: `${books.shotts_command_line}#page=39` },
-          { name: 'cat', desc: 'показать содержимое файлов в stdout', link: `${books.shotts_command_line}#page=74` },
-          { name: 'head/tail', desc: 'вывод первых/последних n строк содержимого файла', link: `${books.shotts_command_line}#page=78` },
-          { name: 'sort', desc: 'сортировка результатов выводы', link: `${books.shotts_command_line}#page=76` },
-          { name: 'uniq', desc: 'поиск или удаление повторяющихся строк', link: `${books.shotts_command_line}#page=77` },
-          { name: 'wc', desc: 'cчетчик строк, слов, символов, байтов', link: `${books.shotts_command_line}#page=77` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ разрешения файлов
-
-      {
-        header: 'разрешения файлов',
-        items: [
-          { name: 'подробнее о -rwxrw-r--', desc: 'подробнее о типах файлов и привелегиях', link: `${books.shotts_command_line}#page=104` },
-          { name: 'восмеричные и двоичные маски привелегий', desc: 'изменение режима доступа к файлу', link: `${books.shotts_command_line}#page=107` },
-          { name: 'umask', desc: 'показать/установить разрашенеия по умолчанию для новых файлов', link: `${books.shotts_command_line}#page=109` },
-          { name: 'разрешения setuid, setgid, sticky bit', desc: 'об установке специальных разрешений', link: `${books.shotts_command_line}#page=111` },
-          { name: 'chmod', desc: 'изменение режима доступа к файлу', link: `${books.shotts_command_line}#page=105` },
-          { name: 'chown', desc: 'изменение владельца и группы файла', link: `${books.shotts_command_line}#page=115` },
-          { name: 'chgrp', desc: 'изменение группы файла', link: `${books.shotts_command_line}#page=116` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ пользователи
-
-      {
-        header: 'пользователи',
-        items: [
-          { name: 'id', desc: 'идентификаторы пользователя и групп куда он входит', link: `${books.shotts_command_line}#page=102` },
-          { name: 'способы сменить пользователя', desc: '3 способа как сменить пользователя', link: `${books.shotts_command_line}#page=112` },
-          { name: 'su', desc: 'запуск нового сеанса оболочки от имени другого пользователя', link: `${books.shotts_command_line}#page=112` },
-          { name: 'sudo', desc: 'выполнение команды от имени другого пользователя', link: `${books.shotts_command_line}#page=113` },
-          { name: 'passwd', desc: 'изменение пароля', link: `${books.shotts_command_line}#page=118` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ поиск
-
-      {
-        header: 'поиск',
-        items: [
-          { name: 'поиск в истории', desc: 'поиск в истории команд', link: `${books.shotts_command_line}#page=97` },
-          { name: 'locate', desc: 'поиск файлов по имени в базе данных файлов, которая обновляется раз в сутки программой updatedb', link: `${books.shotts_command_line}#page=214` },
-          { name: 'find', desc: 'поиск файлов в указаном каталоге по параметрам -type, -name, -size и т.д.', link: `${books.shotts_command_line}#page=216` },
-          { name: 'операторы find', desc: 'логические операторы при задании параметров в find, по умолчанию -and ', link: `${books.shotts_command_line}#page=220` },
-          { name: 'операции find', desc: 'операции с найденными файлами, по умолчанию -print', link: `${books.shotts_command_line}#page=222` },
-          { name: 'xargs', desc: 'преобразует вводные данные в список параметров указанной команды', link: `${books.shotts_command_line}#page=225` },
-          { name: 'использование null character в find/xargs', desc: 'использование null character в find/xargs', link: `${books.shotts_command_line}#page=225` },
-          { name: 'grep', desc: 'поиск по регулярному выражению', link: `${books.shotts_command_line}#page=245` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ regexp
-
-      {
-        header: 'regexp',
-        items: [
-          { name: 'posix regexp - любой символ', desc: 'любой 1 символ - точка (.)', link: `${books.shotts_command_line}#page=247` },
-          { name: 'posix regexp - начало/конец строки', desc: 'начало/конец строки - ^, $', link: `${books.shotts_command_line}#page=248` },
-          { name: 'словарь в linux', desc: 'словари в linux и поиск слов в них', link: `${books.shotts_command_line}#page=248` },
-          { name: 'posix regexp - диапазон символов', desc: 'диапазон символов - [abc]', link: `${books.shotts_command_line}#page=249` },
-          { name: 'posix regexp - классы символов', desc: 'классы символов - [[:word:]]', link: `${books.shotts_command_line}#page=251` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ процессы
-
-      {
-        header: 'процессы',
-        items: [
-          { name: 'как действует процесс', desc: 'что такое процесс и как он действует', link: `${books.shotts_command_line}#page=120` },
-          { name: 'ps', desc: 'просмотр списка процессов', link: `${books.shotts_command_line}#page=121` },
-          { name: 'top', desc: 'просмотр состояния процессов в динамике', link: `${books.shotts_command_line}#page=123` },
-          { name: 'command &', desc: 'перевод процессa в фоновый режим при запуске', link: `${books.shotts_command_line}#page=126` },
-          { name: 'jobs', desc: 'список процессов, переведенных в фоновый режим', link: `${books.shotts_command_line}#page=127` },
-          { name: 'fg', desc: 'перевод процесса на передний план', link: `${books.shotts_command_line}#page=127` },
-          { name: 'приостановка процесса', desc: 'перевод процесса в фоновый режим во время его работы', link: `${books.shotts_command_line}#page=128` },
-          { name: 'bg', desc: 'перевод процесса в фоновый режим', link: `${books.shotts_command_line}#page=128` },
-          { name: 'kill', desc: 'посылание сигналов процессам', link: `${books.shotts_command_line}#page=129` },
-          { name: 'сигналы, посылаемые процессам', desc: 'часто используемые сигналы, посылаемые процессам с помощью kill или горячих клавиш', link: `${books.shotts_command_line}#page=129` },
-          { name: 'killall', desc: 'посылание сигналов нескольним процессам', link: `${books.shotts_command_line}#page=131` },
-          { name: 'pstree', desc: 'выводит список процессов в древовидной форме', link: `${books.shotts_command_line}#page=132` },
-          { name: 'vmstat', desc: 'снэпшот использования системных ресурсов', link: `${books.shotts_command_line}#page=132` },
-          { name: 'xload', desc: 'изменение нагрузки на систему с течением времени', link: `${books.shotts_command_line}#page=132` },
-          { name: 'tload', desc: 'график изменения нагрузки на систему с течением времени', link: `${books.shotts_command_line}#page=132` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ устройства
-
-      {
-        header: 'устройства',
-        items: [
-          { name: 'монтирование устройств', desc: 'про монтирование и про файл /etc/fstab, где перечисляются устройства, монтируемые на этапе загрузки', link: `${books.shotts_command_line}#page=183` },
-          { name: 'mount', desc: 'монтирование файловых систем и просмотр списка уже смотнированых', link: `${books.shotts_command_line}#page=184` },
-          { name: 'umount', desc: 'размонтирование подключенных файловых систем', link: `${books.shotts_command_line}#page=186` },
-          { name: 'почему важно размонтировать устройства', desc: 'о буферах между устройством и операционной системой', link: `${books.shotts_command_line}#page=187` },
-          { name: 'определение названия устройства', desc: 'определения названия устройства с помощью простмотра логов при его подключении', link: `${books.shotts_command_line}#page=188` },
-          { name: 'fsdisk', desc: 'управление разделами на устройствах хранения', link: `${books.shotts_command_line}#page=191` },
-          { name: 'mkfs', desc: 'создание новой файловой системы', link: `${books.shotts_command_line}#page=193` },
-          { name: 'fsck', desc: 'проверка файловой системы на целостность', link: `${books.shotts_command_line}#page=194` },
-          { name: 'dd', desc: 'копирование блоков данных из одного места в другое', link: `${books.shotts_command_line}#page=196` },
-          { name: 'создание iso образа диска', desc: 'создание iso образа с помощью dd', link: `${books.shotts_command_line}#page=196` },
-          { name: 'genisoimage', desc: 'создание iso образа из каталога', link: `${books.shotts_command_line}#page=197` },
-          { name: 'монтирование iso образов', desc: 'монтирование локальных образов как устрoйства', link: `${books.shotts_command_line}#page=198` },
-          { name: 'wodim', desc: 'очистка компакт-диска и запись на него образов', link: `${books.shotts_command_line}#page=198` },
-          { name: 'md5sum', desc: 'контрольная сумма устройства/образа', link: `${books.shotts_command_line}#page=199` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ сеть
-
-      {
-        header: 'сеть',
-        items: [
-          { name: 'ping', desc: 'проверка соединения с помощью отсылки ICMP сообщения ECHO_REQUEST', link: `${books.shotts_command_line}#page=201` },
-          { name: 'traceroute', desc: 'трассировка маршрутизаторов на пути к целевому адресу', link: `${books.shotts_command_line}#page=202` },
-          { name: 'netstat', desc: 'просмотр параметров сети', link: `${books.shotts_command_line}#page=203` },
-          { name: 'ftp', desc: 'передача файлов по ftp', link: `${books.shotts_command_line}#page=205` },
-          { name: 'wget', desc: 'загрузчик файлов и содержимого сайтов', link: `${books.shotts_command_line}#page=207` },
-          { name: 'ssh', desc: 'шифрованное взаимодействие с удаленными хостами', link: `${books.shotts_command_line}#page=208` },
-          { name: 'scp', desc: 'шифрованное копирование файлов с удаленного хоста', link: `${books.shotts_command_line}#page=212` },
-          { name: 'sftp', desc: 'шифрованная передача файлов по ftp', link: `${books.shotts_command_line}#page=212` },
-          { name: 'rsync', desc: 'синхронизация файлов с удаленной системой', link: `${books.shotts_command_line}#page=240` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ архивация
-
-      {
-        header: 'архивация',
-        items: [
-          { name: 'gzip/gunzip', desc: 'сжатие/восстановление сжатых файлов', link: `${books.shotts_command_line}#page=230` },
-          { name: 'bzip2/bunzip2', desc: 'сжатие/восстановление сжатых файлов с более высокой степенью, чем gzip', link: `${books.shotts_command_line}#page=232` },
-          { name: 'что будет, если сжать уже сжатый файл', desc: 'что будет, если сжать уже сжатый файл', link: `${books.shotts_command_line}#page=233` },
-          { name: 'tar', desc: 'архивирование файлов', link: `${books.shotts_command_line}#page=233` },
-          { name: 'zip/unzip', desc: 'архивирование и сжатие/восстановление файлов', link: `${books.shotts_command_line}#page=238` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ mix
-
-      {
-        header: 'mix',
-        items: [
-
-          { name: 'posix regexp - BRE и ERE', desc: 'простые и расширенные регулярные выражения', link: `${books.shotts_command_line}#page=254` },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ bash_manual
-
-    bash_manual: [
-
-  // <<{ mix
-
-      {
-        header: 'mix',
-        items: [
-          { name: 'what is shell and bash', desc: 'about bash and shell', link: `${books.bash_manual}#page=7` },
-          { name: 'escape character \\', desc: 'preserves the literal value of the next character', link: `${books.bash_manual}#page=12` },
-          { name: 'escape with single quotes', desc: 'preserves the literal value of each character within', link: `${books.bash_manual}#page=12` },
-          { name: 'escape with double quotes', desc: 'preserves the literal value of each character, except $, \', \\', link: `${books.bash_manual}#page=12` },
-          { name: 'ANSI-C quoting', desc: 'special chars inside $\'...\', for example - $\'\\n\' expands to new line', link: `${books.bash_manual}#page=12` },
-          { name: 'piplines', desc: 'about piping commands', link: `${books.bash_manual}#page=14` },
-          { name: 'listing commands', desc: 'listing commands with ;, && and ||', link: `${books.bash_manual}#page=15` },
-          { name: 'looping', desc: 'using for, while, until', link: `${books.bash_manual}#page=16` },
-          { name: 'conditionals', desc: 'using if, case, select', link: `${books.bash_manual}#page=17` },
-          { name: 'grouping commands', desc: 'grouping commands with () and {}', link: `${books.bash_manual}#page=21` },
-          { name: 'coprocesses', desc: 'executed asynchronously in a subshell', link: `${books.bash_manual}#page=21` },
-          { name: 'parallel', desc: 'run commands in parallel', link: `${books.bash_manual}#page=22` },
-          { name: 'functions', desc: 'about shell functions', link: `${books.bash_manual}#page=24` },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ progit
-
-    progit: [
-
-  // <<{ about git
-
-      {
-        header: 'about git',
-        items: [
-          { name: 'local vcs', desc: 'about local version control systems', link: `${books.progit}#page=14` },
-          { name: 'centralized vcs', desc: 'about cetralized version control systems', link: `${books.progit}#page=15` },
-          { name: 'distributed vcs', desc: 'about distributed version control systems', link: `${books.progit}#page=16` },
-          { name: 'what is git', desc: 'what is git in a nutshell', link: `${books.progit}#page=18` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ configuration
-
-      {
-        header: 'configuration',
-        items: [
-          { name: 'config files', desc: 'where are git config files and how to write in them', link: `${books.progit}#page=25` },
-          { name: 'config user', desc: 'config name and email', link: `${books.progit}#page=26` },
-          { name: 'config editor', desc: 'config default editor for typing messages', link: `${books.progit}#page=26` },
-          { name: 'config default branch name', desc: 'config default default branch name instead of master', link: `${books.progit}#page=27` },
-          { name: 'config list settings', desc: 'check your config settings', link: `${books.progit}#page=27` },
-          { name: 'git aliases', desc: 'creating aliases for commands', link: `${books.progit}#page=67` },
-          { name: '.gitignore', desc: 'about .gitignore', link: `${books.progit}#page=36` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ repository
-
-      {
-        header: 'repository',
-        items: [
-          { name: 'initialize repository', desc: 'initialize repository with init', link: `${books.progit}#page=30` },
-          { name: 'cloning repository', desc: 'cloning repository with clone', link: `${books.progit}#page=31` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ checking info
-
-      {
-        header: 'checking info',
-        items: [
-          { name: 'check file status', desc: 'check file status with git status', link: `${books.progit}#page=32` },
-          { name: 'short status', desc: 'about git status -s', link: `${books.progit}#page=35` },
-          { name: 'viewwing staged and unstaged changes', desc: 'about git diff', link: `${books.progit}#page=37` },
-          { name: 'viewing commit history', desc: 'about git log', link: `${books.progit}#page=44` },
-          { name: 'options for git log', desc: 'options for git log', link: `${books.progit}#page=49` },
-          { name: 'options for limit output in git log', desc: 'options for limit output in git log', link: `${books.progit}#page=50` },
-          { name: 'specifiers for git log --pretty=format', desc: 'specifiers for git log --pretty=format', link: `${books.progit}#page=48` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ staging
-
-      {
-        header: 'staging',
-        items: [
-          { name: 'about tracked and untracked files', desc: 'about tracked and untracked files', link: `${books.progit}#page=32` },
-          { name: 'add new files', desc: 'add files with git add', link: `${books.progit}#page=33` },
-          { name: 'unstage a staged file (reset)', desc: 'about git reset HEAD <file>', link: `${books.progit}#page=52` },
-          { name: 'unstage a staged filr (restore)', desc: 'about git restore --staged <file>', link: `${books.progit}#page=54` },
-          { name: 'unmodify a modified file (checkout)', desc: 'about git checkout -- <file>', link: `${books.progit}#page=53` },
-          { name: 'unmodify a modified file (restore)', desc: 'about git restore <file>', link: `${books.progit}#page=55` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ commiting
-
-      {
-        header: 'commiting',
-        items: [
-          { name: 'commiting', desc: 'about git commit', link: `${books.progit}#page=40` },
-          { name: 'skipping staging area', desc: 'about git commit -a', link: `${books.progit}#page=42` },
-          { name: 'uncommit', desc: 'about git commit --amend', link: `${books.progit}#page=51` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ remotes
-
-      {
-        header: 'remotes',
-        items: [
-          { name: 'showing remotes', desc: 'about git remote -v', link: `${books.progit}#page=56` },
-          { name: 'adding remotes', desc: 'about git remote add <shortname> <url>', link: `${books.progit}#page=57` },
-          { name: 'fetching from remotes', desc: 'about git fetch <remote> and git pull', link: `${books.progit}#page=58` },
-          { name: 'pushing to remotes', desc: 'about git push <remote> <branch>', link: `${books.progit}#page=58` },
-          { name: 'info about remotes', desc: 'about git remote show <remote>', link: `${books.progit}#page=59` },
-          { name: 'renaming remotes', desc: 'about git remote rename <old> <new>', link: `${books.progit}#page=60` },
-          { name: 'delete remotes', desc: 'about git remote remove <remote>', link: `${books.progit}#page=60` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ branches
-
-      {
-        header: 'branches',
-        items: [
-          { name: 'branches in a nutshell', desc: 'branches in a nutshell', link: `${books.progit}#page=69` },
-          { name: 'creating branch', desc: 'about git branch <name>', link: `${books.progit}#page=71` },
-          { name: 'switching branches', desc: 'about git checkout <branch>', link: `${books.progit}#page=72` },
-          { name: 'git switch', desc: 'about git switch', link: `${books.progit}#page=76` },
-          { name: 'merging', desc: 'about git merge <branch>', link: `${books.progit}#page=81` },
-          { name: 'deleting branch', desc: 'about git branch -d <name>', link: `${books.progit}#page=82` },
-          { name: 'merge conflicts', desc: 'about merge conflicts', link: `${books.progit}#page=82` },
-          { name: 'list branches', desc: 'about git branch', link: `${books.progit}#page=85` },
-          { name: 'rename branch', desc: 'about git branch --move <oldname> <newname>', link: `${books.progit}#page=87` },
-          { name: 'about remote branches', desc: 'about remote branches', link: `${books.progit}#page=92` },
-          { name: 'pushing branch', desc: 'about git push <remote> <branch>', link: `${books.progit}#page=97` },
-          { name: 'tracking remote branches', desc: 'about git checkout --track <remote>/<branch>', link: `${books.progit}#page=99` },
-          { name: 'delete remote branch', desc: 'about git push <remote> --delete <branch>', link: `${books.progit}#page=100` },
-          { name: 'rabasing', desc: 'about git rebase <branch>', link: `${books.progit}#page=101` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ tags
-
-      {
-        header: 'tags',
-        items: [
-          { name: 'showing tags', desc: 'about git tag', link: `${books.progit}#page=61` },
-          { name: 'creating annotated tags', desc: 'about git tag -a <name> -m <message>', link: `${books.progit}#page=62` },
-          { name: 'creating lightweight tags', desc: 'about git tag <name>', link: `${books.progit}#page=63` },
-          { name: 'tagging commit', desc: 'about git tag -a <name> <commit>', link: `${books.progit}#page=64` },
-          { name: 'pushing tags to remotes', desc: 'about git push <remote> <tagname>', link: `${books.progit}#page=64` },
-          { name: 'deleting tags', desc: 'about git tag -d <name>', link: `${books.progit}#page=65` },
-          { name: 'checkout tags', desc: 'about git checkout <tagname>', link: `${books.progit}#page=66` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ working with filesystem
-
-      {
-        header: 'working with filesystem',
-        items: [
-          { name: 'removing files', desc: 'about git rm', link: `${books.progit}#page=42` },
-          { name: 'moving files', desc: 'about git mv', link: `${books.progit}#page=43` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ mix
-
-      {
-        header: 'mix',
-        items: [
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// }>>
 
   },
 
