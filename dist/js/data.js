@@ -12,11 +12,11 @@ const data = {
   menu: {
 
     'network': {
-      'Созыкин - компьютерные сети': 'sozykin_kompyuternie_seti_video',
+      'mix': 'network_mix',
     },
 
     'linux': {
-      'linux utilities': 'linux_utilities',
+      'utilities': 'linux_utilities',
       'shotts - linux command line': 'shotts_linux_command_line_book',
       'bash manual': 'bash_manual_book',
       'mix': 'linux_mix',
@@ -25,22 +25,26 @@ const data = {
     'git': {
       'reference': 'git_reference',
       'progit book': 'progit_book',
+      'mix': 'git_mix',
     },
 
     'vim': {
       'vim reference book': 'vim_reference_book',
       'vimscript the hard way book': 'vimscript_the_hard_way_book',
       'plugins': 'vim_plugins',
+      'mix': 'vim_mix',
     },
 
     'html': {
       'html': 'html_mdn',
       'handlebars': 'handlebars',
+      'mix': 'html_mix',
     },
 
     'css': {
       'css': 'css_mdn',
       'sass': 'sass',
+      'mix': 'css_mix',
     },
 
     'javascript': {
@@ -51,29 +55,37 @@ const data = {
       'typescript': 'typescript',
       'webpack': 'webpack',
       'react': 'react',
+      'mix': 'js_mix',
     },
 
     'http': {
       'http': 'http_mdn',
       'apache': 'apache',
       'nginx': 'nginx',
+      'mix': 'http_mix',
     },
 
     'nodejs': {
       'nodejs': 'nodejs',
+      'mix': 'nodejs_mix',
     },
 
     'php': {
       'php': 'php',
+      'mix': 'php_mix',
     },
 
     'databases': {
       'sql w3school': 'sql_w3school',
+      'mix': 'db_mix',
     },
 
     'CRM': {
       'bitrix24': 'bitrix24',
+      'mix': 'crm_mix',
     },
+
+    'mix': 'mix',
 
   },
 
@@ -85,14 +97,14 @@ const data = {
 
 // <<{ <network>
 
-// <<{ sozykin_kompyuternie_seti_video
+// <<{ network_mix
 
-    sozykin_kompyuternie_seti_video: [
+    network_mix: [
 
-  // <<{ mix
+  // <<{ Созыкин - Компьютерные сети
 
       {
-        header: 'mix',
+        header: 'Созыкин - Компьютерные сети',
         items: [
           { name: 'Классификация сетей', desc: 'классификация сетей', link: 'https://www.youtube.com/watch?v=Y4LK1OZ54h0&list=PLtPJ9lKvJ4oiNMvYbOzCmWy6cRzYAh9B1' },
           { name: 'Топология сетей', desc: 'топология сетей', link: 'https://www.youtube.com/watch?v=z8VmkYahV8M&list=PLtPJ9lKvJ4oiNMvYbOzCmWy6cRzYAh9B1&index=4' },
@@ -635,17 +647,6 @@ const data = {
 
     linux_mix: [
 
-  // <<{ mix
-
-      {
-        header: 'mix',
-        items: [
-          { name: '', desc: '', link: '' },
-        ]
-      },
-
-  // }>>
-
     ],
 
 // }>>
@@ -845,6 +846,14 @@ const data = {
       },
 
   // }>>
+
+    ],
+
+// }>>
+
+// <<{ git_mix
+
+    git_mix: [
 
     ],
 
@@ -1305,6 +1314,25 @@ const data = {
           { name: 'built-in helpers', desc: 'about built-in helpers', link: 'https://handlebarsjs.com/guide/builtin-helpers.html' },
           { name: 'precompiling templates', desc: 'how to precompile templates', link: 'https://handlebarsjs.com/installation/precompilation.html' },
           { name: 'api', desc: 'api reference', link: 'https://handlebarsjs.com/api-reference/' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ html_mix
+
+    html_mix: [
+
+  // <<{ opengraph
+
+      {
+        header: 'opengraph',
+        items: [
+          { name: 'open graph', desc: 'social graph protocol', link: 'https://ogp.me/' },
         ]
       },
 
@@ -1963,6 +1991,15 @@ const data = {
 
 // }>>
 
+// <<{ css_mix
+
+    css_mix: [
+
+
+    ],
+
+// }>>
+
 // }>>
 
 // <<{ <javascript>
@@ -2369,6 +2406,15 @@ const data = {
 
 // }>>
 
+// <<{ js_mix
+
+    js_mix: [
+
+
+    ],
+
+// }>>
+
 // }>>
 
 // <<{ <http>
@@ -2443,6 +2489,15 @@ const data = {
 
 // }>>
 
+// <<{ http_mix
+
+    http_mix: [
+
+
+    ],
+
+// }>>
+
 // }>>
 
 // <<{ <nodejs>
@@ -2461,6 +2516,15 @@ const data = {
       },
 
   // }>>
+
+    ],
+
+// }>>
+
+// <<{ nodejs_mix
+
+    nodejs_mix: [
+
 
     ],
 
@@ -2489,6 +2553,15 @@ const data = {
 
 // }>>
 
+// <<{ php_mix
+
+    php_mix: [
+
+
+    ],
+
+// }>>
+
 // }>>
 
 // <<{ <databases>
@@ -2507,6 +2580,15 @@ const data = {
       },
 
   // }>>
+
+    ],
+
+// }>>
+
+// <<{ db_mix
+
+    db_mix: [
+
 
     ],
 
@@ -2536,13 +2618,20 @@ const data = {
 
 // }>>
 
+// <<{ crm_mix
+
+    crm_mix: [
+
+
+    ],
+
 // }>>
 
-// <<{ <mix>
+// }>>
 
-// <<{ computer_science
+// <<{ mix
 
-    computer_science: [
+    mix: [
 
   // <<{ binary numbers
 
@@ -2557,145 +2646,19 @@ const data = {
 
   // }>>
 
-    ],
-
-// }>>
-
-// <<{ security
-
-    security: [
-
-  // <<{ Mozilla web security
+  // <<{ fonts and icons
 
       {
-        header: 'Mozilla web security',
-        items: [
-          { name: 'Mozilla web security guidelines', desc: 'Mozilla web security guidelines', link: 'https://infosec.mozilla.org/guidelines/web_security' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ translators
-
-    translators: [
-
-  // <<{ Google translator
-
-      {
-        header: 'Google translator',
-        items: [
-          { name: 'google переводчик', desc: 'google переводчик', link: 'https://translate.google.com/?hl=ru' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ PWA
-
-    pwa: [
-
-  // <<{ mix
-
-      {
-        header: 'mix',
-        items: [
-          { name: 'PWA', desc: 'progressive web apps guide', link: 'https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ windows
-
-    windows: [
-
-  // <<{ optimization
-
-      {
-        header: 'optimization',
-        items: [
-          { name: 'оптимизация и ускорение работы windows', desc: 'оптимизация и ускорение работы windows', link: 'https://sysadmintips.ru/vyzhimaem-iz-windows-10-maksimum-optimizatsiya-sistemy.html' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ fonts_and_icons
-
-    fonts_and_icons: [
-
-  // <<{ google fonts
-
-      {
-        header: 'google fonts',
+        header: 'fonts and icons',
         items: [
           { name: 'google fonts', desc: 'google fonts', link: 'https://fonts.google.com/' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ fontsquirrel
-
-      {
-        header: 'fontsquirrel',
-        items: [
           { name: 'fontsquirrel', desc: 'download free fonts', link: 'https://www.fontsquirrel.com/' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ font awesome
-
-      {
-        header: 'font awesome',
-        items: [
           { name: 'font awesome cheetsheet', desc: 'font awesome cheetsheet', link: 'https://fontawesome.com/v5/cheatsheet' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ icofont
-
-      {
-        header: 'icofont',
-        items: [
           { name: 'icofont cheetsheet', desc: 'icofont cheetsheet', link: 'https://icofont.com/icons' },
         ]
       },
 
   // }>>
-
-    ],
-
-// }>>
-
-// }>>
-
-
-
-// <<{ services
-
-    services: [
 
   // <<{ chars
 
@@ -2709,13 +2672,53 @@ const data = {
 
   // }>>
 
+  // <<{ PWA
+
+      {
+        header: 'PWA',
+        items: [
+          { name: 'PWA', desc: 'progressive web apps guide', link: 'https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ windows
+
+      {
+        header: 'windows',
+        items: [
+          { name: 'оптимизация и ускорение работы windows', desc: 'оптимизация и ускорение работы windows', link: 'https://sysadmintips.ru/vyzhimaem-iz-windows-10-maksimum-optimizatsiya-sistemy.html' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ security
+
+      {
+        header: 'security',
+        items: [
+          { name: 'Mozilla web security guidelines', desc: 'Mozilla web security guidelines', link: 'https://infosec.mozilla.org/guidelines/web_security' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ translators
+
+      {
+        header: 'translators',
+        items: [
+          { name: 'google переводчик', desc: 'google переводчик', link: 'https://translate.google.com/?hl=ru' },
+        ]
+      },
+
+  // }>>
+
     ],
 
 // }>>
-
-
-
-
 
   },
 
