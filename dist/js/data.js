@@ -1981,7 +1981,14 @@ const data = {
       {
         header: 'mix',
         items: [
-          { name: '', desc: '', link: '' },
+          { name: 'syntax', desc: 'about scss and indented syntax', link: 'https://sass-lang.com/documentation/syntax' },
+          { name: 'structure', desc: 'about top-level statements, universal statements and expressions', link: 'https://sass-lang.com/documentation/syntax/structure' },
+          { name: 'comments', desc: 'about comments', link: 'https://sass-lang.com/documentation/syntax/comments' },
+          { name: 'nesting', desc: 'about selector nesting', link: 'https://sass-lang.com/documentation/style-rules#nesting' },
+          { name: 'interpolation', desc: 'injecting values from expressions with #{...}', link: 'https://sass-lang.com/documentation/interpolation' },
+          { name: 'parent selector', desc: 'about parent selector &', link: 'https://sass-lang.com/documentation/style-rules/parent-selector' },
+          { name: 'placeholders', desc: 'about placeholder selector', link: 'https://sass-lang.com/documentation/style-rules/placeholder-selectors' },
+          { name: 'variables', desc: 'about variables, scope', link: 'https://sass-lang.com/documentation/variables' },
         ]
       },
 
