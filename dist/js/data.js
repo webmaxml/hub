@@ -1307,13 +1307,14 @@ const data = {
       {
         header: 'mix',
         items: [
-          { name: 'introduction', desc: 'about handlebars and its features', link: 'https://handlebarsjs.com/guide/' },
-          { name: 'expressions', desc: 'about expressions', link: 'https://handlebarsjs.com/guide/expressions.html' },
-          { name: 'partials', desc: 'about partials', link: 'https://handlebarsjs.com/guide/partials.html' },
-          { name: 'block helpers', desc: 'about block helpers', link: 'https://handlebarsjs.com/guide/block-helpers.html' },
-          { name: 'built-in helpers', desc: 'about built-in helpers', link: 'https://handlebarsjs.com/guide/builtin-helpers.html' },
-          { name: 'precompiling templates', desc: 'how to precompile templates', link: 'https://handlebarsjs.com/installation/precompilation.html' },
-          { name: 'api', desc: 'api reference', link: 'https://handlebarsjs.com/api-reference/' },
+          { name: 'installation via CDN', desc: 'installation via CDN', link: 'https://handlebarsjs.com/guide/#installation' },
+
+          { name: 'basic expressions', desc: 'about basic expressions', link: 'https://handlebarsjs.com/guide/expressions.html#basic-usage' },
+          { name: 'path expressions', desc: 'about dot-separated path expressions', link: 'https://handlebarsjs.com/guide/expressions.html#path-expressions' },
+          { name: 'changing the context', desc: 'about going up with ../ in expression', link: 'https://handlebarsjs.com/guide/expressions.html#changing-the-context' },
+          { name: 'allowed chars in expression', desc: 'which chars are allowed and how to escape them with []', link: 'https://handlebarsjs.com/guide/expressions.html#literal-segments' },
+          { name: 'HTML escaping', desc: 'about escaped {{...}} and not-escaped {{{...}}}', link: 'https://handlebarsjs.com/guide/expressions.html#html-escaping' },
+          { name: '', desc: '', link: '' },
         ]
       },
 
@@ -1976,20 +1977,51 @@ const data = {
 
     sass: [
 
-  // <<{ mix
+  // <<{ syntax
 
       {
-        header: 'mix',
+        header: 'syntax',
         items: [
           { name: 'syntax', desc: 'about scss and indented syntax', link: 'https://sass-lang.com/documentation/syntax' },
           { name: 'structure', desc: 'about top-level statements, universal statements and expressions', link: 'https://sass-lang.com/documentation/syntax/structure' },
           { name: 'comments', desc: 'about comments', link: 'https://sass-lang.com/documentation/syntax/comments' },
-          { name: 'nesting', desc: 'about selector nesting', link: 'https://sass-lang.com/documentation/style-rules#nesting' },
-          { name: 'interpolation', desc: 'injecting values from expressions with #{...}', link: 'https://sass-lang.com/documentation/interpolation' },
-          { name: 'parent selector', desc: 'about parent selector &', link: 'https://sass-lang.com/documentation/style-rules/parent-selector' },
-          { name: 'placeholders', desc: 'about placeholder selector', link: 'https://sass-lang.com/documentation/style-rules/placeholder-selectors' },
-          { name: 'variables', desc: 'about variables, scope', link: 'https://sass-lang.com/documentation/variables' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ interpolation
+
+      {
+        header: 'interpolation',
+        items: [
+          { name: 'interpolation', desc: 'about injecting values from expressions with #{...}', link: 'https://sass-lang.com/documentation/interpolation' },
+          { name: 'selector', desc: 'inject expression values into selectors', link: 'https://sass-lang.com/documentation/style-rules#interpolation' },
+          { name: 'prop', desc: 'inject experssion values into property names', link: 'https://sass-lang.com/documentation/style-rules/declarations#interpolation' },
+          { name: 'values', desc: 'inject expression values into prop values', link: 'https://sass-lang.com/documentation/style-rules/declarations#custom-properties' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ variables
+
+      {
+        header: 'variables',
+        items: [
+          { name: 'variables', desc: 'about variables', link: 'https://sass-lang.com/documentation/variables' },
           { name: 'default values', desc: 'assigns variable only if this variable isn\'t defined', link: 'https://sass-lang.com/documentation/variables#default-values' },
+          { name: 'scope', desc: 'about variables scope', link: 'https://sass-lang.com/documentation/variables#scope' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ at-rules
+
+      {
+        header: 'at-rules',
+        items: [
           { name: '@use', desc: 'loads mixins, functions and vars from other sass stylesheets', link: 'https://sass-lang.com/documentation/at-rules/use' },
           { name: '@use...with', desc: 'loading module with some configuration of the default values', link: 'https://sass-lang.com/documentation/at-rules/use#configuration' },
           { name: '@forward', desc: 'forwarding module to make one entry point for multiple modules', link: 'https://sass-lang.com/documentation/at-rules/forward' },
@@ -2006,21 +2038,76 @@ const data = {
           { name: '@each', desc: 'list loop', link: 'https://sass-lang.com/documentation/at-rules/control/each' },
           { name: '@for', desc: 'for loop', link: 'https://sass-lang.com/documentation/at-rules/control/for' },
           { name: '@while', desc: 'while loop', link: 'https://sass-lang.com/documentation/at-rules/control/while' },
+        ]
+      },
 
-          { name: 'numbers', desc: 'about numbers type', link: 'https://sass-lang.com/documentation/values/numbers' },
-          { name: 'strings', desc: 'about strings type', link: 'https://sass-lang.com/documentation/values/strings' },
-          { name: 'colors', desc: 'about colors type', link: 'https://sass-lang.com/documentation/values/colors' },
-          { name: 'lists', desc: 'about list type', link: 'https://sass-lang.com/documentation/values/lists' },
-          { name: 'maps', desc: 'about map type', link: 'https://sass-lang.com/documentation/values/maps' },
-          { name: 'boolean', desc: 'about boolean type', link: 'https://sass-lang.com/documentation/values/booleans' },
-          { name: 'null', desc: 'about null type', link: 'https://sass-lang.com/documentation/values/null' },
+  // }>>
 
+  // <<{ operators
+
+      {
+        header: 'operators',
+        items: [
           { name: 'equality operators', desc: 'about operators == and !=', link: 'https://sass-lang.com/documentation/operators/equality' },
           { name: 'relational operators', desc: 'about operators >, <, >=, <=', link: 'https://sass-lang.com/documentation/operators/relational' },
           { name: 'numeric operators', desc: 'about operators +, -, *, math.div(), %', link: 'https://sass-lang.com/documentation/operators/numeric' },
           { name: 'string operators', desc: 'about concatenation operators', link: 'https://sass-lang.com/documentation/operators/string' },
           { name: 'boolean operators', desc: 'about operators and, or, not', link: 'https://sass-lang.com/documentation/operators/boolean' },
+        ]
+      },
 
+  // }>>
+
+  // <<{ numbers
+
+      {
+        header: 'numbers',
+        items: [
+          { name: 'numbers', desc: 'about numbers type', link: 'https://sass-lang.com/documentation/values/numbers' },
+          { name: 'ceil()', desc: 'rounds number to the next highest whole', link: 'https://sass-lang.com/documentation/modules/math#ceil' },
+          { name: 'math.clamp()', desc: 'restricts a number to the range between min and max', link: 'https://sass-lang.com/documentation/modules/math#clamp' },
+          { name: 'floor()', desc: 'rounds number to the next lowest whole', link: 'https://sass-lang.com/documentation/modules/math#floor' },
+          { name: 'max()', desc: 'return the highest of the given numbers', link: 'https://sass-lang.com/documentation/modules/math#max' },
+          { name: 'min()', desc: 'return the lowest of the given numbers', link: 'https://sass-lang.com/documentation/modules/math#min' },
+          { name: 'round()', desc: 'rounds number to the nearest whole', link: 'https://sass-lang.com/documentation/modules/math#round' },
+          { name: 'abs()', desc: 'returns absolute value of a given number', link: 'https://sass-lang.com/documentation/modules/math#abs' },
+          { name: 'comparable()', desc: 'whether two numbers have compatible units', link: 'https://sass-lang.com/documentation/modules/math#compatible' },
+          { name: 'unitless()', desc: 'whether given number has no units', link: 'https://sass-lang.com/documentation/modules/math#is-unitless' },
+          { name: 'unit()', desc: 'returns number\'s unit as a string', link: 'https://sass-lang.com/documentation/modules/math#unit' },
+          { name: 'math.div()', desc: 'divides two numbers', link: 'https://sass-lang.com/documentation/modules/math#div' },
+          { name: 'percentage()', desc: 'converts a unitless number between 0 and 1 to a percentage', link: 'https://sass-lang.com/documentation/modules/math#percentage' },
+          { name: 'random()', desc: 'returns random number with given limit', link: 'https://sass-lang.com/documentation/modules/math#random' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ strings
+
+      {
+        header: 'strings',
+        items: [
+          { name: 'strings', desc: 'about strings type', link: 'https://sass-lang.com/documentation/values/strings' },
+          { name: 'quote()', desc: 'returns quoted string', link: 'https://sass-lang.com/documentation/modules/string#quote' },
+          { name: 'str-index()', desc: 'returns index of the first occurance of the substring or null', link: 'https://sass-lang.com/documentation/modules/string#index' },
+          { name: 'str-insert()', desc: 'inserts substring in string', link: 'https://sass-lang.com/documentation/modules/string#insert' },
+          { name: 'str-length()', desc: 'returns the number of characters in string', link: 'https://sass-lang.com/documentation/modules/string#length' },
+          { name: 'str-slice()', desc: 'returns a slice of the string', link: 'https://sass-lang.com/documentation/modules/string#slice' },
+          { name: 'to-upper-case()', desc: 'converts string to upper case', link: 'https://sass-lang.com/documentation/modules/string#to-upper-case' },
+          { name: 'to-lower-case()', desc: 'converts string to lower case', link: 'https://sass-lang.com/documentation/modules/string#to-lower-case' },
+          { name: 'unique-id()', desc: 'returns randomly generated unquoted string', link: 'https://sass-lang.com/documentation/modules/string#unique-id' },
+          { name: 'unquote()', desc: 'returns unquoted string', link: 'https://sass-lang.com/documentation/modules/string#unquote' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ colors
+
+      {
+        header: 'colors',
+        items: [
+          { name: 'colors', desc: 'about colors type', link: 'https://sass-lang.com/documentation/values/colors' },
           { name: 'adjust-color()', desc: 'changes some properties of given color', link: 'https://sass-lang.com/documentation/modules/color#adjust' },
           { name: 'adjust-hue()', desc: 'changes color hue', link: 'https://sass-lang.com/documentation/modules/color#adjust-hue' },
           { name: 'alpha()', desc: 'returns alpha channel as a number between 0 and 1', link: 'https://sass-lang.com/documentation/modules/color#alpha' },
@@ -2046,7 +2133,17 @@ const data = {
           { name: 'scale-color()', desc: 'fluidly scales some properties of a given color', link: 'https://sass-lang.com/documentation/modules/color#scale' },
           { name: 'transparentize()', desc: 'makes color more transparent', link: 'https://sass-lang.com/documentation/modules/color#transparentize' },
           { name: 'color.whiteness()', desc: 'returns HWB whiteness of a color as a number between 0% and 100%', link: 'https://sass-lang.com/documentation/modules/color#whiteness' },
+        ]
+      },
 
+  // }>>
+
+  // <<{ lists
+
+      {
+        header: 'lists',
+        items: [
+          { name: 'lists', desc: 'about list type', link: 'https://sass-lang.com/documentation/values/lists' },
           { name: 'append()', desc: 'appends value to the end of the list', link: 'https://sass-lang.com/documentation/modules/list#append' },
           { name: 'index()', desc: 'returns index of a value in the list', link: 'https://sass-lang.com/documentation/modules/list#index' },
           { name: 'is-bracketed()', desc: 'returns whether list has square brackets', link: 'https://sass-lang.com/documentation/modules/list#is-bracketed' },
@@ -2057,7 +2154,17 @@ const data = {
           { name: 'set-nth()', desc: 'replaces element at the given index with new provided value in the list', link: 'https://sass-lang.com/documentation/modules/list#set-nth' },
           { name: 'list.slash()', desc: 'returns slash separated list with given elements', link: 'https://sass-lang.com/documentation/modules/list#slash' },
           { name: 'zip()', desc: 'combines given lists into a list of sub-lists', link: 'https://sass-lang.com/documentation/modules/list#zip' },
+        ]
+      },
 
+  // }>>
+
+  // <<{ maps
+
+      {
+        header: 'maps',
+        items: [
+          { name: 'maps', desc: 'about map type', link: 'https://sass-lang.com/documentation/values/maps' },
           { name: 'map.deep-merge()', desc: 'deeply merges two maps', link: 'https://sass-lang.com/documentation/modules/map#deep-merge' },
           { name: 'map.deep-remove()', desc: 'deeply removes a given key with value in the map', link: 'https://sass-lang.com/documentation/modules/map#deep-remove' },
           { name: 'map-get()', desc: 'returns a value for a given key', link: 'https://sass-lang.com/documentation/modules/map#get' },
@@ -2067,21 +2174,16 @@ const data = {
           { name: 'map-remove()', desc: 'removes a given key with value in the map', link: 'https://sass-lang.com/documentation/modules/map#remove' },
           { name: 'map.set()', desc: 'adds a given key value pair to the map', link: 'https://sass-lang.com/documentation/modules/map#set' },
           { name: 'map-values()', desc: 'returns a comma-separated list of all the values in the map', link: 'https://sass-lang.com/documentation/modules/map#values' },
+        ]
+      },
 
-          { name: 'ceil()', desc: 'rounds number to the next highest whole', link: 'https://sass-lang.com/documentation/modules/math#ceil' },
-          { name: 'math.clamp()', desc: 'restricts a number to the range between min and max', link: 'https://sass-lang.com/documentation/modules/math#clamp' },
-          { name: 'floor()', desc: 'rounds number to the next lowest whole', link: 'https://sass-lang.com/documentation/modules/math#floor' },
-          { name: 'max()', desc: 'return the highest of the given numbers', link: 'https://sass-lang.com/documentation/modules/math#max' },
-          { name: 'min()', desc: 'return the lowest of the given numbers', link: 'https://sass-lang.com/documentation/modules/math#min' },
-          { name: 'round()', desc: 'rounds number to the nearest whole', link: 'https://sass-lang.com/documentation/modules/math#round' },
-          { name: 'abs()', desc: 'returns absolute value of a given number', link: 'https://sass-lang.com/documentation/modules/math#abs' },
-          { name: 'comparable()', desc: 'whether two numbers have compatible units', link: 'https://sass-lang.com/documentation/modules/math#compatible' },
-          { name: 'unitless()', desc: 'whether given number has no units', link: 'https://sass-lang.com/documentation/modules/math#is-unitless' },
-          { name: 'unit()', desc: 'returns number\'s unit as a string', link: 'https://sass-lang.com/documentation/modules/math#unit' },
-          { name: 'math.div()', desc: 'divides two numbers', link: 'https://sass-lang.com/documentation/modules/math#div' },
-          { name: 'percentage()', desc: 'converts a unitless number between 0 and 1 to a percentage', link: 'https://sass-lang.com/documentation/modules/math#percentage' },
-          { name: 'random()', desc: 'returns random number with given limit', link: 'https://sass-lang.com/documentation/modules/math#random' },
+  // }>>
 
+  // <<{ meta
+
+      {
+        header: 'meta',
+        items: [
           { name: 'meta.load-css()', desc: 'load css at given url as it was written as the contents of this mixin', link: 'https://sass-lang.com/documentation/modules/meta#load-css' },
           { name: 'call()', desc: 'invokes given function and returns the result', link: 'https://sass-lang.com/documentation/modules/meta#call' },
           { name: 'content-exists()', desc: 'whether the current mixin was passed a content during including', link: 'https://sass-lang.com/documentation/modules/meta#content-exists' },
@@ -2096,8 +2198,42 @@ const data = {
           { name: 'meta.module-variables()', desc: 'returns all the variables defined in a module as a map name: value', link: 'https://sass-lang.com/documentation/modules/meta#module-variables' },
           { name: 'type-of()', desc: 'returns the type of a value', link: 'https://sass-lang.com/documentation/modules/meta#type-of' },
           { name: 'variable-exists()', desc: 'whether a given variable exists', link: 'https://sass-lang.com/documentation/modules/meta#variable-exists' },
+        ]
+      },
 
-          { name: '', desc: '', link: '' },
+  // }>>
+
+  // <<{ selectors
+
+      {
+        header: 'selectors',
+        items: [
+          { name: 'nesting', desc: 'about selector nesting', link: 'https://sass-lang.com/documentation/style-rules#nesting' },
+          { name: 'parent selector', desc: 'about parent selector &', link: 'https://sass-lang.com/documentation/style-rules/parent-selector' },
+          { name: 'placeholders', desc: 'about placeholder selector', link: 'https://sass-lang.com/documentation/style-rules/placeholder-selectors' },
+          { name: 'is-superselector()', desc: 'whether first selector matches all the elements that the second matches', link: 'https://sass-lang.com/documentation/modules/selector#is-superselector' },
+          { name: 'selector-append()', desc: 'combines selectors without whitespaces between them', link: 'https://sass-lang.com/documentation/modules/selector#append' },
+          { name: 'selector-extend()', desc: 'extends selector as with @extend rule', link: 'https://sass-lang.com/documentation/modules/selector#extend' },
+          { name: 'selector-nest()', desc: 'combines selectors as thought they were nested within one another', link: 'https://sass-lang.com/documentation/modules/selector#nest' },
+          { name: 'selector-parse()', desc: 'parses string, returns value in the selector format', link: 'https://sass-lang.com/documentation/modules/selector#parse' },
+          { name: 'selector-replace()', desc: 'replaces parts of the given selector', link: 'https://sass-lang.com/documentation/modules/selector#replace' },
+          { name: 'selector-unify()', desc: 'returns selector that matches elements that both given selector matches', link: 'https://sass-lang.com/documentation/modules/selector#unify' },
+          { name: 'simple-selector()', desc: 'breaks down complex selector into list of simple ones', link: 'https://sass-lang.com/documentation/modules/selector#simple-selectors' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: 'boolean', desc: 'about boolean type', link: 'https://sass-lang.com/documentation/values/booleans' },
+          { name: 'null', desc: 'about null type', link: 'https://sass-lang.com/documentation/values/null' },
+          { name: 'CLI', desc: 'Dart sass command line interface ', link: 'https://sass-lang.com/documentation/cli/dart-sass' },
+          { name: 'javascript api', desc: 'sass javascript api', link: 'https://sass-lang.com/documentation/js-api' },
+          { name: 'sass online', desc: 'sass online playground', link: 'https://www.sassmeister.com/' },
         ]
       },
 
@@ -2771,6 +2907,7 @@ const data = {
           { name: 'fontsquirrel', desc: 'download free fonts', link: 'https://www.fontsquirrel.com/' },
           { name: 'font awesome cheetsheet', desc: 'font awesome cheetsheet', link: 'https://fontawesome.com/v5/cheatsheet' },
           { name: 'icofont cheetsheet', desc: 'icofont cheetsheet', link: 'https://icofont.com/icons' },
+          { name: 'favicons', desc: 'how to create favicons', link: 'https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs' },
         ]
       },
 
