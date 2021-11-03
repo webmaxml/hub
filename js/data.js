@@ -1,80 +1,58 @@
 
 const data = {
 
+// <<{ quick
+
+  quick: {
+    'google': 'https://www.google.ru/',
+    'google timer': 'https://www.google.ru/search?q=timer&newwindow=1&source=hp&ei=IEeCYaPuK7XttQauqo6IBw&iflsig=ALs-wAMAAAAAYYJVMCRfrBgVpJUQ4ylI3oi_ZxQATJO9&oq=timer&gs_lcp=Cgdnd3Mtd2l6EAMyBAgAEEMyBAgAEEMyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQguEIAEMgUIABCABDoKCAAQ6gIQtAIQQzoUCAAQ6gIQtAIQigMQtwMQ1AMQ5QI6CwguEIAEEMcBENEDOgsILhCABBDHARCjAlD8D1jiE2C9FmgBcAB4AIABkAGIAb4FkgEDMC41mAEAoAEBsAEK&sclient=gws-wiz&ved=0ahUKEwij_suO4vvzAhW1ds0KHS6VA3EQ4dUDCAc&uact=5',
+    'youtube': 'https://www.youtube.com/feed/subscriptions',
+    'github': 'https://github.com/webmaxml',
+    'hdrezka': 'https://rezka.ag/films/',
+    'пикабу': 'https://pikabu.ru/best',
+    'rutracker': 'https://rutracker.org/forum/tracker.php',
+    'books': 'file:///home/webmaxml/static/work/hub/books.html',
+  },
+
+// }>>
+
 // <<{ menu
 
   menu: {
 
-    'network': {
-      'mix': 'network_mix',
-    },
+    'cheatsheets': 'cheatsheets',
 
-    'linux': {
-      'utilities': 'linux_utilities',
-      'mix': 'linux_mix',
-    },
+    'linux utilities': 'linux_utilities',
+    'git': 'git',
+    'vim reference book': 'vim_reference_book',
+    'vimscript the hard way book': 'vimscript_the_hard_way_book',
+    'vim plugins': 'vim_plugins',
 
-    'git': {
-      'reference': 'git_reference',
-      'mix': 'git_mix',
-    },
+    'html': 'html',
+    'handlebars': 'handlebars',
 
-    'vim': {
-      'vim reference book': 'vim_reference_book',
-      'vimscript the hard way book': 'vimscript_the_hard_way_book',
-      'plugins': 'vim_plugins',
-      'mix': 'vim_mix',
-    },
+    'css': 'css',
+    'sass': 'sass',
 
-    'html': {
-      'html': 'html_mdn',
-      'handlebars': 'handlebars',
-      'mix': 'html_mix',
-    },
+    'javascript': 'javascript',
+    'DOM': 'dom',
+    'js api': 'js_api',
+    'js utilities': 'js_utilities',
+    'typescript': 'typescript',
+    'webpack': 'webpack',
+    'react': 'react',
 
-    'css': {
-      'css': 'css_mdn',
-      'sass': 'sass',
-      'mix': 'css_mix',
-    },
+    'http': 'http',
+    'apache': 'apache',
+    'nginx': 'nginx',
 
-    'javascript': {
-      'javascript': 'javascript_mdn',
-      'DOM': 'dom',
-      'api': 'js_api',
-      'utilities': 'js_utilities',
-      'typescript': 'typescript',
-      'webpack': 'webpack',
-      'react': 'react',
-      'mix': 'js_mix',
-    },
+    'nodejs': 'nodejs',
 
-    'http': {
-      'http': 'http_mdn',
-      'apache': 'apache',
-      'nginx': 'nginx',
-      'mix': 'http_mix',
-    },
+    'php': 'php',
 
-    'nodejs': {
-      'nodejs': 'nodejs',
-      'mix': 'nodejs_mix',
-    },
+    'sql w3school': 'sql_w3school',
 
-    'php': {
-      'php': 'php',
-      'mix': 'php_mix',
-    },
-
-    'databases': {
-      'sql w3school': 'sql_w3school',
-      'mix': 'db_mix',
-    },
-
-    'CRM': {
-      'bitrix24': 'bitrix24',
-      'mix': 'crm_mix',
-    },
+    'japan': 'japan',
 
     'mix': 'mix',
 
@@ -86,19 +64,16 @@ const data = {
 
   content: {
 
-// <<{ <network>
+// <<{ cheatsheets
 
-// <<{ network_mix
+    cheatsheets: [
 
-    network_mix: [
-
-  // <<{ Созыкин - Компьютерные сети
+  // <<{ vim
 
       {
-        header: 'Созыкин - Компьютерные сети',
+        header: 'vim',
         items: [
-          { name: 'Классификация сетей', desc: 'классификация сетей', link: 'https://www.youtube.com/watch?v=Y4LK1OZ54h0&list=PLtPJ9lKvJ4oiNMvYbOzCmWy6cRzYAh9B1' },
-          { name: 'Топология сетей', desc: 'топология сетей', link: 'https://www.youtube.com/watch?v=z8VmkYahV8M&list=PLtPJ9lKvJ4oiNMvYbOzCmWy6cRzYAh9B1&index=4' },
+          { name: 'vim cheat sheet', desc: 'vim cheat sheet', link: 'https://vim.rtorr.com/' },
         ]
       },
 
@@ -107,10 +82,6 @@ const data = {
     ],
 
 // }>>
-
-// }>>
-
-// <<{ <linux>
 
 // <<{ linux_utilities
 
@@ -281,21 +252,9 @@ const data = {
 
 // }>>
 
-// <<{ linux_mix
+// <<{ git
 
-    linux_mix: [
-
-    ],
-
-// }>>
-
-// }>>
-
-// <<{ <git>
-
-// <<{ git_reference
-
-    git_reference: [
+    git: [
 
   // <<{ mix
 
@@ -303,6 +262,7 @@ const data = {
         header: 'mix',
         items: [
           { name: 'git reference', desc: 'git commands reference', link: 'https://git-scm.com/docs' },
+          { name: 'gitbook', desc: 'git platform for docs', link: 'https://app.gitbook.com/home' },
         ]
       },
 
@@ -311,18 +271,6 @@ const data = {
     ],
 
 // }>>
-
-// <<{ git_mix
-
-    git_mix: [
-
-    ],
-
-// }>>
-
-// }>>
-
-// <<{ <vim>
 
 // <<{ vim_reference_book
 
@@ -452,32 +400,9 @@ const data = {
 
 // }>>
 
-// <<{ vim_mix
+// <<{ html
 
-    vim_mix: [
-
-  // <<{ cheatsheets
-
-      {
-        header: 'cheatsheets',
-        items: [
-          { name: 'vim cheat sheet', desc: 'vim cheat sheet', link: 'https://vim.rtorr.com/' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// }>>
-
-// <<{ <html>
-
-// <<{ html_mdn
-
-    html_mdn: [
+    html: [
 
   // <<{ meta
 
@@ -731,6 +656,7 @@ const data = {
       {
         header: 'mix',
         items: [
+          { name: 'open graph', desc: 'social graph protocol', link: 'https://ogp.me/' },
           { name: 'tag reference', desc: 'tag reference', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element' },
           { name: 'Quirks Mode and Standards Mode', desc: 'browser modes to display content', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode' },
           { name: 'Responsive images', desc: 'why and how use responsive images', link: 'https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images' },
@@ -785,32 +711,9 @@ const data = {
 
 // }>>
 
-// <<{ html_mix
+// <<{ css
 
-    html_mix: [
-
-  // <<{ opengraph
-
-      {
-        header: 'opengraph',
-        items: [
-          { name: 'open graph', desc: 'social graph protocol', link: 'https://ogp.me/' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// }>>
-
-// <<{ <css>
-
-// <<{ css_mdn
-
-    css_mdn: [
+    css: [
 
   // <<{ cascade
 
@@ -1704,22 +1607,9 @@ const data = {
 
 // }>>
 
-// <<{ css_mix
+// <<{ javascript
 
-    css_mix: [
-
-
-    ],
-
-// }>>
-
-// }>>
-
-// <<{ <javascript>
-
-// <<{ javascript_mdn
-
-    javascript_mdn: [
+    javascript: [
 
   // <<{ mix
 
@@ -2119,22 +2009,9 @@ const data = {
 
 // }>>
 
-// <<{ js_mix
+// <<{ http
 
-    js_mix: [
-
-
-    ],
-
-// }>>
-
-// }>>
-
-// <<{ <http>
-
-// <<{ http_mdn
-
-    http_mdn: [
+    http: [
 
   // <<{ mix
 
@@ -2202,19 +2079,6 @@ const data = {
 
 // }>>
 
-// <<{ http_mix
-
-    http_mix: [
-
-
-    ],
-
-// }>>
-
-// }>>
-
-// <<{ <nodejs>
-
 // <<{ nodejs
 
     nodejs: [
@@ -2233,19 +2097,6 @@ const data = {
     ],
 
 // }>>
-
-// <<{ nodejs_mix
-
-    nodejs_mix: [
-
-
-    ],
-
-// }>>
-
-// }>>
-
-// <<{ <php>
 
 // <<{ php
 
@@ -2266,19 +2117,6 @@ const data = {
 
 // }>>
 
-// <<{ php_mix
-
-    php_mix: [
-
-
-    ],
-
-// }>>
-
-// }>>
-
-// <<{ <databases>
-
 // <<{ sql_w3school
 
     sql_w3school: [
@@ -2298,30 +2136,21 @@ const data = {
 
 // }>>
 
-// <<{ db_mix
+// <<{ japan
 
-    db_mix: [
-
-
-    ],
-
-// }>>
-
-// }>>
-
-// <<{ <CRM>
-
-// <<{ bitrix24
-
-    bitrix24: [
+    japan: [
 
   // <<{ mix
 
       {
         header: 'mix',
         items: [
-          { name: 'bitrix24', desc: 'bitrix24 admin page', link: 'https://uborshchiki.bitrix24.ua/stream/' },
-          { name: 'helpdesk', desc: 'bitrix24 helpdesk', link: 'https://helpdesk.bitrix24.ru/' },
+          { name: 'hiragana/katakana тренажер', desc: 'hiragana/katakana тренажер', link: 'https://vacuum.name/japanese/hiragana-katakana' },
+          { name: 'тренажер по набору слов', desc: 'тренажер по набору слов', link: 'https://vacuum.name/japanese/words-trainer' },
+          { name: 'WaniKani V', desc: 'облегченная wanikani', link: 'https://vacuum.name/japanese/wanikani' },
+          { name: 'jisho.org', desc: 'powerful Japanese-English dictionary', link: 'https://jisho.org/' },
+          { name: 'nippontalk', desc: 'Japanese texts with furigana and English translation', link: 'http://www.nippontalk.com/en.html' },
+          { name: 'grammar', desc: 'japanese grammar', link: 'http://nippon.temerov.org/gramat.php' },
         ]
       },
 
@@ -2331,29 +2160,40 @@ const data = {
 
 // }>>
 
-// <<{ crm_mix
-
-    crm_mix: [
-
-
-    ],
-
-// }>>
-
-// }>>
-
 // <<{ mix
 
     mix: [
 
-  // <<{ binary numbers
+  // <<{ hosts
 
       {
-        header: 'binary numbers',
+        header: 'hosts',
         items: [
-          { name: 'Обратный код', desc: 'чтобы записать отрицательное число, нужно перевернуть все разряды', link: 'https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%80%D0%B0%D1%82%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D0%B4' },
-          { name: 'Дополнительный код', desc: 'чтобы записать отрицательное число, нужно перевернуть все разряды и прибавить 1', link: 'https://ru.wikipedia.org/wiki/%D0%94%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D0%B4' },
-          { name: 'Перевод в разные системы исчисления', desc: 'Перевод в разные системы исчисления', link: 'https://programforyou.ru/calculators/number-systems' },
+          { name: 'localhost:3000', desc: 'localhost:3000', link: 'http://localhost:3000/' },
+          { name: 'test.my', desc: 'local test.my', link: 'http://test.my/' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ bitrix24
+
+      {
+        header: 'bitrix24',
+        items: [
+          { name: 'bitrix24', desc: 'bitrix24 admin page', link: 'https://uborshchiki.bitrix24.ua/stream/' },
+          { name: 'helpdesk', desc: 'bitrix24 helpdesk', link: 'https://helpdesk.bitrix24.ru/' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ task managers
+
+      {
+        header: 'task managers',
+        items: [
+          { name: 'trello', desc: 'trello', link: 'https://trello.com/webmaxml/boards' },
         ]
       },
 
@@ -2386,6 +2226,42 @@ const data = {
 
   // }>>
 
+  // <<{ security
+
+      {
+        header: 'security',
+        items: [
+          { name: 'Mozilla web security guidelines', desc: 'Mozilla web security guidelines', link: 'https://infosec.mozilla.org/guidelines/web_security' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ binary numbers
+
+      {
+        header: 'binary numbers',
+        items: [
+          { name: 'Обратный код', desc: 'чтобы записать отрицательное число, нужно перевернуть все разряды', link: 'https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%80%D0%B0%D1%82%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D0%B4' },
+          { name: 'Дополнительный код', desc: 'чтобы записать отрицательное число, нужно перевернуть все разряды и прибавить 1', link: 'https://ru.wikipedia.org/wiki/%D0%94%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D0%B4' },
+          { name: 'Перевод в разные системы исчисления', desc: 'Перевод в разные системы исчисления', link: 'https://programforyou.ru/calculators/number-systems' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ Созыкин - Компьютерные сети
+
+      {
+        header: 'Созыкин - Компьютерные сети',
+        items: [
+          { name: 'Классификация сетей', desc: 'классификация сетей', link: 'https://www.youtube.com/watch?v=Y4LK1OZ54h0&list=PLtPJ9lKvJ4oiNMvYbOzCmWy6cRzYAh9B1' },
+          { name: 'Топология сетей', desc: 'топология сетей', link: 'https://www.youtube.com/watch?v=z8VmkYahV8M&list=PLtPJ9lKvJ4oiNMvYbOzCmWy6cRzYAh9B1&index=4' },
+        ]
+      },
+
+  // }>>
+
   // <<{ PWA
 
       {
@@ -2408,12 +2284,23 @@ const data = {
 
   // }>>
 
-  // <<{ security
+  // <<{ freelance
 
       {
-        header: 'security',
+        header: 'freelance',
         items: [
-          { name: 'Mozilla web security guidelines', desc: 'Mozilla web security guidelines', link: 'https://infosec.mozilla.org/guidelines/web_security' },
+          { name: 'kabanchik.ua', desc: 'mix freelance service', link: 'https://kabanchik.ua/ua/user/2497358' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ airdroid
+
+      {
+        header: 'airdroid',
+        items: [
+          { name: 'airdroid local', desc: 'local connection to phone app', link: 'http://192.168.43.1:8888/' },
         ]
       },
 
@@ -2425,6 +2312,19 @@ const data = {
         header: 'translators',
         items: [
           { name: 'google переводчик', desc: 'google переводчик', link: 'https://translate.google.com/?hl=ru' },
+          { name: 'deepl', desc: 'deepl translator', link: 'https://www.deepl.com/ru/translator' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ коммуналка
+
+      {
+        header: 'коммуналка',
+        items: [
+          { name: 'новаком', desc: 'новаком', link: 'https://www.novakom.com.ua/abonent.html' },
+          { name: 'yasno', desc: 'поставщик электроэнергии', link: 'https://my.yasno.com.ua/cabinet/person/' },
         ]
       },
 

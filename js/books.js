@@ -7,6 +7,16 @@ const books = {
 
 const data = {
 
+// <<{ quick
+
+  quick: {
+    'google': 'https://www.google.ru/',
+    'youtube': 'https://www.youtube.com/feed/subscriptions',
+    'links': 'file:///home/webmaxml/static/work/hub/index.html',
+  },
+
+// }>>
+
 // <<{ menu
 
   menu: {

@@ -50,6 +50,28 @@ body {
 
 /* }>> */
 
+/* <<{ quick */
+
+.quick-menu {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 15px;
+  border: 1px solid var(--c-text);
+}
+
+.quick-item {
+  padding: 0 15px;
+}
+
+.quick-link {
+  font-size: 14px;
+  line-height: 16px;
+  font-family: var(--ff-main);
+  color: var(--c-text);
+}
+
+/* }>> */
+
 /* <<{ aside */
 
 aside {
