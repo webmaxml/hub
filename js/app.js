@@ -1,19 +1,12 @@
 
 // partials and helpers
 
-Handlebars.registerPartial('quick-menu', document.getElementById('quick-menu').innerHTML)
 Handlebars.registerPartial('menu-item', document.getElementById('menu-item').innerHTML)
 Handlebars.registerPartial('menu', document.getElementById('menu').innerHTML)
 Handlebars.registerPartial('main', document.getElementById('main').innerHTML)
 
 Handlebars.registerHelper('isString', function(value) { return typeof value === 'string' })
 Handlebars.registerHelper('getContentByName', function(name) { return data.content[name] })
-
-// setting quick menu
-
-const quick = document.querySelector('.quick')
-const quickMenuTemplate = Handlebars.compile('{{> quick-menu list=quick }}')
-quick.innerHTML = quickMenuTemplate(data)
 
 // setting menu from data
 
