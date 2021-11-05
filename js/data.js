@@ -1,11 +1,13 @@
 
+const notesPath = 'notes'
+const booksPath = 'file:///home/webmaxml/static/work/prod/hub/books/'
+
 const books = {
-  shotts_command_line: 'books/shotts_linux_command_line.pdf',
-  bash_manual: 'books/bash_manual.pdf',
-  progit: 'books/git.pdf',
+  shotts_command_line: `${booksPath}shotts_linux_command_line.pdf`,
+  bash_manual: `${booksPath}bash_manual.pdf`,
+  progit: `${booksPath}git.pdf`,
 }
 
-const notesPath = 'notes'
 
 const data = {
 
