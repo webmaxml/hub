@@ -1,0 +1,15 @@
+{{#if some}}...{{else if some2}}...{{else}}...{{/if}} - if helper
+{{#unless some}}...{{/unless}} - the block will render if some is falsy
+{{#each list}}...{{else}}for empty list{{/each}} - looping through array/object
+
+@root - intial context with which template was executed
+@first - true if it is the first item in #each 
+@last - true if it is the last item in #each
+@index - zero-based index for the current iteration in #each
+@key - key name for the current object iteration in #each
+
+{{#with some}}...{{else}}empty some{{/with}} - provide context 'some' to the inner temlate
+{{#with some.number as | x |}}...{{/with}} - provide context and use some aliases
+
+{{lookup obj prop}} - dynamically resolve prop from obj/array
+

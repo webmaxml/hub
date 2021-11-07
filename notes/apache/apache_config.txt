@@ -80,3 +80,5 @@ this will enable your custom folder for apache
 6. reload apache - sudo systemctl restart apache2
 
 // }>>
+
+

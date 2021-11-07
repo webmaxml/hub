@@ -14,11 +14,32 @@
   <div class="content">
     <aside></aside>  
     <main>
-      <img src="img/cook.png" alt="cook">
+      <!-- <img src="img/cook.png" alt="cook"> -->
+      <h2>comments</h2>
+      <code>{{! ...  }}</code>
+      <span> - will not output to html</span>
     </main>
   </div>
 
   <!-- <<{ templates -->
+
+  <script id="notes" type="text/x-handlebars-template">
+    <ul class="notes">
+      {{#each this }}
+        <li class="notes-item">
+          <h2 class="notes-header">{{header}}</h2>
+          <ul class="notes-list">
+            {{#each items }}
+              <li class="notes-list-item">
+                <pre class="notes-code"><code>{{code}}</code></pre>
+                <p class="notes-desc">{{desc}}</p>
+              </li>
+            {{/each}}
+          </ul>
+        </li>
+      {{/each}}
+    </ul>
+  </script>
 
   <script id="menu-item" type="text/x-handlebars-template">
     <ul class="menu">
@@ -74,6 +95,7 @@
 
   <script src="js/handlebars.js"></script>
   <script src="js/data.js"></script>
+  <script src="js/hbs.js"></script>
   <script src="js/app.js"></script>
 
 </body>

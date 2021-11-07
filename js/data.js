@@ -81,6 +81,17 @@ const data = {
 
   // }>>
 
+  // <<{ git
+
+      {
+        header: 'git',
+        items: [
+          { name: 'submodule', desc: 'git submoduler cheatsheet', link: 'https://www.devroom.io/2020/03/09/the-git-submodule-cheat-sheet/' },
+        ]
+      },
+
+  // }>>
+
     ],
 
 // }>>
@@ -703,7 +714,8 @@ const data = {
           { name: 'changing the context', desc: 'about going up with ../ in expression', link: 'https://handlebarsjs.com/guide/expressions.html#changing-the-context' },
           { name: 'allowed chars in expression', desc: 'which chars are allowed and how to escape them with []', link: 'https://handlebarsjs.com/guide/expressions.html#literal-segments' },
           { name: 'HTML escaping', desc: 'about escaped {{...}} and not-escaped {{{...}}}', link: 'https://handlebarsjs.com/guide/expressions.html#html-escaping' },
-          { name: '', desc: '', link: '' },
+          { name: 'inline helpers', desc: 'inline helpers - {{helper param1 param2}}', link: 'https://handlebarsjs.com/guide/expressions.html#helpers' },
+          { name: 'prevent HTML escaping in helper', desc: 'prevent escaping in helper return values', link: 'https://handlebarsjs.com/guide/expressions.html#prevent-html-escaping-of-helper-return-values' },
         ]
       },
 
@@ -2363,6 +2375,22 @@ const data = {
         items: [
           { name: 'layout', desc: 'html/css layout', link: `${notesPath}/algorythms/layout.txt` },
           { name: 'psd cropping', desc: 'psd templates cropping', link: `${notesPath}/algorythms/psd_cropping.txt` },
+        ]
+      },
+
+  // }>>
+
+  // <<{ handlebars
+
+      {
+        header: 'handlebars',
+        items: [
+          { name: 'comments', desc: 'comments', link: `${notesPath}/handlebars/comments.txt` },
+          { name: 'compiling templates', desc: 'compiling templates', link: `${notesPath}/handlebars/compiling_templates.txt` },
+          { name: 'expressions', desc: 'expressions', link: `${notesPath}/handlebars/expressions.txt` },
+          { name: 'built-in helpers', desc: 'built-in helpers', link: `${notesPath}/handlebars/built_in_helpers.txt` },
+          { name: 'custom helpers', desc: 'custom helpers', link: `${notesPath}/handlebars/custom_helpers.txt` },
+          { name: 'partials', desc: 'partials', link: `${notesPath}/handlebars/partials.txt` },
         ]
       },
 

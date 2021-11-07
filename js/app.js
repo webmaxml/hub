@@ -4,6 +4,7 @@
 Handlebars.registerPartial('menu-item', document.getElementById('menu-item').innerHTML)
 Handlebars.registerPartial('menu', document.getElementById('menu').innerHTML)
 Handlebars.registerPartial('main', document.getElementById('main').innerHTML)
+Handlebars.registerPartial('notes', document.getElementById('notes').innerHTML)
 
 Handlebars.registerHelper('isString', function(value) { return typeof value === 'string' })
 Handlebars.registerHelper('getContentByName', function(name) { return data.content[name] })
@@ -38,4 +39,9 @@ links.forEach(link => {
    main.innerHTML = mainTemplate({topic, content})
  })
 })
+
+// test
+
+const notes = Handlebars.compile('{{> notes }}')
+main.innerHTML = notes(hbs)
 

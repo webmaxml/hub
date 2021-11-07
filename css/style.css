@@ -168,3 +168,40 @@ main img {
 
 /* }>> */
 
+/* <<{ notes */
+
+.notes-header {
+  font-size: 16px;
+  color: var(--c-text);
+  border-bottom: 1px solid var(--c-text);
+  margin: 15px 0;
+}
+
+.notes-list-item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+.notes-list-item:nth-child(even) {
+  background: #222222;
+}
+
+.notes-code {
+  flex: 0 0 550px;
+  color: var(--c-accent);
+}
+
+.notes-desc {
+  color: var(--c-text);
+}
+
+.notes-desc::before {
+  content: "\00a0\00a0-\00a0\00a0";
+}
+
+/* }>> */
+
