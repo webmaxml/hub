@@ -1,6 +1,7 @@
-# where to process files
 # /app is a working dir in a container binded to a project folder
-source: /app/src
+
+# where to process files
+source: /app/src/jekyll
 
 # where to put generated site
 destination: /app/dist
