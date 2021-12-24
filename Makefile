@@ -18,10 +18,10 @@ ruby-shell:
 	docker-compose run --rm ruby bash
 
 jekyll-watch:
-	docker-compose run --rm ruby bash -c "bundle exec jekyll build --config _jekyll.yml --watch"
+	docker-compose run --rm ruby bash -c "bundle exec jekyll build --config configs/_jekyll.yml --watch"
 
 jekyll-build:
-	docker-compose run --rm ruby bash -c "bundle exec jekyll build --config _jekyll.yml"
+	docker-compose run --rm ruby bash -c "bundle exec jekyll build --config configs/_jekyll.yml"
 
 # }>>
 
