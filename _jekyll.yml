@@ -1,0 +1,9 @@
+# where to process files
+# /app is a working dir in a container binded to a project folder
+source: /app/src
+
+# where to put generated site
+destination: /app/dist
+
+# keep files in destination folder from deleting when rebuilding site
+keep_files: ["css", "js", "img"]

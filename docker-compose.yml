@@ -1,0 +1,30 @@
+version: "3.8"
+
+networks:
+  dev:
+    name: dev
+
+volumes:
+  gems:
+    name: gems
+
+services:
+
+  ruby:
+    image: ruby:2.7.5-buster
+    working_dir: /app
+    networks:
+      - dev
+    volumes:
+      - gems:/gems
+      - ./:/app
+    environment:
+      GEM_HOME: /gems
+
+  node:
+    image: node:16.13.0-buster
+    working_dir: /app
+    networks:
+      - dev
+    volumes:
+      - ./:/app
