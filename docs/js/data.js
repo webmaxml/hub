@@ -1,92 +1,17 @@
 
-const notesPath = 'notes'
-const booksPath = 'file:///home/webmaxml/static/work/prod/hub/books/'
-
-const books = {
-  shotts_command_line: `${booksPath}shotts_linux_command_line.pdf`,
-  bash_manual: `${booksPath}bash_manual.pdf`,
-  progit: `${booksPath}git.pdf`,
-}
-
-
 const data = {
 
-// <<{ menu
+// <<{ apache
 
-  menu: {
+    apache: [
 
-    'cheatsheets': 'cheatsheets',
-
-    'linux utilities': 'linux_utilities',
-    'git': 'git',
-    'vim reference book': 'vim_reference_book',
-    'vimscript the hard way book': 'vimscript_the_hard_way_book',
-    'vim plugins': 'vim_plugins',
-
-    'html': 'html',
-    'handlebars': 'handlebars',
-
-    'css': 'css',
-    'sass': 'sass',
-
-    'javascript': 'javascript',
-    'DOM': 'dom',
-    'js api': 'js_api',
-    'js utilities': 'js_utilities',
-    'typescript': 'typescript',
-    'webpack': 'webpack',
-    'react': 'react',
-
-    'http': 'http',
-    'apache': 'apache',
-    'nginx': 'nginx',
-
-    'nodejs': 'nodejs',
-
-    'php': 'php',
-
-    'sql w3school': 'sql_w3school',
-
-    'japan': 'japan',
-
-    'mix': 'mix',
-    'notes': 'notes',
-
-    'pdf': {
-      'shotts - linux command line': 'shotts_linux_command_line_book',
-      'progit': 'progit_book',
-      'bash manual': 'bash_manual_book',
-    },
-
-  },
-
-// }>>
-
-// <<{ content
-
-  content: {
-
-// <<{ cheatsheets
-
-    cheatsheets: [
-
-  // <<{ vim
+  // <<{ mix
 
       {
-        header: 'vim',
+        header: 'mix',
         items: [
-          { name: 'vim cheat sheet', desc: 'vim cheat sheet', link: 'https://vim.rtorr.com/' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ git
-
-      {
-        header: 'git',
-        items: [
-          { name: 'submodule', desc: 'git submoduler cheatsheet', link: 'https://www.devroom.io/2020/03/09/the-git-submodule-cheat-sheet/' },
+          { name: 'apache 2.4 documentation', desc: 'apache 2.4 documentation', link: 'https://httpd.apache.org/docs/2.4/' },
+          { name: 'apache configuration: .htaccess', desc: 'apache configuration with .htaccess', link: 'https://developer.mozilla.org/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess' },
         ]
       },
 
@@ -96,222 +21,28 @@ const data = {
 
 // }>>
 
-// <<{ linux_utilities
+// <<{ bash
 
-    linux_utilities: [
+    bash: [
 
-  // <<{ bash
+  // <<{ mix
 
       {
-        header: 'bash',
+        header: 'mix',
         items: [
-          { name: 'хабр - скрипты общее', desc: 'переменные, условия и общее для скриптов', link: 'https://habr.com/ru/company/ruvds/blog/325522/' },
-          { name: 'хабр - циклы', desc: 'про циклы', link: 'https://habr.com/ru/company/ruvds/blog/325928/' },
-          { name: 'хабр - параметры и ключи командной строки', desc: 'про параметры и ключи', link: 'https://habr.com/ru/company/ruvds/blog/326328/' },
-          { name: 'хабр - expect и автоматизация утилит', desc: 'про expect и автоматизацию интерактивных утилит', link: 'https://habr.com/ru/company/ruvds/blog/328436/' },
-          { name: 'хабр - sed и обработка текстов', desc: 'про sed и обработку текстов', link: 'https://habr.com/ru/company/ruvds/blog/327530/' },
-          { name: 'хабр - ввод и вывод', desc: 'про ввод и вывод', link: 'https://habr.com/ru/company/ruvds/blog/326594/' },
-          { name: 'хабр - сигналы, фоновые задачи', desc: 'про сигналы, фоновые задачи и управление сценариями', link: 'https://habr.com/ru/company/ruvds/blog/326826/' },
-          { name: 'хабр - функции и разработка библиотек', desc: 'про функции и разработку библиотек', link: 'https://habr.com/ru/company/ruvds/blog/327248/' },
-          { name: 'хабр - регулярные выражения', desc: 'про регулярные выражения', link: 'https://habr.com/ru/company/ruvds/blog/327896/' },
-          { name: 'хабр - практические примеры', desc: 'практические примеры', link: 'https://habr.com/ru/company/ruvds/blog/328346/' },
           { name: 'brackets reference', desc: 'about different bash brackets', link: 'https://dev.to/rpalo/bash-brackets-quick-reference-4eh6' },
         ]
       },
 
   // }>>
 
-  // <<{ ssh
-
-      {
-        header: 'ssh',
-        items: [
-          { name: 'ssh overview', desc: 'about ssh, servers and clients', link: 'https://www.ssh.com/academy/ssh' },
-          { name: 'public key', desc: 'key for server to encrypt data', link: 'https://www.ssh.com/academy/cryptography/public-key' },
-          { name: 'private key', desc: 'key for user to read data, encrypted by publix key on server', link: 'https://www.ssh.com/academy/cryptography/private-key' },
-          { name: 'host key', desc: 'key for identifying hosts', link: 'https://www.ssh.com/academy/ssh/host-key' },
-          { name: 'openssh', desc: 'open source implementation of the ssh protocol', link: 'https://www.ssh.com/academy/ssh/openssh' },
-          { name: 'ssh', desc: 'openssh client', link: 'https://www.ssh.com/academy/ssh/command' },
-          { name: 'ssh-keygen', desc: 'openssh tool for creating ssh key pairs', link: 'https://www.ssh.com/academy/ssh/keygen' },
-          { name: 'ssh-copy-id', desc: 'openssh tool to install public key on the server', link: 'https://www.ssh.com/academy/ssh/copy-id' },
-          { name: 'ssh-agent', desc: 'openssh agent to keep track of user\'s keys and passphrases', link: 'https://www.ssh.com/academy/ssh/agent' },
-          { name: 'ssh-add', desc: 'openssh tool to add private keys to ssh agent', link: 'https://www.ssh.com/academy/ssh/add' },
-          { name: 'sftp', desc: 'secure file transfer protocol', link: 'https://www.ssh.com/academy/ssh/sftp' },
-          { name: 'scp', desc: 'secure copy protocol', link: 'https://www.ssh.com/academy/ssh/scp' },
-          { name: 'sshd', desc: 'openssh server', link: 'https://www.ssh.com/academy/ssh/sshd' },
-          { name: 'sshd_config', desc: 'configuration for ssh server located in /etc/ssh/sshd_config', link: 'https://www.ssh.com/academy/ssh/sshd_config' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ awk
-
-      {
-        header: 'awk',
-        items: [
-          { name: 'awk', desc: 'how to use awk command', link: 'https://www.howtogeek.com/562941/how-to-use-the-awk-command-on-linux/' },
-          { name: 'хабр - awk', desc: 'про awk', link: 'https://habr.com/ru/company/ruvds/blog/327754/' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ i3
-
-      {
-        header: 'i3',
-        items: [
-          { name: 'i3 user guide', desc: 'user guide for i3 window manager', link: 'https://i3wm.org/docs/userguide.html' },
-          { name: 'i3 layout saving', desc: 'guide for layout saving for i3 window manager', link: 'https://i3wm.org/docs/layout-saving.html' },
-          { name: 'i3status', desc: 'configuration of the builtin bar manager in i3 window manager', link: 'https://i3wm.org/docs/i3status.html' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ i3blocks
-
-      {
-        header: 'i3blocks',
-        items: [
-          { name: 'i3blocks', desc: 'more customizable bar manager for i3 wm', link: 'https://github.com/vivien/i3blocks#i3blocks' },
-          { name: 'i3blocks-contrib', desc: 'community contributed blocklets for i3blocks', link: 'https://github.com/vivien/i3blocks-contrib' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ ranger
-
-      {
-        header: 'ranger',
-        items: [
-          { name: 'ranger user guide', desc: 'shell file manager user guide', link: 'https://github.com/ranger/ranger/wiki/Official-user-guide#contents' },
-          { name: 'ranger wiki', desc: 'shell file manager wiki', link: 'https://github.com/ranger/ranger/wiki' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ fzf
-
-      {
-        header: 'fzf',
-        items: [
-          { name: 'fzf', desc: 'fuzzy finder utility', link: 'https://github.com/junegunn/fzf#table-of-contents' },
-          { name: 'search syntax', desc: 'search syntax when searching in fzf', link: 'https://github.com/junegunn/fzf#search-syntax' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ compton
-
-      {
-        header: 'compton',
-        items: [
-          { name: 'compton', desc: 'composition manager', link: 'https://github.com/chjj/compton#compton' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ rofi
-
-      {
-        header: 'rofi',
-        items: [
-          { name: 'rofi', desc: 'application launcher', link: 'https://github.com/davatorium/rofi#a-window-switcher-application-launcher-and-dmenu-replacement' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ fd
-
-      {
-        header: 'fd',
-        items: [
-          { name: 'fd', desc: 'fd finder, simple alternative to "find"', link: 'https://github.com/sharkdp/fd#fd' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ ripgrep
-
-      {
-        header: 'ripgrep',
-        items: [
-          { name: 'ripgrep', desc: 'line-oriented search tool', link: 'https://github.com/BurntSushi/ripgrep#ripgrep-rg' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ dunst
-
-      {
-        header: 'dunst',
-        items: [
-          { name: 'dunst', desc: 'configurable notification daemon', link: 'https://github.com/dunst-project/dunst#documentation' },
-        ]
-      },
-
-  // }>>
-
     ],
 
 // }>>
 
-// <<{ git
+// <<{ blockchain
 
-    git: [
-
-  // <<{ mix
-
-      {
-        header: 'mix',
-        items: [
-          { name: 'git reference', desc: 'git commands reference', link: 'https://git-scm.com/docs' },
-          { name: 'gitbook', desc: 'git platform for docs', link: 'https://app.gitbook.com/home' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ vim_reference_book
-
-    vim_reference_book: [
-
-  // <<{ mix
-
-      {
-        header: 'mix',
-        items: [
-          { name: 'normal mode', desc: 'different things you can do in normal mode', link: 'https://learnbyexample.gitbooks.io/vim-reference/content/Normal_mode.html' },
-          { name: 'commands', desc: 'different commands to enter in command mode', link: 'https://learnbyexample.gitbooks.io/vim-reference/content/Command_Line_mode.html' },
-          { name: 'visual mode', desc: 'about visual mode', link: 'https://learnbyexample.gitbooks.io/vim-reference/content/Visual_mode.html' },
-          { name: 'recording macro', desc: 'how to record macro', link: 'https://learnbyexample.gitbooks.io/vim-reference/content/Recording_Macro.html' },
-          { name: 'customization', desc: 'general vim customization', link: 'https://learnbyexample.gitbooks.io/vim-reference/content/Customizing_vim.html' },
-          { name: 'regexp', desc: 'about regexp in search and replace', link: 'https://learnbyexample.gitbooks.io/vim-reference/content/Regular_Expressions.html' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ vimscript_the_hard_way_book
-
-    vimscript_the_hard_way_book: [
+    blockchain: [
 
   // <<{ mix
 
@@ -328,394 +59,16 @@ const data = {
 
 // }>>
 
-// <<{ vim_plugins
+// <<{ bootstrap
 
-    vim_plugins: [
-
-  // <<{ vimawesome
-
-      {
-        header: 'vimawesome',
-        items: [
-          { name: 'vimawesome', desc: 'vim plugins hub page', link: 'https://vimawesome.com/' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ vim-plug
-
-      {
-        header: 'vim-plug',
-        items: [
-          { name: 'vim-plug', desc: 'vim-plug github page', link: 'https://github.com/junegunn/vim-plug#' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ NERDTree
-
-      {
-        header: 'NERDTree',
-        items: [
-          { name: 'NERDTree', desc: 'nerdtree plugin', link: 'https://github.com/preservim/nerdtree#the-nerdtree-' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ ranger.vim
-
-      {
-        header: 'ranger.vim',
-        items: [
-          { name: 'ranger.vim', desc: 'ranger vim plugin', link: 'https://github.com/francoiscabrol/ranger.vim' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ Emmet-vim
-
-      {
-        header: 'Emmet-vim',
-        items: [
-          { name: 'Emmet-vim', desc: 'emmet plugin', link: 'https://github.com/mattn/emmet-vim#emmet-vim' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ fzf.vim
-
-      {
-        header: 'fzf.vim',
-        items: [
-          { name: 'fzf.vim', desc: 'fzf vim plugin', link: 'https://github.com/junegunn/fzf.vim#fzf-heart-vim' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ UltiSnips
-
-      {
-        header: 'UltiSnips',
-        items: [
-          { name: 'UltiSnips', desc: 'snippets plugin', link: 'https://github.com/SirVer/ultisnips#ultisnips' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ html
-
-    html: [
-
-  // <<{ meta
-
-      {
-        header: 'meta',
-        items: [
-          { name: '<meta>', desc: 'different metadata of the document', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta' },
-          { name: 'names values in <meta>', desc: 'standard names values in <meta>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ link
-
-      {
-        header: 'link',
-        items: [
-          { name: '<link>', desc: 'load external resources', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link' },
-          { name: 'rel values', desc: 'possible rel values in <link>, <a>, <area> and <form>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types' },
-          { name: 'preloading with rel="preload"', desc: 'how to start preloading resources early in the page lifecycle', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/preload' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ sections
-
-      {
-        header: 'sections',
-        items: [
-          { name: '<article>', desc: 'self-contained composition in a document which is intended to be independently distributable or reusable', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article' },
-          { name: '<aside>', desc: 'portion of a document whose content is only indirectly related to the document\'s main content', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside' },
-          { name: '<section>', desc: 'generic section of a document', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section' },
-          { name: '<main>', desc: 'dominant content of the document', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main' },
-          { name: '<nav>', desc: 'section with main navigation links', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav' },
-          { name: '<header>', desc: 'header information (nav, logo, search, author name) for the section', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header' },
-          { name: '<footer>', desc: 'footer information (about the author, copyright, related links) for the section', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ semantic block tags
-
-      {
-        header: 'semantic block tags',
-        items: [
-          { name: '<p>', desc: 'paragraph', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p' },
-          { name: '<h1> - <h6>', desc: 'six levels of section headings', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements' },
-          { name: '<address>', desc: 'contact information for a person/organization', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address' },
-          { name: '<menu>', desc: 'semantic altrenative to <ul> for the menus', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu' },
-          { name: '<blockquote>', desc: 'block quotation', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote' },
-          { name: '<figcaption>', desc: 'caption for the content in <figure>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption' },
-          { name: '<figure>', desc: 'self-contained content with optional caption in <figcaption>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure' },
-          { name: '<pre>', desc: 'preformatted text - presented exactly as written', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre' },
-          { name: '<dialog>', desc: 'container for the dialog boxes', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ semantic inline tags
-
-      {
-        header: 'semantic inline tags',
-        items: [
-          { name: '<a>', desc: 'anchor', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a' },
-          { name: '<abbr>', desc: 'abbreviation', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr' },
-          { name: '<strong>', desc: 'text of strong importance, seriousness or urgency, bold', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong' },
-          { name: '<b>', desc: 'bold text', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b' },
-          { name: '<del>', desc: 'deleted text, with line-through', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del' },
-          { name: '<s>', desc: 'strikethrough text', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/s' },
-          { name: '<ins>', desc: 'inserted text', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins' },
-          { name: '<u>', desc: 'underlined text', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u' },
-          { name: '<em>', desc: 'semantically emphasised text, displays italic', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em' },
-          { name: '<i>', desc: 'italic text', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i' },
-          { name: '<mark>', desc: 'highlighted text', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark' },
-          { name: '<q>', desc: 'inline quotation', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q' },
-          { name: '<cite>', desc: 'reference and title of a cited work', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite' },
-          { name: '<data>', desc: 'content with its machine-readable value', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/data' },
-          { name: '<dfn>', desc: 'term that is currently defined', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dfn' },
-          { name: '<small>', desc: 'small print, like copyright text', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/small' },
-          { name: '<sub>', desc: 'subscript inline text, that should be rendered lower', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sub' },
-          { name: '<sup>', desc: 'superscript inline text, that should be rendered higher', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sup' },
-          { name: '<time>', desc: 'time or date', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time' },
-          { name: '<bdo>', desc: 'render text in defferent direction', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdo' },
-          { name: '<bdi>', desc: 'bidirectional text', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdi' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ lists
-
-      {
-        header: 'list',
-        items: [
-          { name: '<ul>', desc: 'unordered list', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul' },
-          { name: '<ol>', desc: 'ordered list', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol' },
-          { name: '<li>', desc: 'list item', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li' },
-          { name: '<dl>', desc: 'description list', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl' },
-          { name: '<dt>', desc: 'description term in <dl>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dt' },
-          { name: '<dd>', desc: 'description definition for <dt> in <dl>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dd' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ embeding content
-
-      {
-        header: 'embeding content',
-        items: [
-          { name: '<img>', desc: 'embed image in a document', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img' },
-          { name: '<picture>', desc: 'responsive images for browser to choose from', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture' },
-          { name: '<video>', desc: 'embed video player', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video' },
-          { name: '<audio>', desc: 'embed sound content in a document', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio' },
-          { name: '<source>', desc: 'media resource for <picture>, <video> or <audio>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source' },
-          { name: '<track>', desc: 'subtitles for <video> and <audio>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track' },
-          { name: '<embed>', desc: 'embed an external content', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed' },
-          { name: '<iframe>', desc: 'embed anther HTML page into the current one, nested browsing context', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe' },
-          { name: '<object>', desc: 'an external resource, which can be treated as an image, a nested browsing context, or a resource to be handled by a plugin', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object' },
-          { name: '<param>', desc: 'parameters for an <object> element', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/param' },
-          { name: '<svg>', desc: 'svg container', link: 'https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg' },
-          { name: '<canvas>', desc: 'container to draw with canvas API or WebGL API', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas' },
-          { name: '<noscript>', desc: 'html to be inserted if scripting is not available on the page', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript' },
-          { name: '<script>', desc: 'embed executable javascript code', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ tables
-
-      {
-        header: 'tables',
-        items: [
-          { name: '<table>', desc: 'table container', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table' },
-          { name: '<caption>', desc: 'table caption', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/caption' },
-          { name: '<thead>', desc: 'container for header rows in a table', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead' },
-          { name: '<tbody>', desc: 'container for body rows in a table', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody' },
-          { name: '<tfoot>', desc: 'container for footer rows in a table', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tfoot' },
-          { name: '<col>', desc: 'defines a column within a table', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col' },
-          { name: '<colgroup>', desc: 'defines a group of columns within a table', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup' },
-          { name: '<tr>', desc: 'table row', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr' },
-          { name: '<th>', desc: 'table header cell', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th' },
-          { name: '<td>', desc: 'table body cell', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ forms
-
-      {
-        header: 'forms',
-        items: [
-          { name: '<form>', desc: 'form container', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form' },
-          { name: '<input>', desc: 'form input element', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input' },
-          { name: '<button>', desc: 'clickable button', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button' },
-          { name: '<datalist>', desc: 'list of permissible or recomended <option> for <input>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist' },
-          { name: '<fieldset>', desc: 'group for several form elements', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset' },
-          { name: '<label>', desc: 'caption for an input element', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label' },
-          { name: '<legend>', desc: 'caption for the <fieldset>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend' },
-          { name: '<meter>', desc: 'graphical representation of a value within a known range', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter' },
-          { name: '<optgroup>', desc: 'group of <option> in <select>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup' },
-          { name: '<option>', desc: 'item in <select> or <datalist>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option' },
-          { name: '<output>', desc: 'container for injecting the results of calculation or the outcome of a user action', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output' },
-          { name: '<progress>', desc: 'progress bar', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress' },
-          { name: '<select>', desc: 'menu of options', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select' },
-          { name: '<textarea>', desc: 'multiline text input', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ input types
-
-      {
-        header: 'input types',
-        items: [
-          { name: '<input type="button">', desc: 'clickable button', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/button' },
-          { name: '<input type="checkbox">', desc: 'checkbox', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox' },
-          { name: '<input type="color">', desc: 'color picker', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/color' },
-          { name: '<input type="date">', desc: 'date picker', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date' },
-          { name: '<input type="datetime-local">', desc: 'date and time picker', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/datetime-local' },
-          { name: '<input type="email">', desc: 'email input', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/email' },
-          { name: '<input type="file">', desc: 'file picker', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file' },
-          { name: '<input type="hidden">', desc: 'data that cannot be seen or modified by user', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/hidden' },
-          { name: '<input type="image">', desc: 'submit button from the image', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/image' },
-          { name: '<input type="month">', desc: 'month input', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/month' },
-          { name: '<input type="number">', desc: 'number input', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number' },
-          { name: '<input type="password">', desc: 'password input', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/password' },
-          { name: '<input type="radio">', desc: 'radio button', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio' },
-          { name: '<input type="range">', desc: 'numeric value in a specified range', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range' },
-          { name: '<input type="reset">', desc: 'reset all input to their initial values', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/reset' },
-          { name: '<input type="search">', desc: 'search input', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/search' },
-          { name: '<input type="submit">', desc: 'submit button', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/submit' },
-          { name: '<input type="tel">', desc: 'telephone number input', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel' },
-          { name: '<input type="text">', desc: 'basic text input', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/text' },
-          { name: '<input type="time">', desc: 'time input', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/time' },
-          { name: '<input type="url">', desc: 'url input', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/url' },
-          { name: '<input type="week">', desc: 'week input', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/week' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ code
-
-      {
-        header: 'code',
-        items: [
-          { name: '<code>', desc: 'short fragment or a line of code', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code' },
-          { name: '<kbd>', desc: 'keyboard or other user input', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd' },
-          { name: '<samp>', desc: 'sample output from a program', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/samp' },
-          { name: '<var>', desc: 'variable name', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/var' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ map
-
-      {
-        header: 'map',
-        items: [
-          { name: '<area>', desc: 'clickable area inside <map>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area' },
-          { name: '<map>', desc: 'create clickable link area from image', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ separators
-
-      {
-        header: 'separators',
-        items: [
-          { name: '<hr>', desc: 'horizontal rule - thematic break between paragraphs', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr' },
-          { name: '<br>', desc: 'line break', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br' },
-          { name: '<wbr>', desc: 'word break', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr' },
-        ]
-      },
-
-  // }>>
+    bootstrap: [
 
   // <<{ mix
 
       {
         header: 'mix',
         items: [
-          { name: 'open graph', desc: 'social graph protocol', link: 'https://ogp.me/' },
-          { name: 'tag reference', desc: 'tag reference', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element' },
-          { name: 'Quirks Mode and Standards Mode', desc: 'browser modes to display content', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode' },
-          { name: 'Responsive images', desc: 'why and how use responsive images', link: 'https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images' },
-          { name: 'global attributes', desc: 'attributes common to all HTML elements', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes' },
-          { name: 'crossorigin', desc: 'crossorigin attribute for <link>, <img>, <video>, <audio> and <script>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin' },
-          { name: '<!DOCTYPE html>', desc: 'prevent browser from switching into quirks mode', link: 'https://developer.mozilla.org/en-US/docs/Glossary/Doctype' },
-          { name: '<html>', desc: 'document root element', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html' },
-          { name: '<head>', desc: 'metadata about the document', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head' },
-          { name: '<body>', desc: 'content of the document', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body' },
-          { name: '<base>', desc: 'base URL for all relative URL\'s in a document', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base' },
-          { name: '<title>', desc: 'title of the document', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title' },
-          { name: '<style>', desc: 'global document css styles', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style' },
-          { name: '<div>', desc: 'generic container', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div' },
-          { name: '<span>', desc: 'generic inline conatainer', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span' },
-          { name: '<rp>', desc: 'ruby fallback parenthesis', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rp' },
-          { name: '<rt>', desc: 'ruby text element', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rt' },
-          { name: '<ruby>', desc: 'small annotation that rendered above, below or next to the text', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby' },
-          { name: '<details>', desc: 'disclosure widget, where information is visible when it is in opened state', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details' },
-          { name: '<summary>', desc: 'caption for the <details> widget', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ handlebars
-
-    handlebars: [
-
-  // <<{ mix
-
-      {
-        header: 'mix',
-        items: [
-          { name: 'installation via CDN', desc: 'installation via CDN', link: 'https://handlebarsjs.com/guide/#installation' },
-
-          { name: 'basic expressions', desc: 'about basic expressions', link: 'https://handlebarsjs.com/guide/expressions.html#basic-usage' },
-          { name: 'path expressions', desc: 'about dot-separated path expressions', link: 'https://handlebarsjs.com/guide/expressions.html#path-expressions' },
-          { name: 'changing the context', desc: 'about going up with ../ in expression', link: 'https://handlebarsjs.com/guide/expressions.html#changing-the-context' },
-          { name: 'allowed chars in expression', desc: 'which chars are allowed and how to escape them with []', link: 'https://handlebarsjs.com/guide/expressions.html#literal-segments' },
-          { name: 'HTML escaping', desc: 'about escaped {{...}} and not-escaped {{{...}}}', link: 'https://handlebarsjs.com/guide/expressions.html#html-escaping' },
-          { name: 'inline helpers', desc: 'inline helpers - {{helper param1 param2}}', link: 'https://handlebarsjs.com/guide/expressions.html#helpers' },
-          { name: 'prevent HTML escaping in helper', desc: 'prevent escaping in helper return values', link: 'https://handlebarsjs.com/guide/expressions.html#prevent-html-escaping-of-helper-return-values' },
+          { name: '', desc: '', link: '' },
         ]
       },
 
@@ -1351,6 +704,1116 @@ const data = {
 
 // }>>
 
+// <<{ docker
+
+    docker: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ eleventy
+
+    eleventy: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ git
+
+    git: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: 'git reference', desc: 'git commands reference', link: 'https://git-scm.com/docs' },
+          { name: 'gitbook', desc: 'git platform for docs', link: 'https://app.gitbook.com/home' },
+          { name: 'submodule', desc: 'git submoduler cheatsheet', link: 'https://www.devroom.io/2020/03/09/the-git-submodule-cheat-sheet/' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ go
+
+    go: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ handlebars
+
+    handlebars: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: 'installation via CDN', desc: 'installation via CDN', link: 'https://handlebarsjs.com/guide/#installation' },
+
+          { name: 'basic expressions', desc: 'about basic expressions', link: 'https://handlebarsjs.com/guide/expressions.html#basic-usage' },
+          { name: 'path expressions', desc: 'about dot-separated path expressions', link: 'https://handlebarsjs.com/guide/expressions.html#path-expressions' },
+          { name: 'changing the context', desc: 'about going up with ../ in expression', link: 'https://handlebarsjs.com/guide/expressions.html#changing-the-context' },
+          { name: 'allowed chars in expression', desc: 'which chars are allowed and how to escape them with []', link: 'https://handlebarsjs.com/guide/expressions.html#literal-segments' },
+          { name: 'HTML escaping', desc: 'about escaped {{...}} and not-escaped {{{...}}}', link: 'https://handlebarsjs.com/guide/expressions.html#html-escaping' },
+          { name: 'inline helpers', desc: 'inline helpers - {{helper param1 param2}}', link: 'https://handlebarsjs.com/guide/expressions.html#helpers' },
+          { name: 'prevent HTML escaping in helper', desc: 'prevent escaping in helper return values', link: 'https://handlebarsjs.com/guide/expressions.html#prevent-html-escaping-of-helper-return-values' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ html
+
+    html: [
+
+  // <<{ main
+
+      {
+        header: 'main',
+        items: [
+          { name: 'tag reference', desc: 'tag reference', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element' },
+          { name: 'name values in <meta>', desc: 'standard name values in <meta>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name' },
+          { name: 'rel values', desc: 'possible rel values in <link, <a>, <area>, and <form>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types' },
+          { name: 'preloading with rel="preload"', desc: 'how to start preloading resources early in the page lifecycle', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/preload' },
+          { name: 'global attributes', desc: 'attributes common to all HTML elements', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes' },
+          { name: 'crossorigin attribute', desc: 'crossorigin attribute for <link>, <img>, <video>, <audio> and <script>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ main tags
+
+      {
+        header: 'main tags',
+        items: [
+          { name: '<html>', desc: 'document root', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html' },
+          { name: '<head>', desc: 'metadata about the document', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head' },
+          { name: '<base>', desc: 'base URL for all relative URL\'s in a document', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base' },
+          { name: '<meta>', desc: 'different metadata of the document', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta' },
+          { name: '<link>', desc: 'load external resources', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link' },
+          { name: '<title>', desc: 'title of the document', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title' },
+          { name: '<style>', desc: 'global document css styles', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style' },
+          { name: '<body>', desc: 'content of the document', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ sections
+
+      {
+        header: 'sections',
+        items: [
+          { name: '<article>', desc: 'self-contained composition in a document which is intended to be independently distributable or reusable', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article' },
+          { name: '<aside>', desc: 'portion of a document whose content is only indirectly related to the document\'s main content', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside' },
+          { name: '<section>', desc: 'generic section of a document', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section' },
+          { name: '<main>', desc: 'dominant content of the document', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main' },
+          { name: '<nav>', desc: 'section with main navigation links', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav' },
+          { name: '<header>', desc: 'header information (nav, logo, search, author name) for the section', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header' },
+          { name: '<footer>', desc: 'footer information (about the author, copyright, related links) for the section', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ semantic block tags
+
+      {
+        header: 'semantic block tags',
+        items: [
+          { name: '<p>', desc: 'paragraph', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p' },
+          { name: '<h1> - <h6>', desc: 'six levels of section headings', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements' },
+          { name: '<address>', desc: 'contact information for a person/organization', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address' },
+          { name: '<menu>', desc: 'semantic altrenative to <ul> for the menus', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu' },
+          { name: '<blockquote>', desc: 'block quotation', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote' },
+          { name: '<figcaption>', desc: 'caption for the content in <figure>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption' },
+          { name: '<figure>', desc: 'self-contained content with optional caption in <figcaption>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure' },
+          { name: '<pre>', desc: 'preformatted text - presented exactly as written', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre' },
+          { name: '<dialog>', desc: 'container for the dialog boxes', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ semantic inline tags
+
+      {
+        header: 'semantic inline tags',
+        items: [
+          { name: '<a>', desc: 'anchor', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a' },
+          { name: '<abbr>', desc: 'abbreviation', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr' },
+          { name: '<strong>', desc: 'text of strong importance, seriousness or urgency, bold', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong' },
+          { name: '<b>', desc: 'bold text', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b' },
+          { name: '<del>', desc: 'deleted text, with line-through', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del' },
+          { name: '<s>', desc: 'strikethrough text', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/s' },
+          { name: '<ins>', desc: 'inserted text', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins' },
+          { name: '<u>', desc: 'underlined text', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u' },
+          { name: '<em>', desc: 'semantically emphasised text, displays italic', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em' },
+          { name: '<i>', desc: 'italic text', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i' },
+          { name: '<mark>', desc: 'highlighted text', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark' },
+          { name: '<q>', desc: 'inline quotation', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q' },
+          { name: '<cite>', desc: 'reference and title of a cited work', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite' },
+          { name: '<data>', desc: 'content with its machine-readable value', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/data' },
+          { name: '<dfn>', desc: 'term that is currently defined', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dfn' },
+          { name: '<small>', desc: 'small print, like copyright text', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/small' },
+          { name: '<sub>', desc: 'subscript inline text, that should be rendered lower', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sub' },
+          { name: '<sup>', desc: 'superscript inline text, that should be rendered higher', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sup' },
+          { name: '<time>', desc: 'time or date', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time' },
+          { name: '<bdo>', desc: 'render text in defferent direction', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdo' },
+          { name: '<bdi>', desc: 'bidirectional text', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdi' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ lists
+
+      {
+        header: 'list',
+        items: [
+          { name: '<ul>', desc: 'unordered list', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul' },
+          { name: '<ol>', desc: 'ordered list', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol' },
+          { name: '<li>', desc: 'list item', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li' },
+          { name: '<dl>', desc: 'description list', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl' },
+          { name: '<dt>', desc: 'description term in <dl>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dt' },
+          { name: '<dd>', desc: 'description definition for <dt> in <dl>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dd' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ embeding content
+
+      {
+        header: 'embeding content',
+        items: [
+          { name: '<img>', desc: 'embed image in a document', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img' },
+          { name: '<picture>', desc: 'responsive images for browser to choose from', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture' },
+          { name: '<video>', desc: 'embed video player', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video' },
+          { name: '<audio>', desc: 'embed sound content in a document', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio' },
+          { name: '<source>', desc: 'media resource for <picture>, <video> or <audio>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source' },
+          { name: '<track>', desc: 'subtitles for <video> and <audio>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track' },
+          { name: '<embed>', desc: 'embed an external content', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed' },
+          { name: '<iframe>', desc: 'embed anther HTML page into the current one, nested browsing context', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe' },
+          { name: '<object>', desc: 'an external resource, which can be treated as an image, a nested browsing context, or a resource to be handled by a plugin', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object' },
+          { name: '<param>', desc: 'parameters for an <object> element', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/param' },
+          { name: '<svg>', desc: 'svg container', link: 'https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg' },
+          { name: '<canvas>', desc: 'container to draw with canvas API or WebGL API', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas' },
+          { name: '<noscript>', desc: 'html to be inserted if scripting is not available on the page', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript' },
+          { name: '<script>', desc: 'embed executable javascript code', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ tables
+
+      {
+        header: 'tables',
+        items: [
+          { name: '<table>', desc: 'table container', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table' },
+          { name: '<caption>', desc: 'table caption', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/caption' },
+          { name: '<thead>', desc: 'container for header rows in a table', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead' },
+          { name: '<tbody>', desc: 'container for body rows in a table', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody' },
+          { name: '<tfoot>', desc: 'container for footer rows in a table', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tfoot' },
+          { name: '<col>', desc: 'defines a column within a table', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col' },
+          { name: '<colgroup>', desc: 'defines a group of columns within a table', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup' },
+          { name: '<tr>', desc: 'table row', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr' },
+          { name: '<th>', desc: 'table header cell', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th' },
+          { name: '<td>', desc: 'table body cell', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ forms
+
+      {
+        header: 'forms',
+        items: [
+          { name: '<form>', desc: 'form container', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form' },
+          { name: '<input>', desc: 'form input element', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input' },
+          { name: '<button>', desc: 'clickable button', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button' },
+          { name: '<datalist>', desc: 'list of permissible or recomended <option> for <input>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist' },
+          { name: '<fieldset>', desc: 'group for several form elements', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset' },
+          { name: '<label>', desc: 'caption for an input element', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label' },
+          { name: '<legend>', desc: 'caption for the <fieldset>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend' },
+          { name: '<meter>', desc: 'graphical representation of a value within a known range', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter' },
+          { name: '<optgroup>', desc: 'group of <option> in <select>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup' },
+          { name: '<option>', desc: 'item in <select> or <datalist>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option' },
+          { name: '<output>', desc: 'container for injecting the results of calculation or the outcome of a user action', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output' },
+          { name: '<progress>', desc: 'progress bar', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress' },
+          { name: '<select>', desc: 'menu of options', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select' },
+          { name: '<textarea>', desc: 'multiline text input', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ input types
+
+      {
+        header: 'input types',
+        items: [
+          { name: '<input type="button">', desc: 'clickable button', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/button' },
+          { name: '<input type="checkbox">', desc: 'checkbox', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox' },
+          { name: '<input type="color">', desc: 'color picker', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/color' },
+          { name: '<input type="date">', desc: 'date picker', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date' },
+          { name: '<input type="datetime-local">', desc: 'date and time picker', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/datetime-local' },
+          { name: '<input type="email">', desc: 'email input', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/email' },
+          { name: '<input type="file">', desc: 'file picker', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file' },
+          { name: '<input type="hidden">', desc: 'data that cannot be seen or modified by user', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/hidden' },
+          { name: '<input type="image">', desc: 'submit button from the image', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/image' },
+          { name: '<input type="month">', desc: 'month input', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/month' },
+          { name: '<input type="number">', desc: 'number input', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number' },
+          { name: '<input type="password">', desc: 'password input', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/password' },
+          { name: '<input type="radio">', desc: 'radio button', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio' },
+          { name: '<input type="range">', desc: 'numeric value in a specified range', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range' },
+          { name: '<input type="reset">', desc: 'reset all input to their initial values', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/reset' },
+          { name: '<input type="search">', desc: 'search input', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/search' },
+          { name: '<input type="submit">', desc: 'submit button', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/submit' },
+          { name: '<input type="tel">', desc: 'telephone number input', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel' },
+          { name: '<input type="text">', desc: 'basic text input', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/text' },
+          { name: '<input type="time">', desc: 'time input', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/time' },
+          { name: '<input type="url">', desc: 'url input', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/url' },
+          { name: '<input type="week">', desc: 'week input', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/week' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ code
+
+      {
+        header: 'code',
+        items: [
+          { name: '<code>', desc: 'short fragment or a line of code', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code' },
+          { name: '<kbd>', desc: 'keyboard or other user input', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd' },
+          { name: '<samp>', desc: 'sample output from a program', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/samp' },
+          { name: '<var>', desc: 'variable name', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/var' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ map
+
+      {
+        header: 'map',
+        items: [
+          { name: '<area>', desc: 'clickable area inside <map>', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area' },
+          { name: '<map>', desc: 'create clickable link area from image', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ separators
+
+      {
+        header: 'separators',
+        items: [
+          { name: '<hr>', desc: 'horizontal rule - thematic break between paragraphs', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr' },
+          { name: '<br>', desc: 'line break', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br' },
+          { name: '<wbr>', desc: 'word break', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: '<div>', desc: 'generic container', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div' },
+          { name: '<span>', desc: 'generic inline conatainer', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span' },
+          { name: '<rp>', desc: 'ruby fallback parenthesis', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rp' },
+          { name: '<rt>', desc: 'ruby text element', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rt' },
+          { name: '<ruby>', desc: 'small annotation that rendered above, below or next to the text', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby' },
+          { name: '<details>', desc: 'disclosure widget, where information is visible when it is in opened state', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details' },
+          { name: '<summary>', desc: 'caption for the <details> widget', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ http
+
+    http: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: 'HTTP overview', desc: 'about HTTP protocol', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview' },
+          { name: 'caching', desc: 'about HTTP caching', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching' },
+          { name: 'cookies', desc: 'about HTTP cookies', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies' },
+          { name: 'CORS', desc: 'about Cross-Origin Resource Sharing', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS' },
+          { name: 'CSP', desc: 'about Content Security Policy', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP' },
+          { name: 'HTTP versions', desc: 'about different HTTP versions', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP' },
+          { name: 'Requests and Responses', desc: 'about HTTP messages', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages' },
+          { name: 'typical HTTP session', desc: 'about typical HTTP session', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Session' },
+          { name: 'connection management in HTTP/1.x', desc: 'about connection management in HTTP/1.x', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x' },
+          { name: 'headers reference', desc: 'HTTP headers reference', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers' },
+          { name: 'methods reference', desc: 'HTTP methods reference', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods' },
+          { name: 'codes reference', desc: 'HTTP response status codes reference', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Status' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ icons
+
+    icons: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ japan
+
+    japan: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: 'hiragana/katakana тренажер', desc: 'hiragana/katakana тренажер', link: 'https://vacuum.name/japanese/hiragana-katakana' },
+          { name: 'тренажер по набору слов', desc: 'тренажер по набору слов', link: 'https://vacuum.name/japanese/words-trainer' },
+          { name: 'WaniKani V', desc: 'облегченная wanikani', link: 'https://vacuum.name/japanese/wanikani' },
+          { name: 'jisho.org', desc: 'powerful Japanese-English dictionary', link: 'https://jisho.org/' },
+          { name: 'nippontalk', desc: 'Japanese texts with furigana and English translation', link: 'http://www.nippontalk.com/en.html' },
+          { name: 'grammar', desc: 'japanese grammar', link: 'http://nippon.temerov.org/gramat.php' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ javascript
+
+    javascript: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ DOM
+
+      {
+        header: 'DOM',
+        items: [
+          { name: 'EventTarget', desc: 'interface for receiving events and attaching listeners', link: 'https://developer.mozilla.org/en-US/docs/Web/API/EventTarget' },
+          { name: 'Window', desc: 'interface for a browser window', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Window' },
+          { name: 'Node', desc: 'interface for a node in DOM tree', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Node' },
+          { name: 'Document', desc: 'interface for a loaded web page', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Document' },
+          { name: 'DocumentFragment', desc: 'interface for a document fragment', link: 'https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment' },
+          { name: 'Element', desc: 'interface for an element', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Element' },
+          { name: 'HTMLElement', desc: 'interface for an HTML element', link: 'https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement' },
+          { name: 'HTMLCollection', desc: 'interface for a live collection of elements', link: 'https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection' },
+          { name: 'NodeList', desc: 'interface for a live and static collection of nodes', link: 'https://developer.mozilla.org/en-US/docs/Web/API/NodeList' },
+          { name: 'TreeWalker', desc: 'inteface for nodes with their position in subtree', link: 'https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker' },
+          { name: 'Event', desc: 'interface for an event', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Event' },
+          { name: 'Event reference', desc: 'event reference', link: 'https://developer.mozilla.org/en-US/docs/Web/Events' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ Font Loading api
+
+      {
+        header: 'Font Loading api',
+        items: [
+          { name: 'CSS Font Loading api', desc: 'dynamically loading fonts', link: 'https://developer.mozilla.org/en-US/docs/Web/API/CSS_Font_Loading_API' },
+          { name: 'FontFace', desc: 'interface for a single loadable font', link: 'https://developer.mozilla.org/en-US/docs/Web/API/FontFace' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ CSSOM
+
+      {
+        header: 'CSSOM',
+        items: [
+          { name: 'CSSOM', desc: 'interfaces for css manipulation from javascript, like DOM but for CSS', link: 'https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ Canvas api
+
+      {
+        header: 'Canvas api',
+        items: [
+          { name: 'canvas api', desc: 'drawing 2D graphics via javascript', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API' },
+          { name: 'HTMLCanvasElement', desc: 'interface for <canvas> element', link: 'https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement' },
+          { name: 'CanvasRenderingContext2D', desc: 'interface for 2D drawing on the <canvas> element', link: 'https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ Console api
+
+      {
+        header: 'Console api',
+        items: [
+          { name: 'Console', desc: 'interface for browser debugging console', link: 'https://developer.mozilla.org/en-US/docs/Web/API/console' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ Fetch api
+
+      {
+        header: 'Fetch api',
+        items: [
+          { name: 'Fetch api', desc: 'api for fetching resources', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API' },
+          { name: 'fetch()', desc: 'function for fetching resources', link: 'https://developer.mozilla.org/en-US/docs/Web/API/fetch' },
+          { name: 'Headers', desc: 'interface for configuring request HTTP headers', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Headers' },
+          { name: 'Request', desc: 'interface for a request', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Request' },
+          { name: 'Response', desc: 'interface for a response to a request', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Response' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ File api
+
+      {
+        header: 'File api',
+        items: [
+          { name: 'Using File api', desc: 'using file api', link: 'https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications' },
+          { name: 'FileList', desc: 'list of files, returned by the files prop of the <input type="file"> element', link: 'https://developer.mozilla.org/en-US/docs/Web/API/FileList' },
+          { name: 'File', desc: 'interface for a file in FileList', link: 'https://developer.mozilla.org/en-US/docs/Web/API/File' },
+          { name: 'FileReader', desc: 'interface for asynchronously read the contents of the file', link: 'https://developer.mozilla.org/en-US/docs/Web/API/FileReader' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ Fullscreen api
+
+      {
+        header: 'Fullscreen api',
+        items: [
+          { name: 'Fullscreen api guide', desc: 'fullscreen api guide', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API/Guide' },
+          { name: 'Fullscreen api', desc: 'fullscreen api', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ Drag and Drop api
+
+      {
+        header: 'Drag and Drop api',
+        items: [
+          { name: 'Drag and Drop api', desc: 'enables to use drag and drop features', link: 'https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ History api
+
+      {
+        header: 'History api',
+        items: [
+          { name: 'History api', desc: 'access to the browser session history', link: 'https://developer.mozilla.org/en-US/docs/Web/API/History_API' },
+          { name: 'History', desc: 'interface for manipulating browser session history', link: 'https://developer.mozilla.org/en-US/docs/Web/API/History' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ IndexedDB api
+
+      {
+        header: 'IndexedDB api',
+        items: [
+          { name: 'Using IndexedDB', desc: 'how to use IndexedDB', link: 'https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB' },
+          { name: 'IndexedDB api', desc: 'client-side storage of big data', link: 'https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ Intersectin Observer api
+
+      {
+        header: 'Intersection Observer api',
+        items: [
+          { name: 'Intersection Observer api', desc: 'asynchronously observer changes in the intersection of the target element', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ Performance api
+
+      {
+        header: 'Performance api',
+        items: [
+          { name: 'Performance api', desc: 'client-side latency measurements', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Performance_API' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ Streams api
+
+      {
+        header: 'Streams api',
+        items: [
+          { name: 'Streams api', desc: 'accessing streams of data received over the network', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Streams_API' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ URL api
+
+      {
+        header: 'URL api',
+        items: [
+          { name: 'URL api', desc: 'access and manipulate URL', link: 'https://developer.mozilla.org/en-US/docs/Web/API/URL_API' },
+          { name: 'URL', desc: 'interface for URL', link: 'https://developer.mozilla.org/en-US/docs/Web/API/URL' },
+          { name: 'URLSearchParams', desc: 'interface for a query string of a URL', link: 'https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ Web Animations api
+
+      {
+        header: 'Web Animations api',
+        items: [
+          { name: 'Web Animations api', desc: 'animations over javascript', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API' },
+          { name: 'using web animations api', desc: 'using web animations api', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ Web Storage api
+
+      {
+        header: 'Web Storage api',
+        items: [
+          { name: 'Web Storage api', desc: 'storing key/values pairs in the browser', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ Web Workers api
+
+      {
+        header: 'Web Workers api',
+        items: [
+          { name: 'Web Workers api', desc: 'creating threads in javascript', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ WebSocket api
+
+      {
+        header: 'WebSocket api',
+        items: [
+          { name: 'WebSocket api', desc: 'two-way communication between browser and server', link: 'https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ XMLHttpRequest
+
+      {
+        header: 'XMLHttpRequest',
+        items: [
+          { name: 'XMLHttpRequest', desc: 'making asynchronous requests to the server', link: 'https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ eslint
+
+      {
+        header: 'eslint',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ babel
+
+      {
+        header: 'babel',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ browser-sync
+
+      {
+        header: 'browser-sync',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ browserify
+
+      {
+        header: 'browserify',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ uglifyjs
+
+      {
+        header: 'uglifyjs',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ jekyll
+
+    jekyll: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ laravel
+
+    laravel: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ linux
+
+    linux: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ ssh
+
+      {
+        header: 'ssh',
+        items: [
+          { name: 'ssh overview', desc: 'about ssh, servers and clients', link: 'https://www.ssh.com/academy/ssh' },
+          { name: 'public key', desc: 'key for server to encrypt data', link: 'https://www.ssh.com/academy/cryptography/public-key' },
+          { name: 'private key', desc: 'key for user to read data, encrypted by publix key on server', link: 'https://www.ssh.com/academy/cryptography/private-key' },
+          { name: 'host key', desc: 'key for identifying hosts', link: 'https://www.ssh.com/academy/ssh/host-key' },
+          { name: 'openssh', desc: 'open source implementation of the ssh protocol', link: 'https://www.ssh.com/academy/ssh/openssh' },
+          { name: 'ssh', desc: 'openssh client', link: 'https://www.ssh.com/academy/ssh/command' },
+          { name: 'ssh-keygen', desc: 'openssh tool for creating ssh key pairs', link: 'https://www.ssh.com/academy/ssh/keygen' },
+          { name: 'ssh-copy-id', desc: 'openssh tool to install public key on the server', link: 'https://www.ssh.com/academy/ssh/copy-id' },
+          { name: 'ssh-agent', desc: 'openssh agent to keep track of user\'s keys and passphrases', link: 'https://www.ssh.com/academy/ssh/agent' },
+          { name: 'ssh-add', desc: 'openssh tool to add private keys to ssh agent', link: 'https://www.ssh.com/academy/ssh/add' },
+          { name: 'sftp', desc: 'secure file transfer protocol', link: 'https://www.ssh.com/academy/ssh/sftp' },
+          { name: 'scp', desc: 'secure copy protocol', link: 'https://www.ssh.com/academy/ssh/scp' },
+          { name: 'sshd', desc: 'openssh server', link: 'https://www.ssh.com/academy/ssh/sshd' },
+          { name: 'sshd_config', desc: 'configuration for ssh server located in /etc/ssh/sshd_config', link: 'https://www.ssh.com/academy/ssh/sshd_config' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ awk
+
+      {
+        header: 'awk',
+        items: [
+          { name: 'awk', desc: 'how to use awk command', link: 'https://www.howtogeek.com/562941/how-to-use-the-awk-command-on-linux/' },
+          { name: 'хабр - awk', desc: 'про awk', link: 'https://habr.com/ru/company/ruvds/blog/327754/' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ i3
+
+      {
+        header: 'i3',
+        items: [
+          { name: 'i3 user guide', desc: 'user guide for i3 window manager', link: 'https://i3wm.org/docs/userguide.html' },
+          { name: 'i3 layout saving', desc: 'guide for layout saving for i3 window manager', link: 'https://i3wm.org/docs/layout-saving.html' },
+          { name: 'i3status', desc: 'configuration of the builtin bar manager in i3 window manager', link: 'https://i3wm.org/docs/i3status.html' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ i3blocks
+
+      {
+        header: 'i3blocks',
+        items: [
+          { name: 'i3blocks', desc: 'more customizable bar manager for i3 wm', link: 'https://github.com/vivien/i3blocks#i3blocks' },
+          { name: 'i3blocks-contrib', desc: 'community contributed blocklets for i3blocks', link: 'https://github.com/vivien/i3blocks-contrib' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ ranger
+
+      {
+        header: 'ranger',
+        items: [
+          { name: 'ranger user guide', desc: 'shell file manager user guide', link: 'https://github.com/ranger/ranger/wiki/Official-user-guide#contents' },
+          { name: 'ranger wiki', desc: 'shell file manager wiki', link: 'https://github.com/ranger/ranger/wiki' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ fzf
+
+      {
+        header: 'fzf',
+        items: [
+          { name: 'fzf', desc: 'fuzzy finder utility', link: 'https://github.com/junegunn/fzf#table-of-contents' },
+          { name: 'search syntax', desc: 'search syntax when searching in fzf', link: 'https://github.com/junegunn/fzf#search-syntax' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ compton
+
+      {
+        header: 'compton',
+        items: [
+          { name: 'compton', desc: 'composition manager', link: 'https://github.com/chjj/compton#compton' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ rofi
+
+      {
+        header: 'rofi',
+        items: [
+          { name: 'rofi', desc: 'application launcher', link: 'https://github.com/davatorium/rofi#a-window-switcher-application-launcher-and-dmenu-replacement' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ fd
+
+      {
+        header: 'fd',
+        items: [
+          { name: 'fd', desc: 'fd finder, simple alternative to "find"', link: 'https://github.com/sharkdp/fd#fd' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ ripgrep
+
+      {
+        header: 'ripgrep',
+        items: [
+          { name: 'ripgrep', desc: 'line-oriented search tool', link: 'https://github.com/BurntSushi/ripgrep#ripgrep-rg' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ dunst
+
+      {
+        header: 'dunst',
+        items: [
+          { name: 'dunst', desc: 'configurable notification daemon', link: 'https://github.com/dunst-project/dunst#documentation' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ makefile
+
+    makefile: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ markdown
+
+    markdown: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ mysql
+
+    mysql: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ nginx
+
+    nginx: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: 'nginx documentation', desc: 'nginx documentation', link: 'https://nginx.org/en/docs/' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ nodejs
+
+    nodejs: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ php
+
+    php: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ react
+
+    react: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: '', desc: '', link: '' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
 // <<{ sass
 
     sass: [
@@ -1621,340 +2084,14 @@ const data = {
 
 // }>>
 
-// <<{ javascript
+// <<{ translators
 
-    javascript: [
-
-  // <<{ mix
-
-      {
-        header: 'mix',
-        items: [
-          { name: '', desc: '', link: '' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ dom
-
-    dom: [
+    translators: [
 
   // <<{ mix
 
       {
         header: 'mix',
-        items: [
-          { name: 'EventTarget', desc: 'interface for receiving events and attaching listeners', link: 'https://developer.mozilla.org/en-US/docs/Web/API/EventTarget' },
-          { name: 'Window', desc: 'interface for a browser window', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Window' },
-          { name: 'Node', desc: 'interface for a node in DOM tree', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Node' },
-          { name: 'Document', desc: 'interface for a loaded web page', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Document' },
-          { name: 'DocumentFragment', desc: 'interface for a document fragment', link: 'https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment' },
-          { name: 'Element', desc: 'interface for an element', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Element' },
-          { name: 'HTMLElement', desc: 'interface for an HTML element', link: 'https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement' },
-          { name: 'HTMLCollection', desc: 'interface for a live collection of elements', link: 'https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection' },
-          { name: 'NodeList', desc: 'interface for a live and static collection of nodes', link: 'https://developer.mozilla.org/en-US/docs/Web/API/NodeList' },
-          { name: 'TreeWalker', desc: 'inteface for nodes with their position in subtree', link: 'https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker' },
-          { name: 'Event', desc: 'interface for an event', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Event' },
-          { name: 'Event reference', desc: 'event reference', link: 'https://developer.mozilla.org/en-US/docs/Web/Events' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ js_api
-
-    js_api: [
-
-  // <<{ Font Loading api
-
-      {
-        header: 'Font Loading api',
-        items: [
-          { name: 'CSS Font Loading api', desc: 'dynamically loading fonts', link: 'https://developer.mozilla.org/en-US/docs/Web/API/CSS_Font_Loading_API' },
-          { name: 'FontFace', desc: 'interface for a single loadable font', link: 'https://developer.mozilla.org/en-US/docs/Web/API/FontFace' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ CSSOM
-
-      {
-        header: 'CSSOM',
-        items: [
-          { name: 'CSSOM', desc: 'interfaces for css manipulation from javascript, like DOM but for CSS', link: 'https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ Canvas api
-
-      {
-        header: 'Canvas api',
-        items: [
-          { name: 'canvas api', desc: 'drawing 2D graphics via javascript', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API' },
-          { name: 'HTMLCanvasElement', desc: 'interface for <canvas> element', link: 'https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement' },
-          { name: 'CanvasRenderingContext2D', desc: 'interface for 2D drawing on the <canvas> element', link: 'https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ Console api
-
-      {
-        header: 'Console api',
-        items: [
-          { name: 'Console', desc: 'interface for browser debugging console', link: 'https://developer.mozilla.org/en-US/docs/Web/API/console' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ Fetch api
-
-      {
-        header: 'Fetch api',
-        items: [
-          { name: 'Fetch api', desc: 'api for fetching resources', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API' },
-          { name: 'fetch()', desc: 'function for fetching resources', link: 'https://developer.mozilla.org/en-US/docs/Web/API/fetch' },
-          { name: 'Headers', desc: 'interface for configuring request HTTP headers', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Headers' },
-          { name: 'Request', desc: 'interface for a request', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Request' },
-          { name: 'Response', desc: 'interface for a response to a request', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Response' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ File api
-
-      {
-        header: 'File api',
-        items: [
-          { name: 'Using File api', desc: 'using file api', link: 'https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications' },
-          { name: 'FileList', desc: 'list of files, returned by the files prop of the <input type="file"> element', link: 'https://developer.mozilla.org/en-US/docs/Web/API/FileList' },
-          { name: 'File', desc: 'interface for a file in FileList', link: 'https://developer.mozilla.org/en-US/docs/Web/API/File' },
-          { name: 'FileReader', desc: 'interface for asynchronously read the contents of the file', link: 'https://developer.mozilla.org/en-US/docs/Web/API/FileReader' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ Fullscreen api
-
-      {
-        header: 'Fullscreen api',
-        items: [
-          { name: 'Fullscreen api guide', desc: 'fullscreen api guide', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API/Guide' },
-          { name: 'Fullscreen api', desc: 'fullscreen api', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ Drag and Drop api
-
-      {
-        header: 'Drag and Drop api',
-        items: [
-          { name: 'Drag and Drop api', desc: 'enables to use drag and drop features', link: 'https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ History api
-
-      {
-        header: 'History api',
-        items: [
-          { name: 'History api', desc: 'access to the browser session history', link: 'https://developer.mozilla.org/en-US/docs/Web/API/History_API' },
-          { name: 'History', desc: 'interface for manipulating browser session history', link: 'https://developer.mozilla.org/en-US/docs/Web/API/History' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ IndexedDB api
-
-      {
-        header: 'IndexedDB api',
-        items: [
-          { name: 'Using IndexedDB', desc: 'how to use IndexedDB', link: 'https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB' },
-          { name: 'IndexedDB api', desc: 'client-side storage of big data', link: 'https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ Intersectin Observer api
-
-      {
-        header: 'Intersection Observer api',
-        items: [
-          { name: 'Intersection Observer api', desc: 'asynchronously observer changes in the intersection of the target element', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ Performance api
-
-      {
-        header: 'Performance api',
-        items: [
-          { name: 'Performance api', desc: 'client-side latency measurements', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Performance_API' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ Streams api
-
-      {
-        header: 'Streams api',
-        items: [
-          { name: 'Streams api', desc: 'accessing streams of data received over the network', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Streams_API' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ URL api
-
-      {
-        header: 'URL api',
-        items: [
-          { name: 'URL api', desc: 'access and manipulate URL', link: 'https://developer.mozilla.org/en-US/docs/Web/API/URL_API' },
-          { name: 'URL', desc: 'interface for URL', link: 'https://developer.mozilla.org/en-US/docs/Web/API/URL' },
-          { name: 'URLSearchParams', desc: 'interface for a query string of a URL', link: 'https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ Web Animations api
-
-      {
-        header: 'Web Animations api',
-        items: [
-          { name: 'Web Animations api', desc: 'animations over javascript', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API' },
-          { name: 'using web animations api', desc: 'using web animations api', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ Web Storage api
-
-      {
-        header: 'Web Storage api',
-        items: [
-          { name: 'Web Storage api', desc: 'storing key/values pairs in the browser', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ Web Workers api
-
-      {
-        header: 'Web Workers api',
-        items: [
-          { name: 'Web Workers api', desc: 'creating threads in javascript', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ WebSocket api
-
-      {
-        header: 'WebSocket api',
-        items: [
-          { name: 'WebSocket api', desc: 'two-way communication between browser and server', link: 'https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ XMLHttpRequest
-
-      {
-        header: 'XMLHttpRequest',
-        items: [
-          { name: 'XMLHttpRequest', desc: 'making asynchronous requests to the server', link: 'https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ js_utilities
-
-    js_utilities: [
-
-  // <<{ eslint
-
-      {
-        header: 'eslint',
-        items: [
-          { name: '', desc: '', link: '' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ babel
-
-      {
-        header: 'babel',
-        items: [
-          { name: '', desc: '', link: '' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ browser-sync
-
-      {
-        header: 'browser-sync',
-        items: [
-          { name: '', desc: '', link: '' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ browserify
-
-      {
-        header: 'browserify',
-        items: [
-          { name: '', desc: '', link: '' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ uglifyjs
-
-      {
-        header: 'uglifyjs',
         items: [
           { name: '', desc: '', link: '' },
         ]
@@ -1985,6 +2122,118 @@ const data = {
 
 // }>>
 
+// <<{ vim
+
+    vim: [
+
+  // <<{ mix
+
+      {
+        header: 'mix',
+        items: [
+          { name: 'vim cheat sheet', desc: 'vim cheat sheet', link: 'https://vim.rtorr.com/' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ vim reference book
+
+      {
+        header: 'vim reference book',
+        items: [
+          { name: 'normal mode', desc: 'different things you can do in normal mode', link: 'https://learnbyexample.gitbooks.io/vim-reference/content/Normal_mode.html' },
+          { name: 'commands', desc: 'different commands to enter in command mode', link: 'https://learnbyexample.gitbooks.io/vim-reference/content/Command_Line_mode.html' },
+          { name: 'visual mode', desc: 'about visual mode', link: 'https://learnbyexample.gitbooks.io/vim-reference/content/Visual_mode.html' },
+          { name: 'recording macro', desc: 'how to record macro', link: 'https://learnbyexample.gitbooks.io/vim-reference/content/Recording_Macro.html' },
+          { name: 'customization', desc: 'general vim customization', link: 'https://learnbyexample.gitbooks.io/vim-reference/content/Customizing_vim.html' },
+          { name: 'regexp', desc: 'about regexp in search and replace', link: 'https://learnbyexample.gitbooks.io/vim-reference/content/Regular_Expressions.html' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ vimawesome
+
+      {
+        header: 'vimawesome',
+        items: [
+          { name: 'vimawesome', desc: 'vim plugins hub page', link: 'https://vimawesome.com/' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ vim-plug
+
+      {
+        header: 'vim-plug',
+        items: [
+          { name: 'vim-plug', desc: 'vim-plug github page', link: 'https://github.com/junegunn/vim-plug#' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ NERDTree
+
+      {
+        header: 'NERDTree',
+        items: [
+          { name: 'NERDTree', desc: 'nerdtree plugin', link: 'https://github.com/preservim/nerdtree#the-nerdtree-' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ ranger.vim
+
+      {
+        header: 'ranger.vim',
+        items: [
+          { name: 'ranger.vim', desc: 'ranger vim plugin', link: 'https://github.com/francoiscabrol/ranger.vim' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ Emmet-vim
+
+      {
+        header: 'Emmet-vim',
+        items: [
+          { name: 'Emmet-vim', desc: 'emmet plugin', link: 'https://github.com/mattn/emmet-vim#emmet-vim' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ fzf.vim
+
+      {
+        header: 'fzf.vim',
+        items: [
+          { name: 'fzf.vim', desc: 'fzf vim plugin', link: 'https://github.com/junegunn/fzf.vim#fzf-heart-vim' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ UltiSnips
+
+      {
+        header: 'UltiSnips',
+        items: [
+          { name: 'UltiSnips', desc: 'snippets plugin', link: 'https://github.com/SirVer/ultisnips#ultisnips' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
 // <<{ webpack
 
     webpack: [
@@ -2004,98 +2253,9 @@ const data = {
 
 // }>>
 
-// <<{ react
+// <<{ wordpress
 
-    react: [
-
-  // <<{ mix
-
-      {
-        header: 'mix',
-        items: [
-          { name: '', desc: '', link: '' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ http
-
-    http: [
-
-  // <<{ mix
-
-      {
-        header: 'mix',
-        items: [
-          { name: 'HTTP overview', desc: 'about HTTP protocol', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview' },
-          { name: 'caching', desc: 'about HTTP caching', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching' },
-          { name: 'cookies', desc: 'about HTTP cookies', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies' },
-          { name: 'CORS', desc: 'about Cross-Origin Resource Sharing', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS' },
-          { name: 'CSP', desc: 'about Content Security Policy', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP' },
-          { name: 'HTTP versions', desc: 'about different HTTP versions', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP' },
-          { name: 'Requests and Responses', desc: 'about HTTP messages', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages' },
-          { name: 'typical HTTP session', desc: 'about typical HTTP session', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Session' },
-          { name: 'connection management in HTTP/1.x', desc: 'about connection management in HTTP/1.x', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x' },
-          { name: 'headers reference', desc: 'HTTP headers reference', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers' },
-          { name: 'methods reference', desc: 'HTTP methods reference', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods' },
-          { name: 'codes reference', desc: 'HTTP response status codes reference', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Status' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ apache
-
-    apache: [
-
-  // <<{ mix
-
-      {
-        header: 'mix',
-        items: [
-          { name: 'installation', desc: 'apache and php installation on Linux', link: 'https://medium.com/@bahadirmezgil/how-to-install-php-and-apache-on-linux-ubuntu-linux-mint-ea73a1c1c426' },
-          { name: 'apache 2.4 documentation', desc: 'apache 2.4 documentation', link: 'https://httpd.apache.org/docs/2.4/' },
-          { name: 'apache configuration: .htaccess', desc: 'apache configuration with .htaccess', link: 'https://developer.mozilla.org/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ nginx
-
-    nginx: [
-
-  // <<{ mix
-
-      {
-        header: 'mix',
-        items: [
-          { name: 'nginx documentation', desc: 'nginx documentation', link: 'https://nginx.org/en/docs/' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ nodejs
-
-    nodejs: [
+    wordpress: [
 
   // <<{ mix
 
@@ -2112,28 +2272,9 @@ const data = {
 
 // }>>
 
-// <<{ php
+// <<{ yaml
 
-    php: [
-
-  // <<{ mix
-
-      {
-        header: 'mix',
-        items: [
-          { name: '', desc: '', link: '' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ sql_w3school
-
-    sql_w3school: [
+    yaml: [
 
   // <<{ mix
 
@@ -2141,30 +2282,6 @@ const data = {
         header: 'mix',
         items: [
           { name: '', desc: '', link: '' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ japan
-
-    japan: [
-
-  // <<{ mix
-
-      {
-        header: 'mix',
-        items: [
-          { name: 'hiragana/katakana тренажер', desc: 'hiragana/katakana тренажер', link: 'https://vacuum.name/japanese/hiragana-katakana' },
-          { name: 'тренажер по набору слов', desc: 'тренажер по набору слов', link: 'https://vacuum.name/japanese/words-trainer' },
-          { name: 'WaniKani V', desc: 'облегченная wanikani', link: 'https://vacuum.name/japanese/wanikani' },
-          { name: 'jisho.org', desc: 'powerful Japanese-English dictionary', link: 'https://jisho.org/' },
-          { name: 'nippontalk', desc: 'Japanese texts with furigana and English translation', link: 'http://www.nippontalk.com/en.html' },
-          { name: 'grammar', desc: 'japanese grammar', link: 'http://nippon.temerov.org/gramat.php' },
         ]
       },
 
@@ -2350,591 +2467,6 @@ const data = {
   // }>>
 
     ],
-
-// }>>
-
-// <<{ notes
-
-    notes: [
-
-  // <<{ apache
-
-      {
-        header: 'apache',
-        items: [
-          { name: 'apache config', desc: 'apache configuration', link: `${notesPath}/apache/apache_config.txt` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ algorythms
-
-      {
-        header: 'algorythms',
-        items: [
-          { name: 'layout', desc: 'html/css layout', link: `${notesPath}/algorythms/layout.txt` },
-          { name: 'psd cropping', desc: 'psd templates cropping', link: `${notesPath}/algorythms/psd_cropping.txt` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ handlebars
-
-      {
-        header: 'handlebars',
-        items: [
-          { name: 'comments', desc: 'comments', link: `${notesPath}/handlebars/comments.txt` },
-          { name: 'compiling templates', desc: 'compiling templates', link: `${notesPath}/handlebars/compiling_templates.txt` },
-          { name: 'expressions', desc: 'expressions', link: `${notesPath}/handlebars/expressions.txt` },
-          { name: 'built-in helpers', desc: 'built-in helpers', link: `${notesPath}/handlebars/built_in_helpers.txt` },
-          { name: 'custom helpers', desc: 'custom helpers', link: `${notesPath}/handlebars/custom_helpers.txt` },
-          { name: 'partials', desc: 'partials', link: `${notesPath}/handlebars/partials.txt` },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ <pdf>
-
-// <<{ shotts_linux_command_line_book
-
-    shotts_linux_command_line_book: [
-
-  // <<{ командная оболочка
-
-      {
-        header: 'командная оболочка',
-        items: [
-          { name: 'что такое командная строка', desc: 'что такое командная строка и эмуляторы терминалов', link: `${books.shotts_command_line}#page=26` },
-          { name: 'консоль за кулисами', desc: 'о сеансах терминалов за ширмой рабочего стола и как между ними переключаться', link: `${books.shotts_command_line}#page=29` },
-          { name: 'оболочка входа и простая оболочка', desc: '2 типа сеансов работы с оболочкой', link: `${books.shotts_command_line}#page=137` },
-          { name: 'горячие клавиши оболочки', desc: 'горячие клавиши оболочки', link: `${books.shotts_command_line}#page=94` },
-          { name: 'автодополнение с помощью tab', desc: 'автодополненине с помощью tab', link: `${books.shotts_command_line}#page=95` },
-          { name: 'script', desc: 'запись в файл сеансов работы с оболочкой', link: `${books.shotts_command_line}#page=100` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ подстановка в командной оболочке
-
-      {
-        header: 'подстановка в командной оболочке',
-        items: [
-          { name: 'wildcards для имен файлов', desc: 'групповые символы и классы символов', link: `${books.shotts_command_line}#page=46` },
-          { name: 'подстановка путей и имен файлов', desc: 'подстановка результатов вместо wildcards перед выполнением команды', link: `${books.shotts_command_line}#page=82` },
-          { name: 'подстановка арифметических выражений', desc: 'подстановка результатов арифметических выражений', link: `${books.shotts_command_line}#page=85` },
-          { name: 'подстановка множества из {}', desc: 'подстановка множества из фигурных скобок', link: `${books.shotts_command_line}#page=86` },
-          { name: 'подстановка вывода команд', desc: 'подстановка stdout команды с помощью ${}', link: `${books.shotts_command_line}#page=87` },
-          { name: 'подстановка команды из истории', desc: 'подстановка команды из истории', link: `${books.shotts_command_line}#page=99` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ экранирование
-
-      {
-        header: 'экранирование',
-        items: [
-          { name: 'экранирование с помощью двойных кавычек', desc: 'все спецсимволы кроме $, /, ` теряют значение', link: `${books.shotts_command_line}#page=89` },
-          { name: 'экранирование с помощью одиночных кавычек', desc: 'все спецсимволы теряют значение', link: `${books.shotts_command_line}#page=90` },
-          { name: 'экранирование символов с помощью \\', desc: 'экранирование одного символа', link: `${books.shotts_command_line}#page=91` },
-          { name: 'спецсимволы \\n,\\r, \\t', desc: 'использование спецсимволов в командах', link: `${books.shotts_command_line}#page=92` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ перенаправления ввода/вывода
-
-      {
-        header: 'перенаправления ввода/вывода',
-        items: [
-          { name: 'stdin, stdout, stderr', desc: 'немного о стандартных вводах и выводах', link: `${books.shotts_command_line}#page=70` },
-          { name: 'перенаправление stdout', desc: 'как перенаправить stdout в файл', link: `${books.shotts_command_line}#page=71` },
-          { name: 'перенаправление stderr', desc: 'как перенаправить stderr в файл', link: `${books.shotts_command_line}#page=72` },
-          { name: 'перенаправление stdout и stderr', desc: 'как перенаправить stdout вместе с stderr в файл', link: `${books.shotts_command_line}#page=73` },
-          { name: 'перенаправление в /dev/null', desc: 'как избавиться от нежелательного вывода', link: `${books.shotts_command_line}#page=73` },
-          { name: 'перенаправление stdin', desc: 'как перенаправить stdin в файл', link: `${books.shotts_command_line}#page=75` },
-          { name: 'оператор перенаправления <', desc: 'изменение ввода, вместо stdin - файл', link: `${books.shotts_command_line}#page=76` },
-          { name: 'piping', desc: 'перенаправление вывода команды на ввод другой команды', link: `${books.shotts_command_line}#page=76` },
-          { name: 'tee', desc: 'получает данные с stdin и передает одновременно в stdout и в файл', link: `${books.shotts_command_line}#page=79` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ конфигурация командной оболочки
-
-      {
-        header: 'конфигурация командной оболочки',
-        items: [
-          { name: 'source .bashrc', desc: 'выполнить .bashrc в текущем сеансе оболочки', link: `${books.shotts_command_line}#page=144` },
-          { name: 'alias', desc: 'создание псеводнимов', link: `${books.shotts_command_line}#page=68` },
-          { name: 'спецсимволы, используемые в $PS1', desc: 'экранированные последовательности, используемые в строке приглашения', link: `${books.shotts_command_line}#page=164` },
-          { name: 'спецсимволы цвета, используемые в $PS1', desc: 'экранированные последовательности цвета, используемые в строке приглашения', link: `${books.shotts_command_line}#page=167` },
-          { name: 'спецсимолы позиции курсора, используемые в $PS1', desc: 'экранированные последовательности позиции курсора, используемые в строке приглашения', link: `${books.shotts_command_line}#page=169` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ переменные окружения
-
-      {
-        header: 'переменные окружения',
-        items: [
-          { name: 'printenv', desc: 'вывод переменных окружения', link: `${books.shotts_command_line}#page=135` },
-          { name: 'set', desc: 'вывод переменных окружения и оболочки и установка их значений', link: `${books.shotts_command_line}#page=135` },
-          { name: 'некоторые переменные окружения', desc: 'некоторые переменные окружения', link: `${books.shotts_command_line}#page=136` },
-          { name: 'export', desc: 'сделать содержимое переменной доступным дочерним процессам этой оболочки', link: `${books.shotts_command_line}#page=140` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ информация о командах
-
-      {
-        header: 'информация о командах',
-        items: [
-          { name: 'что такое команды', desc: 'про разные типы команд', link: `${books.shotts_command_line}#page=60` },
-          { name: 'type', desc: 'определение типа команды', link: `${books.shotts_command_line}#page=61` },
-          { name: 'which', desc: 'определение местоположения исполняемого файла', link: `${books.shotts_command_line}#page=61` },
-          { name: 'help', desc: 'получение справки для встроенных комманд (cd)', link: `${books.shotts_command_line}#page=62` },
-          { name: 'man', desc: 'вывод одностраничного справочника для команды', link: `${books.shotts_command_line}#page=63` },
-          { name: 'apropos', desc: 'поиск команды по ключевому слову в описании', link: `${books.shotts_command_line}#page=65` },
-          { name: 'whatis', desc: 'вывод однострочного описания команды', link: `${books.shotts_command_line}#page=66` },
-          { name: 'info', desc: 'вывод многостраничного справочника для команды', link: `${books.shotts_command_line}#page=66` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ файловая система
-
-      {
-        header: 'файловая система',
-        items: [
-          { name: 'об именах файлов', desc: 'некоторые факты об именах файлов', link: `${books.shotts_command_line}#page=34` },
-          { name: 'структура каталогов linux', desc: 'структура каталогов linux', link: `${books.shotts_command_line}#page=41` },
-          { name: 'немного про inode', desc: 'что такое inode и как его посмотреть', link: `${books.shotts_command_line}#page=56` },
-          { name: 'pwd', desc: 'о команде print working directory', link: `${books.shotts_command_line}#page=31` },
-          { name: 'cd', desc: 'о команде change current working directory', link: `${books.shotts_command_line}#page=33` },
-          { name: 'ls', desc: 'о команде list files', link: `${books.shotts_command_line}#page=35` },
-          { name: 'ls -l', desc: 'поля формата ls -l', link: `${books.shotts_command_line}#page=38` },
-          { name: 'file', desc: 'определение типа файла', link: `${books.shotts_command_line}#page=38` },
-          { name: 'mkdir', desc: 'создание каталогов', link: `${books.shotts_command_line}#page=48` },
-          { name: 'cp', desc: 'копирование файлов', link: `${books.shotts_command_line}#page=48` },
-          { name: 'mv', desc: 'перемещение файлов', link: `${books.shotts_command_line}#page=49` },
-          { name: 'rm', desc: 'удаление файлов', link: `${books.shotts_command_line}#page=50` },
-          { name: 'ln', desc: 'о жестких и симолических ссылках и их создании', link: `${books.shotts_command_line}#page=52` },
-          { name: 'touch', desc: 'создание нового файла или обновление времени модификации', link: `${books.shotts_command_line}#page=226` },
-          { name: 'stat', desc: 'полная информация о файле', link: `${books.shotts_command_line}#page=226` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ содержимое файлов
-
-      {
-        header: 'содержимое файлов',
-        items: [
-          { name: 'что такое текст', desc: 'что такое текст, редакторы и текстовые процессоры', link: `${books.shotts_command_line}#page=39` },
-          { name: 'less', desc: 'просмотр содержимого файла', link: `${books.shotts_command_line}#page=39` },
-          { name: 'cat', desc: 'показать содержимое файлов в stdout', link: `${books.shotts_command_line}#page=74` },
-          { name: 'head/tail', desc: 'вывод первых/последних n строк содержимого файла', link: `${books.shotts_command_line}#page=78` },
-          { name: 'sort', desc: 'сортировка результатов выводы', link: `${books.shotts_command_line}#page=76` },
-          { name: 'uniq', desc: 'поиск или удаление повторяющихся строк', link: `${books.shotts_command_line}#page=77` },
-          { name: 'wc', desc: 'cчетчик строк, слов, символов, байтов', link: `${books.shotts_command_line}#page=77` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ разрешения файлов
-
-      {
-        header: 'разрешения файлов',
-        items: [
-          { name: 'подробнее о -rwxrw-r--', desc: 'подробнее о типах файлов и привелегиях', link: `${books.shotts_command_line}#page=104` },
-          { name: 'восмеричные и двоичные маски привелегий', desc: 'изменение режима доступа к файлу', link: `${books.shotts_command_line}#page=107` },
-          { name: 'umask', desc: 'показать/установить разрашенеия по умолчанию для новых файлов', link: `${books.shotts_command_line}#page=109` },
-          { name: 'разрешения setuid, setgid, sticky bit', desc: 'об установке специальных разрешений', link: `${books.shotts_command_line}#page=111` },
-          { name: 'chmod', desc: 'изменение режима доступа к файлу', link: `${books.shotts_command_line}#page=105` },
-          { name: 'chown', desc: 'изменение владельца и группы файла', link: `${books.shotts_command_line}#page=115` },
-          { name: 'chgrp', desc: 'изменение группы файла', link: `${books.shotts_command_line}#page=116` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ пользователи
-
-      {
-        header: 'пользователи',
-        items: [
-          { name: 'id', desc: 'идентификаторы пользователя и групп куда он входит', link: `${books.shotts_command_line}#page=102` },
-          { name: 'способы сменить пользователя', desc: '3 способа как сменить пользователя', link: `${books.shotts_command_line}#page=112` },
-          { name: 'su', desc: 'запуск нового сеанса оболочки от имени другого пользователя', link: `${books.shotts_command_line}#page=112` },
-          { name: 'sudo', desc: 'выполнение команды от имени другого пользователя', link: `${books.shotts_command_line}#page=113` },
-          { name: 'passwd', desc: 'изменение пароля', link: `${books.shotts_command_line}#page=118` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ поиск
-
-      {
-        header: 'поиск',
-        items: [
-          { name: 'поиск в истории', desc: 'поиск в истории команд', link: `${books.shotts_command_line}#page=97` },
-          { name: 'locate', desc: 'поиск файлов по имени в базе данных файлов, которая обновляется раз в сутки программой updatedb', link: `${books.shotts_command_line}#page=214` },
-          { name: 'find', desc: 'поиск файлов в указаном каталоге по параметрам -type, -name, -size и т.д.', link: `${books.shotts_command_line}#page=216` },
-          { name: 'операторы find', desc: 'логические операторы при задании параметров в find, по умолчанию -and ', link: `${books.shotts_command_line}#page=220` },
-          { name: 'операции find', desc: 'операции с найденными файлами, по умолчанию -print', link: `${books.shotts_command_line}#page=222` },
-          { name: 'xargs', desc: 'преобразует вводные данные в список параметров указанной команды', link: `${books.shotts_command_line}#page=225` },
-          { name: 'использование null character в find/xargs', desc: 'использование null character в find/xargs', link: `${books.shotts_command_line}#page=225` },
-          { name: 'grep', desc: 'поиск по регулярному выражению', link: `${books.shotts_command_line}#page=245` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ regexp
-
-      {
-        header: 'regexp',
-        items: [
-          { name: 'posix regexp - любой символ', desc: 'любой 1 символ - точка (.)', link: `${books.shotts_command_line}#page=247` },
-          { name: 'posix regexp - начало/конец строки', desc: 'начало/конец строки - ^, $', link: `${books.shotts_command_line}#page=248` },
-          { name: 'словарь в linux', desc: 'словари в linux и поиск слов в них', link: `${books.shotts_command_line}#page=248` },
-          { name: 'posix regexp - диапазон символов', desc: 'диапазон символов - [abc]', link: `${books.shotts_command_line}#page=249` },
-          { name: 'posix regexp - классы символов', desc: 'классы символов - [[:word:]]', link: `${books.shotts_command_line}#page=251` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ процессы
-
-      {
-        header: 'процессы',
-        items: [
-          { name: 'как действует процесс', desc: 'что такое процесс и как он действует', link: `${books.shotts_command_line}#page=120` },
-          { name: 'ps', desc: 'просмотр списка процессов', link: `${books.shotts_command_line}#page=121` },
-          { name: 'top', desc: 'просмотр состояния процессов в динамике', link: `${books.shotts_command_line}#page=123` },
-          { name: 'command &', desc: 'перевод процессa в фоновый режим при запуске', link: `${books.shotts_command_line}#page=126` },
-          { name: 'jobs', desc: 'список процессов, переведенных в фоновый режим', link: `${books.shotts_command_line}#page=127` },
-          { name: 'fg', desc: 'перевод процесса на передний план', link: `${books.shotts_command_line}#page=127` },
-          { name: 'приостановка процесса', desc: 'перевод процесса в фоновый режим во время его работы', link: `${books.shotts_command_line}#page=128` },
-          { name: 'bg', desc: 'перевод процесса в фоновый режим', link: `${books.shotts_command_line}#page=128` },
-          { name: 'kill', desc: 'посылание сигналов процессам', link: `${books.shotts_command_line}#page=129` },
-          { name: 'сигналы, посылаемые процессам', desc: 'часто используемые сигналы, посылаемые процессам с помощью kill или горячих клавиш', link: `${books.shotts_command_line}#page=129` },
-          { name: 'killall', desc: 'посылание сигналов нескольним процессам', link: `${books.shotts_command_line}#page=131` },
-          { name: 'pstree', desc: 'выводит список процессов в древовидной форме', link: `${books.shotts_command_line}#page=132` },
-          { name: 'vmstat', desc: 'снэпшот использования системных ресурсов', link: `${books.shotts_command_line}#page=132` },
-          { name: 'xload', desc: 'изменение нагрузки на систему с течением времени', link: `${books.shotts_command_line}#page=132` },
-          { name: 'tload', desc: 'график изменения нагрузки на систему с течением времени', link: `${books.shotts_command_line}#page=132` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ устройства
-
-      {
-        header: 'устройства',
-        items: [
-          { name: 'монтирование устройств', desc: 'про монтирование и про файл /etc/fstab, где перечисляются устройства, монтируемые на этапе загрузки', link: `${books.shotts_command_line}#page=183` },
-          { name: 'mount', desc: 'монтирование файловых систем и просмотр списка уже смотнированых', link: `${books.shotts_command_line}#page=184` },
-          { name: 'umount', desc: 'размонтирование подключенных файловых систем', link: `${books.shotts_command_line}#page=186` },
-          { name: 'почему важно размонтировать устройства', desc: 'о буферах между устройством и операционной системой', link: `${books.shotts_command_line}#page=187` },
-          { name: 'определение названия устройства', desc: 'определения названия устройства с помощью простмотра логов при его подключении', link: `${books.shotts_command_line}#page=188` },
-          { name: 'fsdisk', desc: 'управление разделами на устройствах хранения', link: `${books.shotts_command_line}#page=191` },
-          { name: 'mkfs', desc: 'создание новой файловой системы', link: `${books.shotts_command_line}#page=193` },
-          { name: 'fsck', desc: 'проверка файловой системы на целостность', link: `${books.shotts_command_line}#page=194` },
-          { name: 'dd', desc: 'копирование блоков данных из одного места в другое', link: `${books.shotts_command_line}#page=196` },
-          { name: 'создание iso образа диска', desc: 'создание iso образа с помощью dd', link: `${books.shotts_command_line}#page=196` },
-          { name: 'genisoimage', desc: 'создание iso образа из каталога', link: `${books.shotts_command_line}#page=197` },
-          { name: 'монтирование iso образов', desc: 'монтирование локальных образов как устрoйства', link: `${books.shotts_command_line}#page=198` },
-          { name: 'wodim', desc: 'очистка компакт-диска и запись на него образов', link: `${books.shotts_command_line}#page=198` },
-          { name: 'md5sum', desc: 'контрольная сумма устройства/образа', link: `${books.shotts_command_line}#page=199` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ сеть
-
-      {
-        header: 'сеть',
-        items: [
-          { name: 'ping', desc: 'проверка соединения с помощью отсылки ICMP сообщения ECHO_REQUEST', link: `${books.shotts_command_line}#page=201` },
-          { name: 'traceroute', desc: 'трассировка маршрутизаторов на пути к целевому адресу', link: `${books.shotts_command_line}#page=202` },
-          { name: 'netstat', desc: 'просмотр параметров сети', link: `${books.shotts_command_line}#page=203` },
-          { name: 'ftp', desc: 'передача файлов по ftp', link: `${books.shotts_command_line}#page=205` },
-          { name: 'wget', desc: 'загрузчик файлов и содержимого сайтов', link: `${books.shotts_command_line}#page=207` },
-          { name: 'ssh', desc: 'шифрованное взаимодействие с удаленными хостами', link: `${books.shotts_command_line}#page=208` },
-          { name: 'scp', desc: 'шифрованное копирование файлов с удаленного хоста', link: `${books.shotts_command_line}#page=212` },
-          { name: 'sftp', desc: 'шифрованная передача файлов по ftp', link: `${books.shotts_command_line}#page=212` },
-          { name: 'rsync', desc: 'синхронизация файлов с удаленной системой', link: `${books.shotts_command_line}#page=240` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ архивация
-
-      {
-        header: 'архивация',
-        items: [
-          { name: 'gzip/gunzip', desc: 'сжатие/восстановление сжатых файлов', link: `${books.shotts_command_line}#page=230` },
-          { name: 'bzip2/bunzip2', desc: 'сжатие/восстановление сжатых файлов с более высокой степенью, чем gzip', link: `${books.shotts_command_line}#page=232` },
-          { name: 'что будет, если сжать уже сжатый файл', desc: 'что будет, если сжать уже сжатый файл', link: `${books.shotts_command_line}#page=233` },
-          { name: 'tar', desc: 'архивирование файлов', link: `${books.shotts_command_line}#page=233` },
-          { name: 'zip/unzip', desc: 'архивирование и сжатие/восстановление файлов', link: `${books.shotts_command_line}#page=238` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ mix
-
-      {
-        header: 'mix',
-        items: [
-
-          { name: 'posix regexp - BRE и ERE', desc: 'простые и расширенные регулярные выражения', link: `${books.shotts_command_line}#page=254` },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ bash_manual_book
-
-    bash_manual_book: [
-
-  // <<{ mix
-
-      {
-        header: 'mix',
-        items: [
-          { name: 'what is shell and bash', desc: 'about bash and shell', link: `${books.bash_manual}#page=7` },
-          { name: 'escape character \\', desc: 'preserves the literal value of the next character', link: `${books.bash_manual}#page=12` },
-          { name: 'escape with single quotes', desc: 'preserves the literal value of each character within', link: `${books.bash_manual}#page=12` },
-          { name: 'escape with double quotes', desc: 'preserves the literal value of each character, except $, \', \\', link: `${books.bash_manual}#page=12` },
-          { name: 'ANSI-C quoting', desc: 'special chars inside $\'...\', for example - $\'\\n\' expands to new line', link: `${books.bash_manual}#page=12` },
-          { name: 'piplines', desc: 'about piping commands', link: `${books.bash_manual}#page=14` },
-          { name: 'listing commands', desc: 'listing commands with ;, && and ||', link: `${books.bash_manual}#page=15` },
-          { name: 'looping', desc: 'using for, while, until', link: `${books.bash_manual}#page=16` },
-          { name: 'conditionals', desc: 'using if, case, select', link: `${books.bash_manual}#page=17` },
-          { name: 'grouping commands', desc: 'grouping commands with () and {}', link: `${books.bash_manual}#page=21` },
-          { name: 'coprocesses', desc: 'executed asynchronously in a subshell', link: `${books.bash_manual}#page=21` },
-          { name: 'parallel', desc: 'run commands in parallel', link: `${books.bash_manual}#page=22` },
-          { name: 'functions', desc: 'about shell functions', link: `${books.bash_manual}#page=24` },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ progit_book
-
-    progit_book: [
-
-  // <<{ about git
-
-      {
-        header: 'about git',
-        items: [
-          { name: 'local vcs', desc: 'about local version control systems', link: `${books.progit}#page=14` },
-          { name: 'centralized vcs', desc: 'about cetralized version control systems', link: `${books.progit}#page=15` },
-          { name: 'distributed vcs', desc: 'about distributed version control systems', link: `${books.progit}#page=16` },
-          { name: 'what is git', desc: 'what is git in a nutshell', link: `${books.progit}#page=18` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ configuration
-
-      {
-        header: 'configuration',
-        items: [
-          { name: 'config files', desc: 'where are git config files and how to write in them', link: `${books.progit}#page=25` },
-          { name: 'config user', desc: 'config name and email', link: `${books.progit}#page=26` },
-          { name: 'config editor', desc: 'config default editor for typing messages', link: `${books.progit}#page=26` },
-          { name: 'config default branch name', desc: 'config default default branch name instead of master', link: `${books.progit}#page=27` },
-          { name: 'config list settings', desc: 'check your config settings', link: `${books.progit}#page=27` },
-          { name: 'git aliases', desc: 'creating aliases for commands', link: `${books.progit}#page=67` },
-          { name: '.gitignore', desc: 'about .gitignore', link: `${books.progit}#page=36` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ repository
-
-      {
-        header: 'repository',
-        items: [
-          { name: 'initialize repository', desc: 'initialize repository with init', link: `${books.progit}#page=30` },
-          { name: 'cloning repository', desc: 'cloning repository with clone', link: `${books.progit}#page=31` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ checking info
-
-      {
-        header: 'checking info',
-        items: [
-          { name: 'check file status', desc: 'check file status with git status', link: `${books.progit}#page=32` },
-          { name: 'short status', desc: 'about git status -s', link: `${books.progit}#page=35` },
-          { name: 'viewwing staged and unstaged changes', desc: 'about git diff', link: `${books.progit}#page=37` },
-          { name: 'viewing commit history', desc: 'about git log', link: `${books.progit}#page=44` },
-          { name: 'options for git log', desc: 'options for git log', link: `${books.progit}#page=49` },
-          { name: 'options for limit output in git log', desc: 'options for limit output in git log', link: `${books.progit}#page=50` },
-          { name: 'specifiers for git log --pretty=format', desc: 'specifiers for git log --pretty=format', link: `${books.progit}#page=48` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ staging
-
-      {
-        header: 'staging',
-        items: [
-          { name: 'about tracked and untracked files', desc: 'about tracked and untracked files', link: `${books.progit}#page=32` },
-          { name: 'add new files', desc: 'add files with git add', link: `${books.progit}#page=33` },
-          { name: 'unstage a staged file (reset)', desc: 'about git reset HEAD <file>', link: `${books.progit}#page=52` },
-          { name: 'unstage a staged filr (restore)', desc: 'about git restore --staged <file>', link: `${books.progit}#page=54` },
-          { name: 'unmodify a modified file (checkout)', desc: 'about git checkout -- <file>', link: `${books.progit}#page=53` },
-          { name: 'unmodify a modified file (restore)', desc: 'about git restore <file>', link: `${books.progit}#page=55` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ commiting
-
-      {
-        header: 'commiting',
-        items: [
-          { name: 'commiting', desc: 'about git commit', link: `${books.progit}#page=40` },
-          { name: 'skipping staging area', desc: 'about git commit -a', link: `${books.progit}#page=42` },
-          { name: 'uncommit', desc: 'about git commit --amend', link: `${books.progit}#page=51` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ remotes
-
-      {
-        header: 'remotes',
-        items: [
-          { name: 'showing remotes', desc: 'about git remote -v', link: `${books.progit}#page=56` },
-          { name: 'adding remotes', desc: 'about git remote add <shortname> <url>', link: `${books.progit}#page=57` },
-          { name: 'fetching from remotes', desc: 'about git fetch <remote> and git pull', link: `${books.progit}#page=58` },
-          { name: 'pushing to remotes', desc: 'about git push <remote> <branch>', link: `${books.progit}#page=58` },
-          { name: 'info about remotes', desc: 'about git remote show <remote>', link: `${books.progit}#page=59` },
-          { name: 'renaming remotes', desc: 'about git remote rename <old> <new>', link: `${books.progit}#page=60` },
-          { name: 'delete remotes', desc: 'about git remote remove <remote>', link: `${books.progit}#page=60` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ branches
-
-      {
-        header: 'branches',
-        items: [
-          { name: 'branches in a nutshell', desc: 'branches in a nutshell', link: `${books.progit}#page=69` },
-          { name: 'creating branch', desc: 'about git branch <name>', link: `${books.progit}#page=71` },
-          { name: 'switching branches', desc: 'about git checkout <branch>', link: `${books.progit}#page=72` },
-          { name: 'git switch', desc: 'about git switch', link: `${books.progit}#page=76` },
-          { name: 'merging', desc: 'about git merge <branch>', link: `${books.progit}#page=81` },
-          { name: 'deleting branch', desc: 'about git branch -d <name>', link: `${books.progit}#page=82` },
-          { name: 'merge conflicts', desc: 'about merge conflicts', link: `${books.progit}#page=82` },
-          { name: 'list branches', desc: 'about git branch', link: `${books.progit}#page=85` },
-          { name: 'rename branch', desc: 'about git branch --move <oldname> <newname>', link: `${books.progit}#page=87` },
-          { name: 'about remote branches', desc: 'about remote branches', link: `${books.progit}#page=92` },
-          { name: 'pushing branch', desc: 'about git push <remote> <branch>', link: `${books.progit}#page=97` },
-          { name: 'tracking remote branches', desc: 'about git checkout --track <remote>/<branch>', link: `${books.progit}#page=99` },
-          { name: 'delete remote branch', desc: 'about git push <remote> --delete <branch>', link: `${books.progit}#page=100` },
-          { name: 'rabasing', desc: 'about git rebase <branch>', link: `${books.progit}#page=101` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ tags
-
-      {
-        header: 'tags',
-        items: [
-          { name: 'showing tags', desc: 'about git tag', link: `${books.progit}#page=61` },
-          { name: 'creating annotated tags', desc: 'about git tag -a <name> -m <message>', link: `${books.progit}#page=62` },
-          { name: 'creating lightweight tags', desc: 'about git tag <name>', link: `${books.progit}#page=63` },
-          { name: 'tagging commit', desc: 'about git tag -a <name> <commit>', link: `${books.progit}#page=64` },
-          { name: 'pushing tags to remotes', desc: 'about git push <remote> <tagname>', link: `${books.progit}#page=64` },
-          { name: 'deleting tags', desc: 'about git tag -d <name>', link: `${books.progit}#page=65` },
-          { name: 'checkout tags', desc: 'about git checkout <tagname>', link: `${books.progit}#page=66` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ working with filesystem
-
-      {
-        header: 'working with filesystem',
-        items: [
-          { name: 'removing files', desc: 'about git rm', link: `${books.progit}#page=42` },
-          { name: 'moving files', desc: 'about git mv', link: `${books.progit}#page=43` },
-        ]
-      },
-
-  // }>>
-
-  // <<{ mix
-
-      {
-        header: 'mix',
-        items: [
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// }>>
-
-  },
 
 // }>>
 

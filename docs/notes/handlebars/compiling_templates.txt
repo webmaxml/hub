@@ -1,8 +1,0 @@
-const t = Handlebars.compile('<p>{{x}}</p>') - compiling template
-t({ x: 25 }) - creating compiled html string from template
-
-
-const pre = Handlebars.precompile('<p>{{x}}</p>') - precompiling template, so it can be sent over net
-const t = Handlebars.template(pre) - sets up precompiled template
-t({ x: 25 })
-

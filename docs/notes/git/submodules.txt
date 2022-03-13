@@ -1,3 +1,0 @@
-git submodule init - create .gitmodules
-git submodule add [url] [folder] - add submodule to repository
-

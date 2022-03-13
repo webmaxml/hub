@@ -4,27 +4,15 @@ networks:
   dev:
     name: dev
 
-volumes:
-  gems:
-    name: gems
-
 services:
 
-  ruby:
-    image: ruby:2.7.5-buster
+  apache:
+    image: httpd:2.4.51-alpine3.14
     working_dir: /app
     networks:
       - dev
+    ports:
+      - 80:80
     volumes:
-      - gems:/gems
-      - ./:/app
-    environment:
-      GEM_HOME: /gems
-
-  node:
-    image: node:16.13.0-buster
-    working_dir: /app
-    networks:
-      - dev
-    volumes:
-      - ./:/app
+      - ./configs/apache:/usr/local/apache2/conf
+      - ./dist:/app
