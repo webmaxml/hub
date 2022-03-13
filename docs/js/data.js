@@ -5,12 +5,44 @@ const data = {
 
     apache: [
 
-  // <<{ mix
+  // <<{ general
 
       {
-        header: 'mix',
+        header: 'general',
         items: [
           { name: 'apache 2.4 documentation', desc: 'apache 2.4 documentation', link: 'https://httpd.apache.org/docs/2.4/' },
+          { name: 'modules', desc: 'modules list', link: 'https://httpd.apache.org/docs/2.4/mod/' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ modules
+
+      {
+        header: 'modules',
+        items: [
+          { name: 'core', desc: 'core directives that are always available', link: 'https://httpd.apache.org/docs/2.4/mod/core.html' },
+          { name: 'mod_alias', desc: 'URL redirection', link: 'https://httpd.apache.org/docs/2.4/mod/mod_alias.html' },
+          { name: 'mod_authz_core', desc: 'core authorization', link: 'https://httpd.apache.org/docs/2.4/mod/mod_authz_core.html' },
+          { name: 'mod_autoindex', desc: 'generation of directory indexes', link: 'https://httpd.apache.org/docs/2.4/mod/mod_autoindex.html' },
+          { name: 'mod_deflate', desc: 'compress content before deliver to the client', link: 'https://httpd.apache.org/docs/2.4/mod/mod_deflate.html' },
+          { name: 'mod_expires', desc: 'generation of Expires and Cache-Control headers', link: 'https://httpd.apache.org/docs/2.4/mod/mod_expires.html' },
+          { name: 'mod_filter', desc: 'smart filter configuration', link: 'https://httpd.apache.org/docs/2.4/mod/mod_filter.html' },
+          { name: 'mod_headers', desc: 'HTTP request and response headers', link: 'https://httpd.apache.org/docs/2.4/mod/mod_headers.html' },
+          { name: 'mod_mime', desc: 'extensions and mime-types', link: 'https://httpd.apache.org/docs/2.4/mod/mod_mime.html' },
+          { name: 'mod_rewrite', desc: 'rewriting requested URLs', link: 'https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html' },
+          { name: 'mod_setenvif', desc: 'setting env vars based on request params', link: 'https://httpd.apache.org/docs/2.4/mod/mod_setenvif.html' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ articles
+
+      {
+        header: 'articles',
+        items: [
           { name: 'apache configuration: .htaccess', desc: 'apache configuration with .htaccess', link: 'https://developer.mozilla.org/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess' },
         ]
       },
@@ -25,12 +57,61 @@ const data = {
 
     bash: [
 
-  // <<{ mix
+  // <<{ main
 
       {
-        header: 'mix',
+        header: 'bash reference manual',
         items: [
-          { name: 'brackets reference', desc: 'about different bash brackets', link: 'https://dev.to/rpalo/bash-brackets-quick-reference-4eh6' },
+          { name: 'contents', desc: 'bash reference manual', link: 'https://www.gnu.org/software/bash/manual/bash.html' },
+          { name: 'quoting', desc: 'escaping with quotes, escape char', link: 'https://www.gnu.org/software/bash/manual/bash.html#Quoting' },
+          { name: 'pipe', desc: 'about pipelines', link: 'https://www.gnu.org/software/bash/manual/bash.html#Pipelines' },
+          { name: 'multiple commands', desc: 'listing commands with ; & && ||', link: 'https://www.gnu.org/software/bash/manual/bash.html#Lists' },
+          { name: 'loops', desc: 'looping with for, while, until', link: 'https://www.gnu.org/software/bash/manual/bash.html#Looping-Constructs' },
+          { name: 'conditions and brackets', desc: 'conditionals if, case, select and different brackets', link: 'https://www.gnu.org/software/bash/manual/bash.html#Conditional-Constructs' },
+          { name: 'grouping', desc: 'grouping commands with () and {}', link: 'https://www.gnu.org/software/bash/manual/bash.html#Command-Grouping' },
+          { name: 'coprocesses', desc: 'asynchronous commands in subshell', link: 'https://www.gnu.org/software/bash/manual/bash.html#Coprocesses' },
+          { name: 'functions', desc: 'about shell functions', link: 'https://www.gnu.org/software/bash/manual/bash.html#Shell-Functions' },
+          { name: 'vars', desc: 'about shell vars', link: 'https://www.gnu.org/software/bash/manual/bash.html#Shell-Parameters' },
+          { name: 'special vars', desc: 'special vars $*, $@, $#, $?, etc', link: 'https://www.gnu.org/software/bash/manual/bash.html#Special-Parameters' },
+          { name: 'brace expansion', desc: 'about a{b,c,d}e expansion', link: 'https://www.gnu.org/software/bash/manual/bash.html#Brace-Expansion' },
+          { name: 'tilde expansion', desc: 'about ~/foo, ~+/foo expansions', link: 'https://www.gnu.org/software/bash/manual/bash.html#Tilde-Expansion' },
+          { name: 'var expansion', desc: 'about ${var} expansions', link: 'https://www.gnu.org/software/bash/manual/bash.html#Shell-Parameter-Expansion' },
+          { name: 'command substitution', desc: 'substitute output of the command with $(cmd)', link: 'https://www.gnu.org/software/bash/manual/bash.html#Command-Substitution' },
+          { name: 'arithmetic expansion', desc: 'arithmetic evaluation with $(( expr ))', link: 'https://www.gnu.org/software/bash/manual/bash.html#Arithmetic-Expansion' },
+          { name: 'process substitution', desc: 'process input/output to be referred as a filename', link: 'https://www.gnu.org/software/bash/manual/bash.html#Process-Substitution' },
+          { name: 'pattern matching', desc: 'filename expansions with *, ? and [...]', link: 'https://www.gnu.org/software/bash/manual/bash.html#Pattern-Matching' },
+          { name: 'redirections', desc: 'about input/output redirections', link: 'https://www.gnu.org/software/bash/manual/bash.html#Redirections' },
+          { name: 'exit status', desc: 'about cmd exit statuses', link: 'https://www.gnu.org/software/bash/manual/bash.html#Exit-Status' },
+          { name: 'signals', desc: 'about handling signals', link: 'https://www.gnu.org/software/bash/manual/bash.html#Signals' },
+          { name: 'shell scripts', desc: 'about script files', link: 'https://www.gnu.org/software/bash/manual/bash.html#Shell-Scripts' },
+          { name: 'bourne shell builtins', desc: 'builtins like :, ., cd, eval, exec, exit, pwd, test', link: 'https://www.gnu.org/software/bash/manual/bash.html#Bourne-Shell-Builtins' },
+          { name: 'bash builtins', desc: 'builtins like alias, bind, declare, echo, printf', link: 'https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins' },
+          { name: 'set', desc: 'change shell options builtin', link: 'https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin' },
+          { name: 'shopt', desc: 'change shell optional behavior', link: 'https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin' },
+          { name: 'bourne shell env vars', desc: 'bourne shell env vars', link: 'https://www.gnu.org/software/bash/manual/bash.html#Bourne-Shell-Variables' },
+          { name: 'bash env vars', desc: 'bash env vars', link: 'https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables' },
+          { name: 'bash startup files', desc: 'about bash statup file', link: 'https://www.gnu.org/software/bash/manual/bash.html#Bash-Startup-Files' },
+          { name: 'interactive shells', desc: 'about interactive shells', link: 'https://www.gnu.org/software/bash/manual/bash.html#Interactive-Shells' },
+          { name: '[[ ... ]]', desc: 'bash conditional expression', link: 'https://www.gnu.org/software/bash/manual/bash.html#Bash-Conditional-Expressions' },
+          { name: 'arithmetic operators', desc: 'bash arithmetic operators', link: 'https://www.gnu.org/software/bash/manual/bash.html#Shell-Arithmetic' },
+          { name: 'aliases', desc: 'about aliases', link: 'https://www.gnu.org/software/bash/manual/bash.html#Aliases' },
+          { name: 'arrays', desc: 'about bash arrays', link: 'https://www.gnu.org/software/bash/manual/bash.html#Arrays' },
+          { name: 'directory stack', desc: 'list of recently visited dirs, builtins dirs, popd, pushd', link: 'https://www.gnu.org/software/bash/manual/bash.html#The-Directory-Stack' },
+          { name: 'job control', desc: 'about job control', link: 'https://www.gnu.org/software/bash/manual/bash.html#Job-Control-Basics' },
+          { name: 'job control builtins', desc: 'bg, fg, jobs, kill, wait, disown, suspend', link: 'https://www.gnu.org/software/bash/manual/bash.html#Job-Control-Builtins' },
+          { name: 'bash hotkeys', desc: 'bash hotkeys', link: 'https://www.gnu.org/software/bash/manual/bash.html#Readline-Interaction' },
+          { name: 'completion', desc: 'about args completion', link: 'https://www.gnu.org/software/bash/manual/bash.html#Programmable-Completion' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ articles
+
+      {
+        header: 'articles',
+        items: [
+          { name: 'brackets', desc: 'about different bash brackets', link: 'https://dev.to/rpalo/bash-brackets-quick-reference-4eh6' },
         ]
       },
 
