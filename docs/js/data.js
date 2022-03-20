@@ -5,10 +5,10 @@ const data = {
 
     apache: [
 
-  // <<{ general
+  // <<{ docs
 
       {
-        header: 'general',
+        header: 'docs',
         items: [
           { name: 'apache 2.4 documentation', desc: 'apache 2.4 documentation', link: 'https://httpd.apache.org/docs/2.4/' },
           { name: 'modules', desc: 'modules list', link: 'https://httpd.apache.org/docs/2.4/mod/' },
@@ -57,7 +57,20 @@ const data = {
 
     bash: [
 
-  // <<{ main
+  // <<{ guides
+
+      {
+        header: 'guides',
+        items: [
+          { name: 'for beginners', desc: 'bash guide for beginners', link: 'https://tldp.org/LDP/Bash-Beginners-Guide/html/' },
+          { name: 'for advanced', desc: 'advanced bash guide', link: 'https://tldp.org/LDP/abs/html/index.html' },
+          { name: 'rip tutorial', desc: 'bash rip tutorial', link: 'https://riptutorial.com/bash' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ bash reference manual
 
       {
         header: 'bash reference manual',
@@ -125,12 +138,42 @@ const data = {
 
     blockchain: [
 
-  // <<{ mix
+  // <<{ docs
 
       {
-        header: 'mix',
+        header: 'docs',
         items: [
-          { name: '', desc: '', link: '' },
+          { name: 'Tendermint', desc: 'blockchain application server', link: 'https://docs.tendermint.com/' },
+          { name: 'Cosmos SDK', desc: 'cosmos SDK docs', link: 'https://docs.cosmos.network/' },
+          { name: 'Starport', desc: 'starport docs', link: 'https://docs.starport.com/' },
+          { name: 'Cosmwasm', desc: 'cosmwasm docs', link: 'https://docs.cosmwasm.com/docs/1.0/' },
+          { name: 'IBC Go', desc: 'IBC Go docs', link: 'https://ibc.cosmos.network/' },
+          { name: 'Cosmos Hub', desc: 'interconnected blockchain', link: 'https://hub.cosmos.network/main/hub-overview/overview.html' },
+          { name: 'Umee', desc: 'Umee docs', link: 'https://docs.umee.cc/umee/' },
+          { name: 'Keplr', desc: 'Keplr wallet docs', link: 'https://docs.keplr.app/' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ clients
+
+      {
+        header: 'clients',
+        items: [
+          { name: 'citadel', desc: 'citadel wallet', link: 'https://app.citadel.one/' },
+          { name: 'cosmostation', desc: 'cosmostation waller', link: 'https://wallet.cosmostation.io/' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ articles
+
+      {
+        header: 'articles',
+        items: [
+          { name: 'Start Umee validator node', desc: 'Start umee validator node', link: 'https://medium.com/@MantiCore.Team/start-umee-validator-node-39f493079e61' },
         ]
       },
 
@@ -144,12 +187,12 @@ const data = {
 
     bootstrap: [
 
-  // <<{ mix
+  // <<{ docs
 
       {
-        header: 'mix',
+        header: 'docs',
         items: [
-          { name: '', desc: '', link: '' },
+          { name: 'bootstrap', desc: 'bootstrap docs', link: 'https://getbootstrap.com/docs' },
         ]
       },
 
@@ -789,12 +832,15 @@ const data = {
 
     docker: [
 
-  // <<{ mix
+  // <<{ docs
 
       {
-        header: 'mix',
+        header: 'docs',
         items: [
-          { name: '', desc: '', link: '' },
+          { name: 'docker CLI reference', desc: 'docker CLI reference', link: 'https://docs.docker.com/engine/reference/run/' },
+          { name: 'docker compose CLI reference', desc: 'docker compose CLI reference', link: 'https://docs.docker.com/compose/reference/' },
+          { name: 'Dockerfile reference', desc: 'Dockerfile reference', link: 'https://docs.docker.com/engine/reference/builder/' },
+          { name: 'Compose file reference', desc: 'Compose file reference', link: 'https://docs.docker.com/compose/compose-file/compose-file-v3/' },
         ]
       },
 
@@ -808,12 +854,12 @@ const data = {
 
     eleventy: [
 
-  // <<{ mix
+  // <<{ docs
 
       {
-        header: 'mix',
+        header: 'docs',
         items: [
-          { name: '', desc: '', link: '' },
+          { name: 'eleventy', desc: 'eleventy docs', link: 'https://www.11ty.dev/docs/' },
         ]
       },
 
@@ -827,13 +873,23 @@ const data = {
 
     git: [
 
-  // <<{ mix
+  // <<{ docs
 
       {
-        header: 'mix',
+        header: 'docs',
         items: [
           { name: 'git reference', desc: 'git commands reference', link: 'https://git-scm.com/docs' },
           { name: 'gitbook', desc: 'git platform for docs', link: 'https://app.gitbook.com/home' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ articles
+
+      {
+        header: 'articles',
+        items: [
           { name: 'submodule', desc: 'git submoduler cheatsheet', link: 'https://www.devroom.io/2020/03/09/the-git-submodule-cheat-sheet/' },
         ]
       },
@@ -848,12 +904,35 @@ const data = {
 
     go: [
 
-  // <<{ mix
+  // <<{ docs
 
       {
-        header: 'mix',
+        header: 'docs',
         items: [
-          { name: '', desc: '', link: '' },
+          { name: 'docs', desc: 'docs reference', link: 'https://go.dev/doc/' },
+          { name: 'tour', desc: 'interactive go tour', link: 'https://go.dev/tour/basics/1' },
+          { name: 'about modules', desc: 'about go modules', link: 'https://go.dev/ref/mod' },
+          { name: 'go command reference', desc: 'go command reference', link: 'https://pkg.go.dev/cmd/go' },
+          { name: 'standard packages reference', desc: 'standard packages reference', link: 'https://pkg.go.dev/std' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ packages
+
+      {
+        header: 'packages',
+        items: [
+          { name: 'fmt', desc: 'formatted I/O', link: 'https://pkg.go.dev/fmt' },
+          { name: 'math', desc: 'math functions and constants', link: 'https://pkg.go.dev/math' },
+          { name: 'time', desc: 'measuring and displaying time', link: 'https://pkg.go.dev/time' },
+          { name: 'io', desc: 'basic interfaces of I/O primitives', link: 'https://pkg.go.dev/io' },
+          { name: 'strings', desc: 'UTF-8 strings manipulation', link: 'https://pkg.go.dev/strings' },
+          { name: 'image', desc: 'basic 2D image library', link: 'https://pkg.go.dev/image' },
+          { name: 'sync', desc: 'synchronization primitives', link: 'https://pkg.go.dev/sync' },
+          { name: 'errors', desc: 'errors manipulation', link: 'https://pkg.go.dev/errors' },
+          { name: 'flag', desc: 'command-line flag parsing', link: 'https://pkg.go.dev/flag' },
         ]
       },
 
@@ -867,13 +946,11 @@ const data = {
 
     handlebars: [
 
-  // <<{ mix
+  // <<{ docs
 
       {
-        header: 'mix',
+        header: 'docs',
         items: [
-          { name: 'installation via CDN', desc: 'installation via CDN', link: 'https://handlebarsjs.com/guide/#installation' },
-
           { name: 'basic expressions', desc: 'about basic expressions', link: 'https://handlebarsjs.com/guide/expressions.html#basic-usage' },
           { name: 'path expressions', desc: 'about dot-separated path expressions', link: 'https://handlebarsjs.com/guide/expressions.html#path-expressions' },
           { name: 'changing the context', desc: 'about going up with ../ in expression', link: 'https://handlebarsjs.com/guide/expressions.html#changing-the-context' },
@@ -1175,10 +1252,10 @@ const data = {
 
     http: [
 
-  // <<{ mix
+  // <<{ docs
 
       {
-        header: 'mix',
+        header: 'docs',
         items: [
           { name: 'HTTP overview', desc: 'about HTTP protocol', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview' },
           { name: 'caching', desc: 'about HTTP caching', link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching' },
@@ -1205,12 +1282,32 @@ const data = {
 
     icons: [
 
-  // <<{ mix
+  // <<{ services
 
       {
-        header: 'mix',
+        header: 'services',
         items: [
-          { name: '', desc: '', link: '' },
+          { name: 'google fonts', desc: 'google fonts', link: 'https://fonts.google.com/' },
+          { name: 'fontsquirrel', desc: 'download free fonts', link: 'https://www.fontsquirrel.com/' },
+          { name: 'font awesome cheetsheet', desc: 'font awesome cheetsheet', link: 'https://fontawesome.com/v5/cheatsheet' },
+          { name: 'icofont cheetsheet', desc: 'icofont cheetsheet', link: 'https://icofont.com/icons' },
+          { name: 'fontsquirrel', desc: 'fonts download service', link: 'https://www.fontsquirrel.com/' },
+          { name: 'google-webfonts-helper', desc: '@font-face generator and fonts download service', link: 'https://google-webfonts-helper.herokuapp.com/fonts' },
+          { name: 'fonts fallbacks', desc: 'common fonts fallbacks', link: 'https://www.w3schools.com/css/css_font_fallbacks.asp' },
+          { name: 'font style matcher', desc: 'comparing fonts by overlaping', link: 'https://meowni.ca/font-style-matcher/' },
+          { name: 'sprite generator', desc: 'css sprite generator', link: 'https://spritegen.website-performance.org/' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ articles
+
+      {
+        header: 'articles',
+        items: [
+          { name: 'How to create favicons', desc: 'how to create favicons', link: 'https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs' },
+          { name: 'How to work with SVG icons', desc: 'How to work with SVG icons', link: 'https://fvsch.com/svg-icons' },
         ]
       },
 
@@ -1224,10 +1321,10 @@ const data = {
 
     japan: [
 
-  // <<{ mix
+  // <<{ services
 
       {
-        header: 'mix',
+        header: 'services',
         items: [
           { name: 'hiragana/katakana тренажер', desc: 'hiragana/katakana тренажер', link: 'https://vacuum.name/japanese/hiragana-katakana' },
           { name: 'тренажер по набору слов', desc: 'тренажер по набору слов', link: 'https://vacuum.name/japanese/words-trainer' },
@@ -1288,17 +1385,6 @@ const data = {
         items: [
           { name: 'CSS Font Loading api', desc: 'dynamically loading fonts', link: 'https://developer.mozilla.org/en-US/docs/Web/API/CSS_Font_Loading_API' },
           { name: 'FontFace', desc: 'interface for a single loadable font', link: 'https://developer.mozilla.org/en-US/docs/Web/API/FontFace' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ CSSOM
-
-      {
-        header: 'CSSOM',
-        items: [
-          { name: 'CSSOM', desc: 'interfaces for css manipulation from javascript, like DOM but for CSS', link: 'https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model' },
         ]
       },
 
@@ -1399,17 +1485,6 @@ const data = {
         items: [
           { name: 'Using IndexedDB', desc: 'how to use IndexedDB', link: 'https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB' },
           { name: 'IndexedDB api', desc: 'client-side storage of big data', link: 'https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ Intersectin Observer api
-
-      {
-        header: 'Intersection Observer api',
-        items: [
-          { name: 'Intersection Observer api', desc: 'asynchronously observer changes in the intersection of the target element', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API' },
         ]
       },
 
@@ -2376,18 +2451,6 @@ const data = {
 
     mix: [
 
-  // <<{ hosts
-
-      {
-        header: 'hosts',
-        items: [
-          { name: 'localhost:3000', desc: 'localhost:3000', link: 'http://localhost:3000/' },
-          { name: 'test.my', desc: 'local test.my', link: 'http://test.my/' },
-        ]
-      },
-
-  // }>>
-
   // <<{ bitrix24
 
       {
@@ -2400,36 +2463,6 @@ const data = {
 
   // }>>
 
-  // <<{ task managers
-
-      {
-        header: 'task managers',
-        items: [
-          { name: 'trello', desc: 'trello', link: 'https://trello.com/webmaxml/boards' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ fonts and icons
-
-      {
-        header: 'fonts and icons',
-        items: [
-          { name: 'google fonts', desc: 'google fonts', link: 'https://fonts.google.com/' },
-          { name: 'fontsquirrel', desc: 'download free fonts', link: 'https://www.fontsquirrel.com/' },
-          { name: 'font awesome cheetsheet', desc: 'font awesome cheetsheet', link: 'https://fontawesome.com/v5/cheatsheet' },
-          { name: 'icofont cheetsheet', desc: 'icofont cheetsheet', link: 'https://icofont.com/icons' },
-          { name: 'favicons', desc: 'how to create favicons', link: 'https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs' },
-          { name: 'fontsquirrel', desc: 'fonts download service', link: 'https://www.fontsquirrel.com/' },
-          { name: 'google-webfonts-helper', desc: '@font-face generator and fonts download service', link: 'https://google-webfonts-helper.herokuapp.com/fonts' },
-          { name: 'fonts fallbacks', desc: 'common fonts fallbacks', link: 'https://www.w3schools.com/css/css_font_fallbacks.asp' },
-          { name: 'font style matcher', desc: 'comparing fonts by overlaping', link: 'https://meowni.ca/font-style-matcher/' },
-          { name: 'sprite generator', desc: 'css sprite generator', link: 'https://spritegen.website-performance.org/' },
-        ]
-      },
-
-  // }>>
 
   // <<{ chars
 
@@ -2467,18 +2500,6 @@ const data = {
 
   // }>>
 
-  // <<{ Созыкин - Компьютерные сети
-
-      {
-        header: 'Созыкин - Компьютерные сети',
-        items: [
-          { name: 'Классификация сетей', desc: 'классификация сетей', link: 'https://www.youtube.com/watch?v=Y4LK1OZ54h0&list=PLtPJ9lKvJ4oiNMvYbOzCmWy6cRzYAh9B1' },
-          { name: 'Топология сетей', desc: 'топология сетей', link: 'https://www.youtube.com/watch?v=z8VmkYahV8M&list=PLtPJ9lKvJ4oiNMvYbOzCmWy6cRzYAh9B1&index=4' },
-        ]
-      },
-
-  // }>>
-
   // <<{ PWA
 
       {
@@ -2501,28 +2522,6 @@ const data = {
 
   // }>>
 
-  // <<{ freelance
-
-      {
-        header: 'freelance',
-        items: [
-          { name: 'kabanchik.ua', desc: 'mix freelance service', link: 'https://kabanchik.ua/ua/user/2497358' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ airdroid
-
-      {
-        header: 'airdroid',
-        items: [
-          { name: 'airdroid local', desc: 'local connection to phone app', link: 'http://192.168.43.1:8888/' },
-        ]
-      },
-
-  // }>>
-
   // <<{ translators
 
       {
@@ -2530,18 +2529,6 @@ const data = {
         items: [
           { name: 'google переводчик', desc: 'google переводчик', link: 'https://translate.google.com/?hl=ru' },
           { name: 'deepl', desc: 'deepl translator', link: 'https://www.deepl.com/ru/translator' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ коммуналка
-
-      {
-        header: 'коммуналка',
-        items: [
-          { name: 'новаком', desc: 'новаком', link: 'https://www.novakom.com.ua/abonent.html' },
-          { name: 'yasno', desc: 'поставщик электроэнергии', link: 'https://my.yasno.com.ua/cabinet/person/' },
         ]
       },
 

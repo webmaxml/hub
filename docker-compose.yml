@@ -15,4 +15,4 @@ services:
       - 80:80
     volumes:
       - ./configs/apache:/usr/local/apache2/conf
-      - ./dist:/app
+      - ./docs:/app
