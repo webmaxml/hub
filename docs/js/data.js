@@ -1345,12 +1345,12 @@ const data = {
 
     javascript: [
 
-  // <<{ mix
+  // <<{ docs
 
       {
-        header: 'mix',
+        header: 'docs',
         items: [
-          { name: '', desc: '', link: '' },
+          { name: 'js reference', desc: 'js reference', link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference' },
         ]
       },
 
@@ -1378,257 +1378,35 @@ const data = {
 
   // }>>
 
-  // <<{ Font Loading api
+  // <<{ api
 
       {
-        header: 'Font Loading api',
-        items: [
-          { name: 'CSS Font Loading api', desc: 'dynamically loading fonts', link: 'https://developer.mozilla.org/en-US/docs/Web/API/CSS_Font_Loading_API' },
-          { name: 'FontFace', desc: 'interface for a single loadable font', link: 'https://developer.mozilla.org/en-US/docs/Web/API/FontFace' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ Canvas api
-
-      {
-        header: 'Canvas api',
+        header: 'api',
         items: [
           { name: 'canvas api', desc: 'drawing 2D graphics via javascript', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API' },
-          { name: 'HTMLCanvasElement', desc: 'interface for <canvas> element', link: 'https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement' },
-          { name: 'CanvasRenderingContext2D', desc: 'interface for 2D drawing on the <canvas> element', link: 'https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ Console api
-
-      {
-        header: 'Console api',
-        items: [
-          { name: 'Console', desc: 'interface for browser debugging console', link: 'https://developer.mozilla.org/en-US/docs/Web/API/console' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ Fetch api
-
-      {
-        header: 'Fetch api',
-        items: [
+          { name: 'CSS Font Loading api', desc: 'dynamically loading fonts', link: 'https://developer.mozilla.org/en-US/docs/Web/API/CSS_Font_Loading_API' },
+          { name: 'Console api', desc: 'interface for browser debugging console', link: 'https://developer.mozilla.org/en-US/docs/Web/API/console' },
           { name: 'Fetch api', desc: 'api for fetching resources', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API' },
-          { name: 'fetch()', desc: 'function for fetching resources', link: 'https://developer.mozilla.org/en-US/docs/Web/API/fetch' },
-          { name: 'Headers', desc: 'interface for configuring request HTTP headers', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Headers' },
-          { name: 'Request', desc: 'interface for a request', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Request' },
-          { name: 'Response', desc: 'interface for a response to a request', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Response' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ File api
-
-      {
-        header: 'File api',
-        items: [
-          { name: 'Using File api', desc: 'using file api', link: 'https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications' },
-          { name: 'FileList', desc: 'list of files, returned by the files prop of the <input type="file"> element', link: 'https://developer.mozilla.org/en-US/docs/Web/API/FileList' },
-          { name: 'File', desc: 'interface for a file in FileList', link: 'https://developer.mozilla.org/en-US/docs/Web/API/File' },
-          { name: 'FileReader', desc: 'interface for asynchronously read the contents of the file', link: 'https://developer.mozilla.org/en-US/docs/Web/API/FileReader' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ Fullscreen api
-
-      {
-        header: 'Fullscreen api',
-        items: [
-          { name: 'Fullscreen api guide', desc: 'fullscreen api guide', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API/Guide' },
-          { name: 'Fullscreen api', desc: 'fullscreen api', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ Drag and Drop api
-
-      {
-        header: 'Drag and Drop api',
-        items: [
+          { name: 'File api', desc: 'using file api', link: 'https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications' },
           { name: 'Drag and Drop api', desc: 'enables to use drag and drop features', link: 'https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ History api
-
-      {
-        header: 'History api',
-        items: [
           { name: 'History api', desc: 'access to the browser session history', link: 'https://developer.mozilla.org/en-US/docs/Web/API/History_API' },
-          { name: 'History', desc: 'interface for manipulating browser session history', link: 'https://developer.mozilla.org/en-US/docs/Web/API/History' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ IndexedDB api
-
-      {
-        header: 'IndexedDB api',
-        items: [
-          { name: 'Using IndexedDB', desc: 'how to use IndexedDB', link: 'https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB' },
           { name: 'IndexedDB api', desc: 'client-side storage of big data', link: 'https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ Performance api
-
-      {
-        header: 'Performance api',
-        items: [
           { name: 'Performance api', desc: 'client-side latency measurements', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Performance_API' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ Streams api
-
-      {
-        header: 'Streams api',
-        items: [
-          { name: 'Streams api', desc: 'accessing streams of data received over the network', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Streams_API' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ URL api
-
-      {
-        header: 'URL api',
-        items: [
           { name: 'URL api', desc: 'access and manipulate URL', link: 'https://developer.mozilla.org/en-US/docs/Web/API/URL_API' },
-          { name: 'URL', desc: 'interface for URL', link: 'https://developer.mozilla.org/en-US/docs/Web/API/URL' },
-          { name: 'URLSearchParams', desc: 'interface for a query string of a URL', link: 'https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ Web Animations api
-
-      {
-        header: 'Web Animations api',
-        items: [
           { name: 'Web Animations api', desc: 'animations over javascript', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API' },
-          { name: 'using web animations api', desc: 'using web animations api', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ Web Storage api
-
-      {
-        header: 'Web Storage api',
-        items: [
           { name: 'Web Storage api', desc: 'storing key/values pairs in the browser', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ Web Workers api
-
-      {
-        header: 'Web Workers api',
-        items: [
           { name: 'Web Workers api', desc: 'creating threads in javascript', link: 'https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ WebSocket api
-
-      {
-        header: 'WebSocket api',
-        items: [
           { name: 'WebSocket api', desc: 'two-way communication between browser and server', link: 'https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ XMLHttpRequest
-
-      {
-        header: 'XMLHttpRequest',
-        items: [
           { name: 'XMLHttpRequest', desc: 'making asynchronous requests to the server', link: 'https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest' },
         ]
       },
 
   // }>>
 
-  // <<{ eslint
+  // <<{ utilities
 
       {
-        header: 'eslint',
-        items: [
-          { name: '', desc: '', link: '' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ babel
-
-      {
-        header: 'babel',
-        items: [
-          { name: '', desc: '', link: '' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ browser-sync
-
-      {
-        header: 'browser-sync',
-        items: [
-          { name: '', desc: '', link: '' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ browserify
-
-      {
-        header: 'browserify',
-        items: [
-          { name: '', desc: '', link: '' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ uglifyjs
-
-      {
-        header: 'uglifyjs',
+        header: 'utilities',
         items: [
           { name: '', desc: '', link: '' },
         ]
@@ -1644,31 +1422,12 @@ const data = {
 
     jekyll: [
 
-  // <<{ mix
+  // <<{ docs
 
       {
-        header: 'mix',
+        header: 'docs',
         items: [
-          { name: '', desc: '', link: '' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ laravel
-
-    laravel: [
-
-  // <<{ mix
-
-      {
-        header: 'mix',
-        items: [
-          { name: '', desc: '', link: '' },
+          { name: 'jekyll docs', desc: 'jekyll docs', link: 'https://jekyllrb.com/docs/' },
         ]
       },
 
@@ -1682,12 +1441,21 @@ const data = {
 
     linux: [
 
-  // <<{ mix
+  // <<{ utilities
 
       {
-        header: 'mix',
+        header: 'utilities',
         items: [
-          { name: '', desc: '', link: '' },
+          { name: 'i3 user guide', desc: 'user guide for i3 window manager', link: 'https://i3wm.org/docs/userguide.html' },
+          { name: 'i3blocks', desc: 'more customizable bar manager for i3 wm', link: 'https://github.com/vivien/i3blocks#i3blocks' },
+          { name: 'ranger user guide', desc: 'shell file manager user guide', link: 'https://github.com/ranger/ranger/wiki/Official-user-guide#contents' },
+          { name: 'fzf', desc: 'fuzzy finder utility', link: 'https://github.com/junegunn/fzf#table-of-contents' },
+          { name: 'search syntax', desc: 'search syntax when searching in fzf', link: 'https://github.com/junegunn/fzf#search-syntax' },
+          { name: 'compton', desc: 'composition manager', link: 'https://github.com/chjj/compton#compton' },
+          { name: 'rofi', desc: 'application launcher', link: 'https://github.com/davatorium/rofi#a-window-switcher-application-launcher-and-dmenu-replacement' },
+          { name: 'fd', desc: 'fd finder, simple alternative to "find"', link: 'https://github.com/sharkdp/fd#fd' },
+          { name: 'ripgrep', desc: 'line-oriented search tool', link: 'https://github.com/BurntSushi/ripgrep#ripgrep-rg' },
+          { name: 'dunst', desc: 'configurable notification daemon', link: 'https://github.com/dunst-project/dunst#documentation' },
         ]
       },
 
@@ -1717,117 +1485,13 @@ const data = {
 
   // }>>
 
-  // <<{ awk
+  // <<{ articles
 
       {
-        header: 'awk',
+        header: 'articles',
         items: [
-          { name: 'awk', desc: 'how to use awk command', link: 'https://www.howtogeek.com/562941/how-to-use-the-awk-command-on-linux/' },
+          { name: 'how to use awk', desc: 'how to use awk command', link: 'https://www.howtogeek.com/562941/how-to-use-the-awk-command-on-linux/' },
           { name: 'хабр - awk', desc: 'про awk', link: 'https://habr.com/ru/company/ruvds/blog/327754/' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ i3
-
-      {
-        header: 'i3',
-        items: [
-          { name: 'i3 user guide', desc: 'user guide for i3 window manager', link: 'https://i3wm.org/docs/userguide.html' },
-          { name: 'i3 layout saving', desc: 'guide for layout saving for i3 window manager', link: 'https://i3wm.org/docs/layout-saving.html' },
-          { name: 'i3status', desc: 'configuration of the builtin bar manager in i3 window manager', link: 'https://i3wm.org/docs/i3status.html' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ i3blocks
-
-      {
-        header: 'i3blocks',
-        items: [
-          { name: 'i3blocks', desc: 'more customizable bar manager for i3 wm', link: 'https://github.com/vivien/i3blocks#i3blocks' },
-          { name: 'i3blocks-contrib', desc: 'community contributed blocklets for i3blocks', link: 'https://github.com/vivien/i3blocks-contrib' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ ranger
-
-      {
-        header: 'ranger',
-        items: [
-          { name: 'ranger user guide', desc: 'shell file manager user guide', link: 'https://github.com/ranger/ranger/wiki/Official-user-guide#contents' },
-          { name: 'ranger wiki', desc: 'shell file manager wiki', link: 'https://github.com/ranger/ranger/wiki' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ fzf
-
-      {
-        header: 'fzf',
-        items: [
-          { name: 'fzf', desc: 'fuzzy finder utility', link: 'https://github.com/junegunn/fzf#table-of-contents' },
-          { name: 'search syntax', desc: 'search syntax when searching in fzf', link: 'https://github.com/junegunn/fzf#search-syntax' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ compton
-
-      {
-        header: 'compton',
-        items: [
-          { name: 'compton', desc: 'composition manager', link: 'https://github.com/chjj/compton#compton' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ rofi
-
-      {
-        header: 'rofi',
-        items: [
-          { name: 'rofi', desc: 'application launcher', link: 'https://github.com/davatorium/rofi#a-window-switcher-application-launcher-and-dmenu-replacement' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ fd
-
-      {
-        header: 'fd',
-        items: [
-          { name: 'fd', desc: 'fd finder, simple alternative to "find"', link: 'https://github.com/sharkdp/fd#fd' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ ripgrep
-
-      {
-        header: 'ripgrep',
-        items: [
-          { name: 'ripgrep', desc: 'line-oriented search tool', link: 'https://github.com/BurntSushi/ripgrep#ripgrep-rg' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ dunst
-
-      {
-        header: 'dunst',
-        items: [
-          { name: 'dunst', desc: 'configurable notification daemon', link: 'https://github.com/dunst-project/dunst#documentation' },
         ]
       },
 
@@ -1841,12 +1505,12 @@ const data = {
 
     makefile: [
 
-  // <<{ mix
+  // <<{ tutorials
 
       {
-        header: 'mix',
+        header: 'tutorials',
         items: [
-          { name: '', desc: '', link: '' },
+          { name: 'makefile tutorial', desc: 'makefile tutorial', link: 'https://makefiletutorial.com/' },
         ]
       },
 
@@ -1860,12 +1524,13 @@ const data = {
 
     markdown: [
 
-  // <<{ mix
+  // <<{ services
 
       {
-        header: 'mix',
+        header: 'services',
         items: [
-          { name: '', desc: '', link: '' },
+          { name: 'markdown cheetsheet', desc: 'markdown cheetsheet', link: 'https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet' },
+          { name: 'makdown online', desc: 'makdown online editor', link: 'https://dillinger.io/' },
         ]
       },
 
@@ -1879,12 +1544,12 @@ const data = {
 
     mysql: [
 
-  // <<{ mix
+  // <<{ w3schools
 
       {
-        header: 'mix',
+        header: 'w3schools',
         items: [
-          { name: '', desc: '', link: '' },
+          { name: 'mysql docs', desc: 'mysql docs', link: 'https://www.w3schools.com/mysql/default.asp' },
         ]
       },
 
@@ -1898,10 +1563,10 @@ const data = {
 
     nginx: [
 
-  // <<{ mix
+  // <<{ docs
 
       {
-        header: 'mix',
+        header: 'docs',
         items: [
           { name: 'nginx documentation', desc: 'nginx documentation', link: 'https://nginx.org/en/docs/' },
         ]
@@ -1917,12 +1582,12 @@ const data = {
 
     nodejs: [
 
-  // <<{ mix
+  // <<{ docs
 
       {
-        header: 'mix',
+        header: 'docs',
         items: [
-          { name: '', desc: '', link: '' },
+          { name: 'nodejs docs', desc: 'nodejs docs', link: 'https://nodejs.org/dist/latest-v16.x/docs/api/' },
         ]
       },
 
@@ -1936,31 +1601,12 @@ const data = {
 
     php: [
 
-  // <<{ mix
+  // <<{ docs
 
       {
-        header: 'mix',
+        header: 'docs',
         items: [
-          { name: '', desc: '', link: '' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
-// <<{ react
-
-    react: [
-
-  // <<{ mix
-
-      {
-        header: 'mix',
-        items: [
-          { name: '', desc: '', link: '' },
+          { name: 'php docs', desc: 'php docs', link: 'https://www.php.net/manual/en/' },
         ]
       },
 
@@ -2240,35 +1886,17 @@ const data = {
 
 // }>>
 
-// <<{ translators
-
-    translators: [
-
-  // <<{ mix
-
-      {
-        header: 'mix',
-        items: [
-          { name: '', desc: '', link: '' },
-        ]
-      },
-
-  // }>>
-
-    ],
-
-// }>>
-
 // <<{ typescript
 
     typescript: [
 
-  // <<{ mix
+  // <<{ docs
 
       {
-        header: 'mix',
+        header: 'docs',
         items: [
-          { name: '', desc: '', link: '' },
+          { name: 'ts handbook', desc: 'ts handbook', link: 'https://www.typescriptlang.org/docs/handbook/intro.html' },
+          { name: 'tsconfig reference', desc: 'tsconfig reference', link: 'https://www.typescriptlang.org/tsconfig' },
         ]
       },
 
@@ -2281,17 +1909,6 @@ const data = {
 // <<{ vim
 
     vim: [
-
-  // <<{ mix
-
-      {
-        header: 'mix',
-        items: [
-          { name: 'vim cheat sheet', desc: 'vim cheat sheet', link: 'https://vim.rtorr.com/' },
-        ]
-      },
-
-  // }>>
 
   // <<{ vim reference book
 
@@ -2309,77 +1926,28 @@ const data = {
 
   // }>>
 
-  // <<{ vimawesome
+  // <<{ articles
 
       {
-        header: 'vimawesome',
+        header: 'articles',
+        items: [
+          { name: 'vim cheat sheet', desc: 'vim cheat sheet', link: 'https://vim.rtorr.com/' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ plugins
+
+      {
+        header: 'plugins',
         items: [
           { name: 'vimawesome', desc: 'vim plugins hub page', link: 'https://vimawesome.com/' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ vim-plug
-
-      {
-        header: 'vim-plug',
-        items: [
           { name: 'vim-plug', desc: 'vim-plug github page', link: 'https://github.com/junegunn/vim-plug#' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ NERDTree
-
-      {
-        header: 'NERDTree',
-        items: [
           { name: 'NERDTree', desc: 'nerdtree plugin', link: 'https://github.com/preservim/nerdtree#the-nerdtree-' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ ranger.vim
-
-      {
-        header: 'ranger.vim',
-        items: [
           { name: 'ranger.vim', desc: 'ranger vim plugin', link: 'https://github.com/francoiscabrol/ranger.vim' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ Emmet-vim
-
-      {
-        header: 'Emmet-vim',
-        items: [
           { name: 'Emmet-vim', desc: 'emmet plugin', link: 'https://github.com/mattn/emmet-vim#emmet-vim' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ fzf.vim
-
-      {
-        header: 'fzf.vim',
-        items: [
           { name: 'fzf.vim', desc: 'fzf vim plugin', link: 'https://github.com/junegunn/fzf.vim#fzf-heart-vim' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ UltiSnips
-
-      {
-        header: 'UltiSnips',
-        items: [
           { name: 'UltiSnips', desc: 'snippets plugin', link: 'https://github.com/SirVer/ultisnips#ultisnips' },
         ]
       },
@@ -2394,12 +1962,31 @@ const data = {
 
     webpack: [
 
-  // <<{ mix
+  // <<{ docs
 
       {
-        header: 'mix',
+        header: 'docs',
         items: [
-          { name: '', desc: '', link: '' },
+          { name: 'webpack config', desc: 'webpack config reference', link: 'https://webpack.js.org/configuration/' },
+        ]
+      },
+
+  // }>>
+
+    ],
+
+// }>>
+
+// <<{ windows
+
+    windows: [
+
+  // <<{ articles
+
+      {
+        header: 'articles',
+        items: [
+          { name: 'оптимизация и ускорение работы windows', desc: 'оптимизация и ускорение работы windows', link: 'https://sysadmintips.ru/vyzhimaem-iz-windows-10-maksimum-optimizatsiya-sistemy.html' },
         ]
       },
 
@@ -2413,12 +2000,12 @@ const data = {
 
     wordpress: [
 
-  // <<{ mix
+  // <<{ docs
 
       {
-        header: 'mix',
+        header: 'docs',
         items: [
-          { name: '', desc: '', link: '' },
+          { name: 'Dev resources', desc: 'developer resources', link: 'https://developer.wordpress.org/' },
         ]
       },
 
@@ -2432,12 +2019,12 @@ const data = {
 
     yaml: [
 
-  // <<{ mix
+  // <<{ articles
 
       {
-        header: 'mix',
+        header: 'articles',
         items: [
-          { name: '', desc: '', link: '' },
+          { name: 'yaml cheetsheet', desc: 'yaml cheetsheet', link: 'https://lzone.de/cheat-sheet/YAML' },
         ]
       },
 
@@ -2450,19 +2037,6 @@ const data = {
 // <<{ mix
 
     mix: [
-
-  // <<{ bitrix24
-
-      {
-        header: 'bitrix24',
-        items: [
-          { name: 'bitrix24', desc: 'bitrix24 admin page', link: 'https://uborshchiki.bitrix24.ua/stream/' },
-          { name: 'helpdesk', desc: 'bitrix24 helpdesk', link: 'https://helpdesk.bitrix24.ru/' },
-        ]
-      },
-
-  // }>>
-
 
   // <<{ chars
 
@@ -2506,29 +2080,6 @@ const data = {
         header: 'PWA',
         items: [
           { name: 'PWA', desc: 'progressive web apps guide', link: 'https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ windows
-
-      {
-        header: 'windows',
-        items: [
-          { name: 'оптимизация и ускорение работы windows', desc: 'оптимизация и ускорение работы windows', link: 'https://sysadmintips.ru/vyzhimaem-iz-windows-10-maksimum-optimizatsiya-sistemy.html' },
-        ]
-      },
-
-  // }>>
-
-  // <<{ translators
-
-      {
-        header: 'translators',
-        items: [
-          { name: 'google переводчик', desc: 'google переводчик', link: 'https://translate.google.com/?hl=ru' },
-          { name: 'deepl', desc: 'deepl translator', link: 'https://www.deepl.com/ru/translator' },
         ]
       },
 
