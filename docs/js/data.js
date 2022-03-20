@@ -841,6 +841,18 @@ const data = {
           { name: 'docker compose CLI reference', desc: 'docker compose CLI reference', link: 'https://docs.docker.com/compose/reference/' },
           { name: 'Dockerfile reference', desc: 'Dockerfile reference', link: 'https://docs.docker.com/engine/reference/builder/' },
           { name: 'Compose file reference', desc: 'Compose file reference', link: 'https://docs.docker.com/compose/compose-file/compose-file-v3/' },
+          { name: 'docker hub', desc: 'docker hub', link: 'https://hub.docker.com/search?type=image' },
+        ]
+      },
+
+  // }>>
+
+  // <<{ articles
+
+      {
+        header: 'articles',
+        items: [
+          { name: 'Docker ARG, ENV and .env', desc: 'about ARG, ENV and .env', link: 'https://vsupalov.com/docker-arg-env-variable-guide/' },
         ]
       },
 
@@ -1588,6 +1600,7 @@ const data = {
         header: 'docs',
         items: [
           { name: 'nodejs docs', desc: 'nodejs docs', link: 'https://nodejs.org/dist/latest-v16.x/docs/api/' },
+          { name: 'npm cli reference', desc: 'npm cli reference', link: 'https://docs.npmjs.com/cli/v8/commands' },
         ]
       },
 

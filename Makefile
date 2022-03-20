@@ -1,5 +1,7 @@
+apache_cmd := docker-compose run --rm --use-aliases --service-ports apache
+
 apache:
-	docker-compose run --rm --use-aliases --service-ports  apache
+	${apache_cmd}
 
 apache-shell:
-	docker-compose run --rm apache sh
+	${apache_cmd} sh

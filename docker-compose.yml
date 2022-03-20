@@ -7,7 +7,7 @@ networks:
 services:
 
   apache:
-    image: httpd:2.4.51-alpine3.14
+    image: ${IMG_APACHE}
     working_dir: /app
     networks:
       - dev
